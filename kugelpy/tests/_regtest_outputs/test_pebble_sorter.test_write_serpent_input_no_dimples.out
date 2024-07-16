@@ -1,0 +1,50 @@
+% Created by pebble_sorter found at: https://github.inl.gov/reactor-multiphysics/pyrates
+% Contact a member of the Griffin team for access.
+
+include pebble_surfaces.inp
+include pebble_materials.inp
+include pebble_cells.inp
+include pbr_structure.inp
+include material_detectors.inp
+include materials.inp
+ene htrpm_9_group 1 1e-11
+ 1.37999E-07
+ 8.20037E-07
+ 1.29304E-06
+ 2.33006E-06
+ 3.88217E-06
+ 1.75648E-05
+ 0.000907501
+ 0.195007703
+ 19.6403
+
+set seed 2
+det core_mesh_9grp n de htrpm_9_group dn 1 0.0 120.0 5 0.0 360.0 1 0.0 893.0 12
+det griffin_flux_mesh n dn 1 0.0 120.0 5 0.0 360.0 1 0.0 893.0 12
+det cons_flux n du cone_u
+% Data option and run information
+
+% Geometry and output plotters
+%plot 12 500  500
+%plot 31 500  500 1050
+mesh 1 500 1000
+
+plot 22 1000  1500
+
+set acelib "/hpc-common/data/serpent/xsdata/endfb71_edep/endfb71_edep.xsdata"
+set declib "/hpc-common/data/serpent/xsdata/sss_endfb7.dec"
+set nfylib "/hpc-common/data/serpent/xsdata/sss_endfb7.nfy"
+
+% Thermal scattering data
+
+therm grph300 300 grph.03t grph.04t
+therm grph600 600 grph.05t grph.06t
+therm grph900 900 grph.08t grph.10t
+therm grph1200 1200 grph.10t grph.12t% Run Data
+set pop 40000 200 40 1.05
+set power 1000000.0
+set opti 1
+set pcc 0
+set printm yes
+set depout 3
+dep daystep 11

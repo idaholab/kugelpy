@@ -1,0 +1,1891 @@
+# ==============================================================================
+# Model description:
+# Equilibrium core neutronics model coupled with TH and pebble temperature
+# models.
+# ------------------------------------------------------------------------------
+# Idaho Falls, INL, April 4, 2022 11:03 AM
+# Author(s)(name alph): David Reger, Dr. Javier Ortensi, Dr. Paolo Balestra,
+#   Dr. Ryan Stewart, Dr. Sebastian Schunert.
+# ==============================================================================
+# MODEL PARAMETERS
+# ==============================================================================
+# Initial values ---------------------------------------------------------------
+pbed_porosity = 0.39
+
+# Blocks -----------------------------------------------------------------------
+fuel_blocks = '
+                1    2   3   4   5   6   7   8   9  10  11  12
+                13  14  15  16  17  18  19  20  21  22  23  24
+                25  26  27  28  29  30  31  32  33  34  35  36
+                37  38  39  40  41  42  43  44  45  46  47  48
+                49  50  51  52  53  54  55  56  57  58  59  60
+                61
+              '
+fuel_blocks_ids = '
+                1    1   1   1   1   1   1   1   1   1   1   1
+                1    1   1   1   1   1   1   1   1   1   1   1
+                1    1   1   1   1   1   1   1   1   1   1   1
+                1    1   1   1   1   1   1   1   1   1   1   1
+                1    1   1   1   1   1   1   1   1   1   1   1
+                1
+                  '
+cns_disch_blocks = '
+                   62
+                  '
+upref_blocks = '
+              63 64 65 66
+              '
+upcav_blocks = '
+              67
+              '
+lowref_blocks = '
+              68 69 70 71 72
+              '
+buff_blocks = '
+              73 74 75 76 77 78
+              '
+crs_blocks = '
+              79 80 81 82 83 84 85 86 87 88 89 90 91 92
+              '
+rdref_blocks = '
+              93 94 95 96 97 98 99 100 101 102 103 104
+              '
+ref_blocks = '${cns_disch_blocks} ${upref_blocks}
+              ${lowref_blocks} ${buff_blocks}
+              ${crs_blocks} ${rdref_blocks}'
+all_blocks = '${fuel_blocks} ${upcav_blocks} ${ref_blocks}'
+all_blocks_ids = '${fuel_blocks_ids} ${upcav_blocks} ${ref_blocks}'
+
+# ==============================================================================
+# GLOBAL PARAMETERS
+# ==============================================================================
+[GlobalParams]
+  library_file = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/data/os200mw_gcpbr_7ge15_microxs.xml
+  library_name = 'os200mw_gcpbr_7ge15_microxs'
+  is_meter = true
+[]
+
+# ==============================================================================
+# GEOMETRY AND MESH
+# ==============================================================================
+[Mesh]
+  [nk_mesh]
+    type = FileMeshGenerator
+    file = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/data/gpbr200_mesh_gfnk.e
+  []
+  [assign_extra_ids]
+    type = SubdomainExtraElementIDGenerator
+    input = nk_mesh
+    extra_element_id_names = 'material_id'
+    subdomains = '${all_blocks}'
+    extra_element_ids = '${all_blocks_ids}'
+  []
+  uniform_refine = 1
+  coord_type = RZ
+[]
+
+# ==============================================================================
+# User Objects
+# ==============================================================================
+[UserObjects]
+  [isotope_densities_CSV_reader]
+    type = PropertyReadFile
+    prop_file_name = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/fuel_blocks_isotope_densities.csv
+    read_type = block
+    nprop = 9
+    nblock = 61
+    use_zero_based_block_indexing = false
+  []
+  [burnup_CSV_reader]
+    type = PropertyReadFile
+    prop_file_name = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/fuel_blocks_burnup.csv
+    read_type = block
+    nprop = 1
+    nblock = 61
+    use_zero_based_block_indexing = false
+  []
+[]
+
+# ==============================================================================
+# Functions
+# ==============================================================================
+[Functions]
+  [isotope_SI30_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 8
+  []
+  [isotope_SI29_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 7
+  []
+  [isotope_SI28_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 6
+  []
+  [isotope_B11_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 5
+  []
+  [isotope_B10_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 4
+  []
+  [isotope_C12_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 3
+  []
+  [isotope_O16_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 2
+  []
+  [isotope_U238_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 1
+  []
+  [isotope_U235_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = isotope_densities_CSV_reader
+    read_type = block
+    column_number = 0
+  []
+  [burnup_function]
+    type = PiecewiseConstantFromCSV
+    read_prop_user_object = burnup_CSV_reader
+    read_type = block
+    column_number = 0
+  []
+[]
+
+# ==============================================================================
+# Initial Conditions
+# ==============================================================================
+[ICs]
+  [isotope_SI30_IC]
+    type = FunctionIC
+    variable = isotope_SI30
+    function = isotope_SI30_function
+  []
+  [isotope_SI29_IC]
+    type = FunctionIC
+    variable = isotope_SI29
+    function = isotope_SI29_function
+  []
+  [isotope_SI28_IC]
+    type = FunctionIC
+    variable = isotope_SI28
+    function = isotope_SI28_function
+  []
+  [isotope_B11_IC]
+    type = FunctionIC
+    variable = isotope_B11
+    function = isotope_B11_function
+  []
+  [isotope_B10_IC]
+    type = FunctionIC
+    variable = isotope_B10
+    function = isotope_B10_function
+  []
+  [isotope_C12_IC]
+    type = FunctionIC
+    variable = isotope_C12
+    function = isotope_C12_function
+  []
+  [isotope_O16_IC]
+    type = FunctionIC
+    variable = isotope_O16
+    function = isotope_O16_function
+  []
+  [isotope_U238_IC]
+    type = FunctionIC
+    variable = isotope_U238
+    function = isotope_U238_function
+  []
+  [isotope_U235_IC]
+    type = FunctionIC
+    variable = isotope_U235
+    function = isotope_U235_function
+  []
+  [burnup_IC]
+    type = FunctionIC
+    variable = Burnup
+    function = burnup_function
+  []
+[]
+
+# ==============================================================================
+# AUXVARIABLES AND AUXKERNELS
+# ==============================================================================
+[AuxVariables]
+  [isotope_SI30]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_SI29]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_SI28]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_B11]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_B10]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_C12]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_O16]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_U238]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+  [isotope_U235]
+    family = MONOMIAL
+    order = CONSTANT
+    block = ${fuel_blocks}
+  []
+
+  [proc_id]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  [elem_id]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  [elem_vol]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  [coord_x]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  [coord_y]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  [coord_z]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  # Porosity
+  [porosity]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+    initial_condition = ${pbed_porosity}
+  []
+  # Ex Core Temperatures.
+  [Tref]
+    family = MONOMIAL
+    order = CONSTANT
+    initial_condition = 500.0
+    block = '${ref_blocks}'
+  []
+  # Pebble Temperature.
+  [Tmod]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+    initial_condition = 500.0
+  []
+  # TRISO Temperature.
+  [Tfuel]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+    initial_condition = 500.0
+  []
+  # Burnup
+  [Burnup]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  # Pebble/TRISO Power Density.
+  [ppd]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+  # SubdomainID (BlockID)
+  [sub_id]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${fuel_blocks}'
+  []
+[]
+
+[AuxKernels]
+  [elem_vol]
+    type = VolumeAux
+    variable = elem_vol
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [proc_id]
+    type = ProcessorIDAux
+    variable = proc_id
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [elem_id]
+    type = ElemIDAux
+    variable = elem_id
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [coord_x]
+    type = FunctionAux
+    function = 'x'
+    variable = coord_x
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [coord_y]
+    type = FunctionAux
+    function = 'y'
+    variable = coord_y
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [coord_z]
+    type = FunctionAux
+    function = 'z'
+    variable = coord_z
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+  [sub_id]
+    type = ElemIDAux
+    variable = sub_id
+    id_type = "subdomain_id"
+    block = '${fuel_blocks}'
+    execute_on = 'INITIAL'
+  []
+[]
+
+# ==============================================================================
+# MATERIALS
+# ==============================================================================
+[Materials]
+  [core]
+    type = CoupledFeedbackNeutronicsMaterial
+    grid_names = 'Tmod Tfuel Burnup'
+    grid_variables = 'Tmod Tfuel Burnup'
+    diffusion_coefficient_scheme = local
+    material_id = 1
+    block = ${fuel_blocks}
+    isotopes = 'U235 U238 O16 C12 B10 B11 SI28 SI29 SI30'
+    plus = true
+    densities = 'isotope_U235 isotope_U238 isotope_O16 isotope_C12 isotope_B10 isotope_B11 isotope_SI28 isotope_SI29 isotope_SI30'
+  []
+  [reflector]
+    type = CoupledFeedbackNeutronicsMaterial
+    grid_names = 'Tmod'
+    grid_variables = 'Tref'
+    isotopes = 'Graphite B10 B11'
+    densities = '8.82418e-2 9.428e-08 3.79489e-07'
+    plus = true
+    material_id = 2
+    diffusion_coefficient_scheme = local
+    block = '${ref_blocks}'
+  []
+  [cavity]
+    type = ConstantNeutronicsMaterial
+    block = '${upcav_blocks}'
+    fromFile = true
+    material_id = 10
+    library_file = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/data/void.xml
+  []
+[]
+
+# ==============================================================================
+# Power Density
+# ==============================================================================
+[PowerDensity]
+  power_density_variable = total_power_density
+  power = 1000000.0
+[]
+
+# ==============================================================================
+# MULTIAPPS AND TRANSFERS
+# ==============================================================================
+[MultiApps]
+  # active = ''
+  # Reactor TH.
+  [pronghorn_th]
+    type = FullSolveMultiApp
+    input_files = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/gpbr200_ri_pronghorn_step0.i
+    keep_solution_during_restore = true
+    execute_on = 'TIMESTEP_END'
+  []
+[]
+
+[Transfers]
+  # active = ''
+  # TO Pronghorn.
+  [to_pronghorn_total_power_density]
+    type = MultiAppGeometricInterpolationTransfer
+    to_multi_app = pronghorn_th
+    source_variable = total_power_density
+    variable = power_density
+  []
+  [to_pronghorn_fixed_point_its]
+    type = MultiAppPostprocessorTransfer
+    to_multi_app = pronghorn_th
+    from_postprocessor = fixed_point_its
+    to_postprocessor = fixed_point_its
+  []
+
+  # Power Density.
+  [to_pronghorn_ppd]
+    type = MultiAppGeometricInterpolationTransfer
+    to_multi_app = pronghorn_th
+    source_variable = ppd
+    variable = ppd
+  []
+  # FROM Pronghorn.
+  [from_pronghorn_Tref]
+    type = MultiAppGeometricInterpolationTransfer
+    from_multi_app = pronghorn_th
+    source_variable = T_solid
+    variable = Tref
+  []
+
+  # Pebble Temperature.
+  [from_pronghorn_Tmod]
+    type = MultiAppGeometricInterpolationTransfer
+    from_multi_app = pronghorn_th
+    source_variable = Tmod
+    variable = Tmod
+  []
+  # TRISO Temperature.
+  [from_pronghorn_Tfuel]
+    type = MultiAppGeometricInterpolationTransfer
+    from_multi_app = pronghorn_th
+    source_variable = Tfuel
+    variable = Tfuel
+  []
+[]
+
+# ==============================================================================
+# EXECUTION PARAMETERS
+# ==============================================================================
+
+[TransportSystems]
+  particle = neutron
+  equation_type = eigenvalue
+  G = 9
+  ReflectingBoundary = 'ssleft'
+  VacuumBoundary = 'ssright sstop ssbottom'
+  [diff]
+    scheme = CFEM-Diffusion
+    family = LAGRANGE
+    order = FIRST
+    n_delay_groups = 6
+    assemble_scattering_jacobian = true
+    assemble_fission_jacobian = true
+  []
+[]
+
+[Executioner]
+  # Diff
+  type = Eigenvalue
+  solve_type = 'PJFNKMO'
+  constant_matrices = true
+  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart '
+  petsc_options_value = 'hypre boomeramg 100'
+  line_search = none
+  snesmf_reuse_base = false
+
+  # Linear/nonlinear iterations.
+  l_max_its = 100
+  l_tol = 1e-3
+
+  nl_max_its = 50
+  nl_rel_tol = 1e-7
+  nl_abs_tol = 1e-9
+
+  # Fixed point iterations.
+  fixed_point_max_its = 200
+  # fixed_point_max_its = 3
+  fixed_point_rel_tol = 1e-50
+  fixed_point_abs_tol = 5e-7
+  accept_on_max_fixed_point_iteration = true
+  fixed_point_force_norms = true
+
+  # Power iterations.
+  free_power_iterations = 4
+  extra_power_iterations = 20
+[]
+
+# ==============================================================================
+# POSTPROCESSORS DEBUG AND OUTPUTS
+# ==============================================================================
+[Debug]
+  show_var_residual_norms = false
+  show_actions = false
+[]
+
+[Postprocessors]
+  # For Pronghorn TimeStepper.
+  [fixed_point_its]
+    type = NumFixedPointIterations
+  []
+[]
+
+[VectorPostprocessors]
+  [./element_value_sampler]
+    type = ElementValueSampler
+    variable = 'Tfuel sub_id'
+    sort_by = id
+    block = ${fuel_blocks}
+  [../]
+[]
+
+[Outputs]
+  file_base = os200mw_gcpbr_eq_gfnk_reactor_fv
+  print_linear_residuals = false
+  print_linear_converged_reason = false
+  print_nonlinear_converged_reason = false
+  perf_graph = false
+  [exodus]
+    type = Exodus
+    additional_execute_on = 'FINAL'
+  []
+  [csv]
+    type = CSV
+    additional_execute_on = 'FINAL'
+  []
+[]
+
+# ==============================================================================
+# Model description:
+# An adaption of the gPBR model from Paolo Balestra from FEM to FV
+# ------------------------------------------------------------------------------
+# Idaho Falls, INL, January 2023
+# Initial conversion performed by Sebastian Schunert
+# Author(s)(name alph): David Reger, Dr. Javier Ortensi, Dr. Paolo Balestra,
+#   Dr. Ryan Stewart, Dr. Sebastian Schunert.
+# ==============================================================================
+# MODEL PARAMETERS
+# ==============================================================================
+# Blocks -----------------------------------------------------------------------
+riser_blocks = '1 2 3'
+fluid_only_blocks = '4'
+heated_blocks = '5'
+conus_blocks = '6'
+outlet_channels_blocks = '7'
+outlet_plenum_blocks = '8 9'
+ref_blocks = '10 11 12 13 14'
+barrel_blocks = '15'
+rpv_blocks = '16'
+#ref2barrel_gap = '17'
+#barrel2rpv_gap = '18'
+porous_blocks = '${riser_blocks} ${heated_blocks}
+                  ${conus_blocks} ${outlet_channels_blocks}
+                  ${outlet_plenum_blocks}'
+fluid_blocks = '${fluid_only_blocks} ${porous_blocks}'
+solid_only_blocks = '${ref_blocks} ${barrel_blocks} ${rpv_blocks}'
+pbed_blocks = '${heated_blocks} ${conus_blocks}'
+no_pbed_porous_blocks = '${riser_blocks} ${outlet_channels_blocks}
+                ${outlet_plenum_blocks}'
+
+# no_bed_solid_blocks = '${no_bed_porous_blocks} ${solid_only_blocks}'
+#positions_file = '../data/os200mw_gcpbr_mesh_msht_cntr.txt'
+
+# Geometry ---------------------------------------------------------------------
+pebble_diameter = 0.06 # Diameter of the pebbles (m).
+risers_dh = 0.05 # Diameter of the risers channels (m).
+outlet_chans_dh = 0.02 # Diameter of the outlet channels (m).
+outlet_plen_dh = 0.25 # Diameter of the outlet channels (m).
+pbed_top = 9.48438 # Absolute height of the core top in the model (m).
+pbed_r = 1.200 # Pebble Bed radius (m).
+pbed_height = 8.930 # Height of the cylindrical pebble bed region (m).
+rpv_r = 2.307 # rpv radius (m)
+cavity_thickness = 1.340 # Cavity thickness from pbmr400 (m)
+reactor_top = 10.8024 # Top of the reactor (m)
+reactor_bottom = -1.851 # Bottom of the reactor (m)ee_volume              = ${fparse  pbed_height * pbed_free_flow_area} # Pebble bed free volume (m3)
+
+# Properties -------------------------------------------------------------------
+global_emissivity = 0.80 # All the materials has the same emissivity (//).
+reactor_total_mfr = 78.6 # Total reactor He mass flow rate (kg/s).
+reactor_inlet_T_fluid = 533.25 # He temperature  at the inlet of the lower inlet plenum (K).
+reactor_inlet_rho = 5.5 # He temperature  at the inlet of the lower inlet plenum (K).
+reactor_outlet_pressure = 5.84e+6 # Pressure at the at the outlet of the outlet plenum (Pa).
+top_bottom_cav_temperature = '${fparse 273.15 + 200.0}' # Top and Bottom cavities temeperatures (K).
+rccs_temperature = '${fparse 273.15 + 25.0}' # RCCS temeperatures (K).
+htc_cavities = 10.0 # Heat Exchange coefficient for natural circulation (W/m2K)
+heat_capacity_multiplier = 1e-5
+
+# Intial values ----------------------------------------------------------------
+initial_temperature = 900.0 # (K)
+
+# Porosity ---------------------------------------------------------------------
+pbed_porosity = 0.39 # Pebble bed porosity (//).
+cavity_porosity = 0.95 # Ideally 1.0 (//).
+riser_porosity = 0.22 # 19 channels and inlet structures (//).
+outlet_channels_porosity = 0.25 # hundreds of small size channels (//).
+outlet_plenum_porosity = 0.34 # Complex geometry with columns (//).
+
+# Power ------------------------------------------------------------------------
+pbed_free_flow_area = '${fparse pi * pbed_r * pbed_r}' # Core inlet free flow area (m2)
+pbed_free_volume = '${fparse  pbed_height * pbed_free_flow_area}' # Pebble bed free volume (no conus) (m3)
+total_power = 100.0e+6 # Total reactor Power (W)
+power_density = '${fparse total_power / pbed_free_volume}' # Pebble Bed power density (W/m3)
+
+# BCs --------------------------------------------------------------------------
+inlet_area = '${fparse 2 * pi * 2.066 * (0.94438 - 0.55438)}'
+inlet_vel = '${fparse reactor_total_mfr/inlet_area/reactor_inlet_rho}'
+# inlet_mass_flux = ${fparse reactor_total_mfr/inlet_area}
+# Heat transfer area per volume ------------------------------------------------
+C_DB = 0.023 # original Dittus Boelter constant for areal htc; modified by ApV
+# ApV_bypass = 8.521                           # heat transfer area per volume bypass
+ApV_riser = 6.927 # heat transfer area per volume riser
+# ApV_top_reflector = 5.737                    # heat transfer area per volume top reflector
+# ApV_bottom_reflector = 5.737                 # heat transfer area per volume bottom reflector
+
+[GlobalParams]
+  pebble_diameter = ${pebble_diameter}
+  acceleration = ' 0.00 -9.81 0.00 ' # Gravity acceleration (m/s2).
+  fp = fluid_properties_obj
+[]
+
+# ==============================================================================
+# GEOMETRY AND MESH
+# ==============================================================================
+[Mesh]
+  # Build mesh.
+  [th_mesh]
+    type = FileMeshGenerator
+    file = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/data/gpbr200_mesh_phth.e
+  []
+  [add_inlet]
+    type = SideSetsAroundSubdomainGenerator
+    input = th_mesh
+    fixed_normal = true
+    normal = '1 0 0'
+    new_boundary = inlet
+    block = '1'
+  []
+  [add_outlet]
+    type = SideSetsAroundSubdomainGenerator
+    input = add_inlet
+    fixed_normal = true
+    normal = '1 0 0'
+    new_boundary = outlet
+    block = '9'
+  []
+  [add_rpv2rcav]
+    type = SideSetsAroundSubdomainGenerator
+    input = add_outlet
+    fixed_normal = true
+    normal = '1 0 0'
+    new_boundary = rpv2rcav
+    block = '16'
+  []
+  [add_wall]
+    type = SideSetsBetweenSubdomainsGenerator
+    input = add_rpv2rcav
+    primary_block = '${fluid_blocks}'
+    paired_block = '${ref_blocks}'
+    new_boundary = wall
+  []
+  [add_inner_wall]
+    type = ParsedGenerateSideset
+    input = add_wall
+    normal = '-1 0 0'
+    combinatorial_geometry = 'abs(x) < 1e-3'
+    new_sideset_name = inner
+    included_subdomains = '4 5 6'
+  []
+  [add_rtop]
+    type = ParsedGenerateSideset
+    input = add_inner_wall
+    normal = '0 1 0'
+    combinatorial_geometry = 'y >= ${reactor_top}-1e-4'
+    new_sideset_name = rtop
+    included_subdomains = '13 14'
+  []
+  [add_rbottom]
+    type = ParsedGenerateSideset
+    input = add_rtop
+    normal = '0 -1 0'
+    combinatorial_geometry = 'y <= ${reactor_bottom}'
+    new_sideset_name = rbottom
+    included_subdomains = '10 11'
+  []
+
+  # General parameters.
+  uniform_refine = 0
+  coord_type = RZ
+  rz_coord_axis = Y
+
+[]
+
+[Problem]
+  kernel_coverage_check = false
+  material_coverage_check = false
+[]
+
+# ==============================================================================
+# VARIABLES AND KERNELS ==> mostly FVAction
+# ==============================================================================
+[Variables]
+  [T_solid]
+    type = INSFVEnergyVariable
+    initial_condition = ${reactor_inlet_T_fluid}
+    block = '${porous_blocks} ${solid_only_blocks}'
+  []
+[]
+
+[FVKernels]
+  [energy_storage]
+    type = PINSFVEnergyTimeDerivative
+    variable = T_solid
+    rho = rho_s
+    cp = cp_s
+    is_solid = true
+    porosity = porosity
+    scaling = ${heat_capacity_multiplier}
+  []
+  [solid_energy_diffusion_core]
+    type = FVAnisotropicDiffusion
+    variable = T_solid
+    coeff = 'effective_thermal_conductivity'
+  []
+  [convection_pebble_bed_fluid]
+    type = PINSFVEnergyAmbientConvection
+    variable = T_solid
+    T_fluid = T_fluid
+    T_solid = T_solid
+    is_solid = true
+    h_solid_fluid = alpha
+    block = '${porous_blocks}'
+  []
+  [heat_source]
+    type = FVCoupledForce
+    variable = T_solid
+    v = power_density
+    block = '${heated_blocks}'
+  []
+
+[]
+
+[FVBCs]
+  [rpv_radial_radiation]
+    type = FVInfiniteCylinderRadiativeBC
+    variable = T_solid
+    cylinder_emissivity = '${global_emissivity}'
+    boundary_emissivity = '${global_emissivity}'
+    boundary_radius = '${rpv_r}'
+    cylinder_radius = '${fparse rpv_r + cavity_thickness}'
+    Tinfinity = '${rccs_temperature}'
+    boundary = 'rpv2rcav'
+  []
+  [rpv_radial_convection]
+    type = FVFunctorConvectiveHeatFluxBC
+    variable = T_solid
+    T_solid = T_solid
+    T_bulk = ${rccs_temperature}
+    boundary = 'rpv2rcav'
+    heat_transfer_coefficient = ${htc_cavities}
+    is_solid = true
+  []
+  [rpv_bottom_top]
+    type = FVFunctorConvectiveHeatFluxBC
+    variable = T_solid
+    T_solid = T_solid
+    T_bulk = ${top_bottom_cav_temperature}
+    boundary = 'rtop rbottom'
+    heat_transfer_coefficient = ${htc_cavities}
+    is_solid = true
+  []
+[]
+
+[Modules]
+  [NavierStokesFV]
+    # Basic settings
+    block = '${fluid_blocks}'
+    compressibility = 'weakly-compressible'
+    gravity = '0.0 -9.81 0.0'
+    add_energy_equation = true
+
+    # Porous treatement.
+    porous_medium_treatment = true
+    friction_types = 'darcy forchheimer'
+    friction_coeffs = 'Darcy_coefficient Forchheimer_coefficient'
+    porosity_interface_pressure_treatment = 'bernoulli'
+
+    # Interpolation schemes.
+    pressure_face_interpolation = average
+    momentum_face_interpolation = average
+    momentum_advection_interpolation = upwind
+    mass_advection_interpolation = upwind
+    energy_advection_interpolation = average
+
+    # Convective heat transfer.
+    ambient_convection_blocks = '${porous_blocks}'
+    ambient_convection_alpha = 'alpha'
+    ambient_temperature = 'T_solid'
+
+    # Fluid properties.
+    density = 'rho'
+    dynamic_viscosity = 'mu'
+    thermal_conductivity = 'kappa'
+    specific_heat = 'cp'
+
+    # Initial conditions.
+    initial_velocity = '0 -1e-3 0'
+    initial_pressure = '${reactor_outlet_pressure}'
+    initial_temperature = '${reactor_inlet_T_fluid}'
+
+    # Fluid boundary conditions.
+    inlet_boundaries = 'inlet'
+    momentum_inlet_types = 'fixed-velocity'
+    momentum_inlet_function = 'vel_inlet_fn 0'
+    # momentum_inlet_types = 'flux-mass'
+    # flux_inlet_pps = 'flux-mass_pps'
+    # flux_inlet_directions = '-1 0 0'
+    energy_inlet_function = '${reactor_inlet_T_fluid}'
+    energy_inlet_types = 'fixed-temperature'
+
+    outlet_boundaries = 'outlet'
+    momentum_outlet_types = 'fixed-pressure'
+    pressure_function = '${reactor_outlet_pressure}'
+
+    wall_boundaries = 'wall inner'
+    momentum_wall_types = 'slip  symmetry'
+    energy_wall_types = 'heatflux  heatflux'
+    energy_wall_function = '0         0'
+
+  []
+[]
+
+# ==============================================================================
+# AUXVARIABLES AND AUXKERNELS
+# ==============================================================================
+[AuxVariables]
+  [power_density]
+    family = MONOMIAL
+    order = CONSTANT
+    fv = true
+    block = ${heated_blocks}
+    initial_condition = ${power_density}
+  []
+
+  [rho_var]
+    family = MONOMIAL
+    order = CONSTANT
+    fv = true
+    block = ${fluid_blocks}
+  []
+
+  [porosity_var]
+    family = MONOMIAL
+    order = CONSTANT
+    fv = true
+    block = ${fluid_blocks}
+  []
+
+  # Pebble/TRISO Power Density.
+  [ppd]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${heated_blocks}'
+  []
+
+  # Pebble Temperature.
+  [Tmod]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${heated_blocks}'
+    initial_condition = ${initial_temperature}
+  []
+
+  # TRISO Temperature.
+  [Tfuel]
+    family = MONOMIAL
+    order = CONSTANT
+    block = '${heated_blocks}'
+    initial_condition = ${initial_temperature}
+  []
+[]
+
+[AuxKernels]
+  [rho_aux]
+    type = ADFunctorElementalAux
+    variable = rho_var
+    functor = rho
+  []
+
+  [porosity_aux]
+    type = ADFunctorElementalAux
+    variable = porosity_var
+    functor = porosity
+  []
+[]
+
+# ==============================================================================
+# INITIAL CONDITIONS AND FUNCTIONS
+# ==============================================================================
+[Functions]
+  [vel_inlet_fn]
+    type = PiecewiseLinear
+    x = '0'
+    y = '-${inlet_vel}'
+  []
+
+  [predt]
+    type = PiecewiseLinear
+    x = '0     1    10 20 100 1000'
+    y = '0.05  0.25 1  2  10  50'
+  []
+
+  [dts]
+    type = ParsedFunction
+    expression = 'if(fixed_point_its<2, predt, 100+t)'
+    symbol_values = 'fixed_point_its predt'
+    symbol_names = 'fixed_point_its predt'
+  []
+
+  #  [he_conductivity_fn]
+  #    type = PiecewiseLinear
+  #    x = '300 350 400 450 500 550 600 650 700 750 800 850 900 950
+  #         1000 1050 1100 1150 1200 1250 1300 1350 1400 1450 1500'
+  #    y = '1.57e-01 1.75e-01 1.92e-01
+  #         2.08e-01 2.24e-01 2.40e-01 2.55e-01 2.69e-01 2.84e-01 2.98e-01 3.12e-01
+  #         3.25e-01 3.38e-01 3.51e-01 3.64e-01 3.77e-01 3.89e-01 4.02e-01
+  #         4.14e-01 4.26e-01 4.38e-01 4.50e-01 4.61e-01 4.73e-01 4.84e-01'
+  #  []
+[]
+
+# ==============================================================================
+# FLUID PROPERTIES, MATERIALS AND USER OBJECTS
+# ==============================================================================
+[FluidProperties]
+  [fluid_properties_obj]
+    type = HeliumFluidProperties
+  []
+[]
+
+[Materials]
+  # Fluid properties and non-dimensional numbers.
+  [fluid_props_to_mat_props]
+    type = GeneralFunctorFluidProps
+    pressure = 'pressure'
+    T_fluid = 'T_fluid'
+    speed = 'speed'
+    porosity = porosity
+    characteristic_length = characteristic_length
+    block = ${fluid_blocks}
+  []
+
+  # Porosity.
+  [outlet_channels_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '${outlet_channels_porosity}'
+    block = '${outlet_channels_blocks}'
+  []
+  [outlet_plenum_blocks_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '${outlet_plenum_porosity}'
+    block = '${outlet_plenum_blocks}'
+  []
+  [pbed_blocks_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '${pbed_porosity}'
+    block = ' ${heated_blocks} ${conus_blocks}'
+  []
+  [cavity_blocks_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '${cavity_porosity}'
+    block = '${fluid_only_blocks}'
+  []
+  [riser_blocks_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '${riser_porosity}'
+    block = '${riser_blocks}'
+  []
+
+  [all_other_porosity]
+    type = ADGenericFunctorMaterial
+    prop_names = 'porosity'
+    prop_values = '-1' # Dummy value.
+    block = '${solid_only_blocks}'
+  []
+
+  # Characteristic Length.
+  [pbed_hydraulic_diameter]
+    type = GenericFunctorMaterial
+    prop_names = 'characteristic_length'
+    prop_values = '${pebble_diameter}'
+    block = '${pbed_blocks}'
+  []
+  [risers_hydraulic_diameter]
+    type = GenericFunctorMaterial
+    prop_names = 'characteristic_length'
+    prop_values = '${risers_dh}'
+    block = '${riser_blocks} ${fluid_only_blocks}'
+  []
+  [outlet_plen_hydraulic_diameter]
+    type = GenericFunctorMaterial
+    prop_names = 'characteristic_length'
+    prop_values = '${outlet_plen_dh}'
+    block = '${outlet_plenum_blocks}'
+  []
+  [outlet_chans_hydraulic_diameter]
+    type = GenericFunctorMaterial
+    prop_names = 'characteristic_length'
+    prop_values = '${outlet_chans_dh}'
+    block = '${outlet_channels_blocks}'
+  []
+
+  # Solid properties.
+  [solid_blocks_full_density_graphite]
+    type = ADGenericFunctorMaterial
+    prop_names = 'rho_s cp_s k_s '
+    prop_values = '1780.0 1697.0 26.0'
+    block = '${porous_blocks} ${ref_blocks}'
+  []
+
+  [core_barrel_steel]
+    type = ADGenericFunctorMaterial
+    prop_names = 'rho_s cp_s k_s '
+    prop_values = '7800.0 540.0 17.0'
+    block = '${barrel_blocks}'
+  []
+
+  [rpv_steel]
+    type = ADGenericFunctorMaterial
+    prop_names = 'rho_s cp_s k_s '
+    prop_values = '7800.0 525.0 38.0'
+    block = '${rpv_blocks}'
+  []
+
+  #  [he_rho_and_cp]
+  #    type = ADGenericFunctorMaterial
+  #    prop_names = 'rho_s  cp_s'
+  #    prop_values = '6      5000'
+  #    block = '${ref2barrel_gap} ${barrel2rpv_gap}'
+  #  []
+
+  # Drag coefficients.
+  [pbed_drag_coefficient]
+    type = FunctorKTADragCoefficients
+    T_fluid = T_fluid
+    T_solid = T_solid
+    porosity = porosity
+    block = '${pbed_blocks}'
+  []
+  [drag_coefficient0]
+    type = FunctorIsotropicFunctorDragCoefficients
+    Darcy_coefficient_sub = 0
+    Forchheimer_coefficient_sub = 0.2 # WIP replace with Correlation
+    block = '${riser_blocks} ${fluid_only_blocks}'
+  []
+  [outlet_channels_drag_coefficients]
+    type = FunctorChurchillDragCoefficients
+    multipliers = '1.0e+05 1.0 1.0e+05'
+    block = '${outlet_channels_blocks}'
+  []
+  [outlet_drag_coefficients00]
+    type = FunctorChurchillDragCoefficients
+    multipliers = '1.0 1.0 1.0e+05'
+    block = '8'
+  []
+  [outlet_drag_coefficients01]
+    type = FunctorChurchillDragCoefficients
+    multipliers = '1.0 1.0e+05 1.0e+05'
+    block = '9'
+  []
+
+  # Heat transfer coefficients.
+  [pbed_alpha]
+    type = FunctorKTAPebbleBedHTC
+    T_solid = T_solid
+    T_fluid = T_fluid
+    mu = mu
+    porosity = porosity
+    pressure = pressure
+    block = '${pbed_blocks}'
+  []
+  [porous_blocks_alpha]
+    type = FunctorDittusBoelterWallHTC
+    C = '${fparse C_DB * ApV_riser}'
+    block = '${riser_blocks}'
+  []
+  [rename_wall_htc_to_alpha]
+    type = ADGenericFunctorMaterial
+    prop_names = 'alpha'
+    prop_values = 'wall_htc'
+    block = '${riser_blocks}'
+  []
+
+  [porous_blocks_noexch_alpha]
+    type = ADGenericFunctorMaterial
+    prop_names = 'alpha'
+    prop_values = '0.0'
+    block = '${outlet_channels_blocks} ${outlet_plenum_blocks}'
+  []
+
+  # Effective solid thermal conductivity.
+  [pebble_effective_thermal_conductivity]
+    type = FunctorPebbleBedKappaSolid
+    T_solid = T_solid
+    porosity = porosity
+    solid_conduction = ZBS
+    emissivity = 0.8
+    infinite_porosity = '${pbed_porosity}'
+    Youngs_modulus = 9e+9
+    Poisson_ratio = 0.1360
+    lattice_parameters = interpolation
+    coordination_number = You
+    wall_distance = bed_geometry # Requested by solid_conduction = ZBS
+    block = '${pbed_blocks}'
+  []
+  [porous_blocks_solid_effective_conductivity]
+    type = FunctorVolumeAverageKappaSolid
+    porosity = porosity
+    block = '${no_pbed_porous_blocks}'
+  []
+  [effective_solid_thermal_conductivity]
+    type = ADGenericVectorFunctorMaterial
+    prop_names = 'effective_thermal_conductivity'
+    prop_values = 'kappa_s kappa_s kappa_s'
+    block = '${pbed_blocks} ${no_pbed_porous_blocks}'
+  []
+  [effective_solid_thermal_conductivity_solid_only]
+    type = ADGenericVectorFunctorMaterial
+    prop_names = 'effective_thermal_conductivity'
+    prop_values = 'k_s k_s k_s'
+    block = '${solid_only_blocks}'
+  []
+  #  [effective_thermal_conductivity_refl_ref2barrel_gap]
+  #    type = FunctorGapHeatTransferEffectiveThermalConductivity
+  #    gap_direction = x
+  #    temperature = T_solid
+  #    gap_conductivity_function = he_conductivity_fn
+  #    emissivity_primary = ${global_emissivity}
+  #    emissivity_secondary = ${global_emissivity}
+  #    radius_primary = 2.066
+  #    radius_secondary = 2.098
+  #    prop_name = effective_thermal_conductivity
+  #    block = '${ref2barrel_gap}'
+  #  []
+  #  [effective_thermal_conductivity_barrel_rpv_gap]
+  #    type = FunctorGapHeatTransferEffectiveThermalConductivity
+  #    gap_direction = x
+  #    temperature = T_solid
+  #    gap_conductivity_function = he_conductivity_fn
+  #    emissivity_primary = ${global_emissivity}
+  #    emissivity_secondary = ${global_emissivity}
+  #    radius_primary = 2.143
+  #    radius_secondary = 2.215
+  #    prop_name = effective_thermal_conductivity
+  #    block = '${barrel2rpv_gap}'
+  #  []
+
+  # Effective fluid thermal conductivity.
+  [pebble_bed_effective_fluid_thermal_conductivity]
+    type = FunctorLinearPecletKappaFluid
+    porosity = porosity
+    block = '${pbed_blocks}'
+  []
+  [everywhere_else_effective_fluid_thermal_conductivity]
+    type = ADGenericVectorFunctorMaterial
+    prop_names = 'kappa'
+    prop_values = 'k k k'
+    block = '${no_pbed_porous_blocks} ${fluid_only_blocks}'
+  []
+[]
+
+[UserObjects]
+  [bed_geometry]
+    type = WallDistanceCylindricalBed
+    top = '${pbed_top}'
+    inner_radius = 0.0
+    outer_radius = '${pbed_r}'
+  []
+[]
+
+# ==============================================================================
+# MULTIAPPS & TRANSFERS
+# ==============================================================================
+[MultiApps]
+  # Pebbles/TRISO.
+  [moose_pebble_triso]
+    type = FullSolveMultiApp
+    input_files = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/gpbr200_ri_triso_step0.i
+    output_in_position = true
+    max_procs_per_app = 1
+    positions_file = /home/stewryan/projects/python_modules/pyrates/pyrates/tests/kugelpy/_tmp/test_create_griffin_file/data/os200mw_gcpbr_mesh_msht_cntr.txt
+    execute_on = 'FINAL'
+  []
+[]
+
+[Transfers]
+  # To Pebbles/TRISO temperature.
+  [to_pebble_triso_surface_temp]
+    type = MultiAppVariableValueSamplePostprocessorTransfer
+    to_multi_app = moose_pebble_triso
+    source_variable = T_solid
+    postprocessor = from_pronghorn_pebble_surface_temp
+  []
+
+  # To Pebbles/TRISO heat source.
+  [to_pebble_triso_heat_source]
+    type = MultiAppVariableValueSampleTransfer
+    to_multi_app = moose_pebble_triso
+    source_variable = ppd
+    variable = from_pronghorn_porous_media_power_density
+  []
+
+  # From Pebbles/TRISO TRISO temperature.
+  [from_pebble_triso_Tfuel]
+    type = MultiAppVariableValueSamplePostprocessorTransfer
+    from_multi_app = moose_pebble_triso
+    source_variable = Tfuel
+    postprocessor = to_pronghorn_fuel_average_temp
+  []
+
+  # From Pebbles/TRISO Pebble temperature.
+  [from_pebble_triso_Tmod]
+    type = MultiAppVariableValueSamplePostprocessorTransfer
+    from_multi_app = moose_pebble_triso
+    source_variable = Tmod
+    postprocessor = to_pronghorn_moderator_average_temp
+  []
+[]
+
+# ==============================================================================
+# EXECUTION PARAMETERS
+# ==============================================================================
+[Preconditioning]
+  [smp]
+    type = SMP
+    full = true
+  []
+[]
+
+[Executioner]
+  type = Transient
+  solve_type = NEWTON
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package
+                        -ksp_gmres_restart -sub_pc_factor_shift_type'
+  petsc_options_value = 'lu mumps 100 NONZERO'
+
+  # Tolerancees.
+  automatic_scaling = true
+  off_diagonals_in_auto_scaling = true
+  compute_scaling_once = false
+  # nl_abs_tol = 1e-5
+  # nl_rel_tol = 1e-6
+  nl_abs_tol = 1e-8
+  nl_rel_tol = 1e-9
+  line_search = none
+  nl_max_its = 15
+
+  # Time step control.
+  # [TimeStepper]
+  #   type = FunctionDT
+  #   function = 'dts'
+  # []
+
+  [TimeStepper]
+    type = IterationAdaptiveDT
+    dt = 0.05
+    cutback_factor = 0.5
+    growth_factor = 2.00
+    optimal_iterations = 6
+  []
+
+  # Steady state detection.
+  steady_state_detection = true
+  steady_state_tolerance = 1e-13
+
+[]
+
+# ==============================================================================
+# POSTPROCESSORS DEBUG AND OUTPUTS
+# ==============================================================================
+[Debug]
+  show_var_residual_norms = false
+[]
+
+[Postprocessors]
+  # Fixed points iterations.
+  [fixed_point_its]
+    type = Receiver
+    default = 1
+  []
+
+  # Impose mass flow rate.
+  # [flux-mass_pps]
+  #   type = Receiver
+  #   default = '${inlet_mass_flux}'
+  # []
+
+  # General checks.
+  [pp00_inlet_mfr]
+    type = VolumetricFlowRate
+    vel_x = 'superficial_vel_x'
+    vel_y = 'superficial_vel_y'
+    advected_quantity = rho
+    boundary = inlet
+    rhie_chow_user_object = pins_rhie_chow_interpolator
+    execute_on = 'INITIAL TIMESTEP_END'
+  []
+  [pp01_outlet_mfr]
+    type = VolumetricFlowRate
+    vel_x = 'superficial_vel_x'
+    vel_y = 'superficial_vel_y'
+    advected_quantity = rho
+    boundary = outlet
+    rhie_chow_user_object = pins_rhie_chow_interpolator
+    execute_on = 'INITIAL TIMESTEP_END'
+  []
+  [pp02_inlet_pressure]
+    type = SideAverageValue
+    variable = pressure
+    boundary = 'inlet'
+    execute_on = 'INITIAL TIMESTEP_END'
+  []
+  [pp03_total_power]
+    type = ElementIntegralVariablePostprocessor
+    variable = power_density
+    block = '${heated_blocks}'
+    execute_on = 'INITIAL TIMESTEP_END'
+  []
+  [pp04_T_oulet]
+    type = SideAverageValue
+    variable = T_fluid
+    boundary = 'outlet'
+  []
+  [pp05_rpv_temp]
+    type = ElementAverageValue
+    variable = T_solid
+    block = '${rpv_blocks}'
+  []
+[]
+
+[Outputs]
+  # file_base = gpbr200_ss_phth_reactor
+  print_linear_residuals = false
+  print_linear_converged_reason = false
+  print_nonlinear_converged_reason = false
+  exodus = true
+  csv = true
+
+  [restart]
+    type = Checkpoint
+    additional_execute_on = 'FINAL'
+  []
+[]
+
+# ==============================================================================
+# Model description:
+# Equilibrium core neutronics model coupled with TH and pebble temperature
+# models.
+# ------------------------------------------------------------------------------
+# Idaho Falls, INL, April 5, 2022 14:09 PM
+# Author(s)(name alph): David Reger, Dr. Javier Ortensi, Dr. Paolo Balestra,
+#   Dr. Ryan Stewart, Dr. Sebastian Schunert.
+# ==============================================================================
+# MODEL PARAMETERS
+# ==============================================================================
+# Geometry and data ------------------------------------------------------------
+pebble_radius = 3.0e-2 # pebble radius (m)
+pebble_shell_thickness = 5.0e-03 # pebble fuel free zone thickness (graphite shell) (m)
+pebble_volume = '${fparse 4/3*pi*pebble_radius^3}' # volume of the pebble (m3)
+pebble_core_volume = '${fparse 4/3*pi*(pebble_radius-pebble_shell_thickness)^3}' # volume of the pebble occupied by TRISO (m3)
+
+kernel_radius = 2.1250e-04 # kernel particle radius (m)
+kernel_volume = '${fparse 4/3*pi*kernel_radius^3}' # volume of the kernel (m3)
+triso_number = 18687 # number of TRISO particle in a pebble (//)
+
+initial_temperature = 1000.0 # (K)
+
+# ==============================================================================
+# GEOMETRY AND MESH
+# ==============================================================================
+[Mesh]
+  block_id = ' 1 2 3 4 5 6 7 '
+  block_name = ' core
+                 shell
+                 kernel
+                 buffer
+                 ipyc
+                 sic
+                 opyc '
+  dim = 1
+  [pebble_mesh]
+    type = CartesianMeshGenerator
+    dim = 1
+    # Uniform mesh.
+    dx = ' 2.50e-02 5.00e-03 '
+    ix = ' 15 3 '
+    subdomain_id = ' 1 2 '
+
+  []
+  [triso_mesh]
+    type = CartesianMeshGenerator
+    dim = 1
+    # Uniform mesh.
+    dx = ' ${kernel_radius} 1.00e-04 4.00e-05 3.50e-05 4.00e-05 '
+    ix = ' 21 8 3 3 3 '
+    subdomain_id = ' 3 4 5 6 7 '
+  []
+  [mesh_combine]
+    type = CombinerGenerator
+    inputs = ' pebble_mesh triso_mesh'
+  []
+  [pebble_surface]
+    type = SideSetsAroundSubdomainGenerator
+    block = ' 2 '
+    fixed_normal = 1
+    normal = ' 1 0 0 '
+    input = mesh_combine
+    new_boundary = pebble_surface
+  []
+  [triso_surface]
+    type = SideSetsAroundSubdomainGenerator
+    block = ' 7 '
+    fixed_normal = 1
+    normal = ' 1 0 0 '
+    input = pebble_surface
+    new_boundary = triso_surface
+  []
+  coord_type = 'RSPHERICAL'
+[]
+
+# ==============================================================================
+# VARIABLES AND KERNELS
+# ==============================================================================
+[Variables]
+  [T_pebble]
+    block = ' 1 2 '
+    initial_condition = ${initial_temperature}
+  []
+  [T_triso]
+    block = ' 3 4 5 6 7 '
+    initial_condition = ${initial_temperature}
+  []
+[]
+[Kernels]
+  # Pebble
+  [pebble_time_dependence]
+    type = ADHeatConductionTimeDerivative
+    variable = T_pebble
+    density_name = 'rho_s'
+    specific_heat = 'cp_s'
+    block = ' 1 2 '
+  []
+  [pebble_diffusion]
+    type = ADHeatConduction
+    variable = T_pebble
+    thermal_conductivity = 'k_s'
+    block = ' 1 2 '
+  []
+  [pebble_core_heat_source]
+    type = HeatSrc
+    variable = T_pebble
+    heat_source = from_pronghorn_porous_media_power_density
+    scaling_factor = '${fparse pebble_volume/pebble_core_volume}'
+    block = ' 1 '
+  []
+  # TRISO
+  [triso_diffusion]
+    type = ADHeatConduction
+    variable = T_triso
+    thermal_conductivity = 'k_s'
+    block = ' 3 4 5 6 7 '
+  []
+  [kernel_heat_source]
+    type = HeatSrc
+    variable = T_triso
+    heat_source = from_pronghorn_porous_media_power_density
+    scaling_factor = '${fparse pebble_volume/triso_number/kernel_volume}'
+    block = ' 3 '
+  []
+[]
+
+# ==============================================================================
+# AUXVARIABLES AND AUXKERNELS
+# ==============================================================================
+[AuxVariables]
+  [from_pronghorn_porous_media_power_density]
+    block = ' 1 3 '
+  []
+[]
+
+# ==============================================================================
+# INITIAL CONDITIONS AND FUNCTIONS
+# ==============================================================================
+[Functions]
+[]
+
+# ==============================================================================
+# MATERIALS AND USER OBJECTS
+# ==============================================================================
+[Materials]
+  # Pebble.
+  [pebble_core]
+    type = PronghornSolidMaterialPT
+    T_solid = T_pebble
+    solid = pebble_core
+    block = ' 1 '
+  []
+  [pebble_shell]
+    type = PronghornSolidMaterialPT
+    T_solid = T_pebble
+    solid = gmatrix
+    block = ' 2 '
+  []
+
+  # TRISO.
+  [kernel]
+    type = PronghornSteadyStateSolidMaterial
+    T_solid = T_triso
+    solid = kernel
+    block = ' 3 '
+  []
+  [buffer]
+    type = PronghornSteadyStateSolidMaterial
+    T_solid = T_triso
+    solid = buffer
+    block = ' 4 '
+  []
+  [ipyc]
+    type = PronghornSteadyStateSolidMaterial
+    T_solid = T_triso
+    solid = ipyc
+    block = ' 5 '
+  []
+  [sic]
+    type = PronghornSteadyStateSolidMaterial
+    T_solid = T_triso
+    solid = sic
+    block = ' 6 '
+  []
+  [opyc]
+    type = PronghornSteadyStateSolidMaterial
+    T_solid = T_triso
+    solid = opyc
+    block = ' 7 '
+  []
+[]
+
+[UserObjects]
+  # Single component materials.
+  [kernel]
+    type = FunctionSolidProperties
+    k_s = '1/(0.035 + 2.25e-4*t) + 8.30e-11*t^3'
+    rho_s = 10500.0
+    cp_s = 320.0
+  []
+  [buffer]
+    type = FunctionSolidProperties
+    k_s = 0.7
+    rho_s = 1050.0
+    cp_s = 1760.0
+  []
+  [ipyc]
+    type = FunctionSolidProperties
+    k_s = 4.0
+    rho_s = 1900.0
+    cp_s = 1760.0
+  []
+  [sic]
+    type = FunctionSolidProperties
+    k_s = 16.0
+    rho_s = 3180.0
+    cp_s = 1242.0
+
+  []
+  [opyc]
+    type = FunctionSolidProperties
+    k_s = 4.0
+    rho_s = 1900.0
+    cp_s = 1760.0
+  []
+  [gmatrix]
+    type = FunctionSolidProperties
+    k_s = 32.4
+    rho_s = 1740.0
+    cp_s = 1760.0
+  []
+
+  # Mixtures.
+  [triso]
+    type = CompositeSolidProperties
+    materials = 'kernel buffer ipyc sic opyc'
+    fractions = '0.12282 0.26779 0.17001 0.18412 0.25526' # volume fractions.
+    k_mixing = 'series'
+    rho_mixing = 'series'
+    cp_mixing = 'series'
+  []
+  [pebble_core]
+    type = CompositeSolidProperties
+    materials = 'triso gmatrix'
+    fractions = '0.09344 0.90656' # volume fractions.
+    k_mixing = 'chiew'
+    rho_mixing = 'series'
+    cp_mixing = 'series'
+  []
+[]
+
+# ==============================================================================
+# BOUNDARY CONDITIONS
+# ==============================================================================
+[BCs]
+  [from_pronghorn_pebble_surface_temp]
+    type = PostprocessorDirichletBC
+    variable = T_pebble
+    postprocessor = from_pronghorn_pebble_surface_temp
+    boundary = 'pebble_surface'
+  []
+  [triso_surface_temp]
+    type = PostprocessorDirichletBC
+    variable = T_triso
+    postprocessor = pebble_core_average_temp
+    boundary = 'triso_surface'
+  []
+[]
+
+# ==============================================================================
+# EXECUTION PARAMETERS
+# ==============================================================================
+[Executioner]
+  type = Transient
+  petsc_options_iname = '-pc_type -pc_hypre_type'
+  petsc_options_value = 'hypre boomeramg'
+  line_search = 'l2'
+
+  # Problem time parameters.
+  end_time = 1e+6
+  dt = 1e+6
+
+  # Linear/nonlinear iterations.
+  nl_rel_tol = 1e-40
+  nl_abs_tol = 1e-9
+[]
+
+# ==============================================================================
+# POSTPROCESSORS DEBUG AND OUTPUTS
+# ==============================================================================
+[Debug]
+  show_var_residual_norms = false
+[]
+
+[Postprocessors]
+  # Pebble/TRISO interaction.
+  [pebble_core_average_temp]
+    type = ElementAverageValue
+    variable = T_pebble
+    block = ' 1 '
+    execute_on = 'LINEAR'
+  []
+
+  # FROM Pronghorn transfer.
+  [from_pronghorn_pebble_surface_temp]
+    type = Receiver
+    default = ${initial_temperature}
+  []
+
+  # TO Pronghorn transfer.
+  [to_pronghorn_fuel_average_temp]
+    type = ElementAverageValue
+    variable = T_triso
+    block = ' 3 '
+  []
+  [to_pronghorn_moderator_average_temp]
+    type = ElementAverageValue
+    variable = T_pebble
+    block = ' 1 2 '
+  []
+
+  # Check values.
+  [from_pronghorn_porous_media_power_density_average]
+    type = ElementAverageValue
+    variable = from_pronghorn_porous_media_power_density
+    block = ' 1 3 '
+  []
+[]
+
+[Outputs]
+  exodus = false
+  csv = false
+  console = false
+[]
+
+1.930769851318835e-06,4.575321654510109e-05,6.809268238285176e-05,0.04375627798320846,9.073540151321428e-09,1.1152421580303632e-07,0.00013431520226421718,6.820192242676497e-06,4.4959296798472026e-06
+1.60432733406311e-06,3.8017548220195855e-05,5.657999658626685e-05,0.036460434889624665,7.552932357143855e-09,9.315422702139944e-08,0.00011160602639914051,5.6670767169454685e-06,3.735785957799827e-06
+1.2858005278857042e-06,3.0469457530619584e-05,4.5346475082579046e-05,0.029602217933438372,6.103610987737247e-09,7.646909585396403e-08,8.944751270192563e-05,4.54192244788737e-06,2.994074537847257e-06
+9.784848324691636e-07,2.318703515878847e-05,3.450833711135994e-05,0.022511026594446985,4.6426854688291135e-09,5.811614557353752e-08,6.806890513402474e-05,3.4563698742702677e-06,2.278468897844897e-06
+6.280552593500425e-07,1.4882948510773551e-05,2.2149697057155846e-05,0.014059243187628643,2.928524444856102e-09,3.544964572266142e-08,4.369105448837782e-05,2.218523189279934e-06,1.4624696632009642e-06
+2.2256483174268163e-06,5.274091541822681e-05,7.84921951577783e-05,0.05119012942359704,1.0558454129591488e-08,1.3212769828693603e-07,0.00015482860933055997,7.861812084558002e-06,5.182574483336643e-06
+2.2065748338577787e-06,5.228893341560359e-05,7.781952841931961e-05,0.05056296966209325,1.0443092034226693e-08,1.3009941965606616e-07,0.0001535017504927195,7.794437489572357e-06,5.138160567938744e-06
+2.2511161461148046e-06,5.334442343348772e-05,7.939037200088963e-05,0.05086599641689438,1.0559167394806734e-08,1.2931403612761604e-07,0.0001566002941771885,7.951773839026226e-06,5.24187804950798e-06
+2.275623248508876e-06,5.3925165235501594e-05,8.025466679931096e-05,0.05187710521099296,1.0734491124870096e-08,1.328960391277423e-07,0.00015830514478194655,8.038341916752977e-06,5.298944474636532e-06
+2.0304994830547067e-06,4.8116497406182355e-05,7.160985877407773e-05,0.04653856102749854,9.611137346687405e-09,1.197670146555586e-07,0.00014125295864062011,7.17247427346884e-06,4.728157039657602e-06
+2.2294370073941302e-06,5.283069554006699e-05,7.862581132255071e-05,0.051260938158574604,1.0574271836059523e-08,1.3227497997914088e-07,0.000155092169734213,7.875195026996153e-06,5.191396634673502e-06
+2.2066415504282653e-06,5.2290514389998115e-05,7.782188132028331e-05,0.050540262208815294,1.0440208568273964e-08,1.2998813698554965e-07,0.00015350638974972276,7.794673059515982e-06,5.138315857681837e-06
+2.2558146369325958e-06,5.345576299458288e-05,7.955607421688192e-05,0.05089646366279951,1.0571214005823053e-08,1.2922406857880917e-07,0.00015692714657600295,7.968370591719264e-06,5.25281877234491e-06
+2.3127459545885582e-06,5.480485745197349e-05,8.156387754369309e-05,0.052145882542700556,1.0833374738737747e-08,1.3231857985586805e-07,0.00016088760927290605,8.169473047044413e-06,5.385387249217004e-06
+2.027872395752074e-06,4.805424364032924e-05,7.151720898406364e-05,0.04680982006131563,9.642456373582878e-09,1.2118785199409388e-07,0.00014107020256169206,7.163194373868532e-06,4.722039649625989e-06
+2.2449995918168803e-06,5.3199480195891795e-05,7.917465877706779e-05,0.05127141948665549,1.0602236027758287e-08,1.3154706765083453e-07,0.0001561747887376507,7.930167730045028e-06,5.227635115705214e-06
+2.226146521577695e-06,5.275272130093377e-05,7.85097653808603e-05,0.05073541763966134,1.0499283221189245e-08,1.2994113212443617e-07,0.00015486326407916943,7.863571766586945e-06,5.183734480940743e-06
+2.2585181529540063e-06,5.35198278824183e-05,7.965141942731033e-05,0.05108940434386245,1.0601299687573753e-08,1.3000618712306451e-07,0.0001571152198907442,7.977920487342615e-06,5.259114146088748e-06
+2.295651648299254e-06,5.439977577079405e-05,8.096101067796193e-05,0.05236839392074019,1.0833549292596414e-08,1.34230673288706e-07,0.00015969843353662316,8.109089657859465e-06,5.345581997114633e-06
+2.0661294083527523e-06,4.896081537941658e-05,7.28664234469658e-05,0.04738164276342213,9.783279234374703e-09,1.219943636933919e-07,0.00014373157605980115,7.298332307480563e-06,4.8111237435900514e-06
+2.160243649903676e-06,5.119102902746795e-05,7.618556122677555e-05,0.05094130835181366,1.0413899496747742e-08,1.3421342095693844e-07,0.00015027869106913855,7.630778540266306e-06,5.030275173894639e-06
+2.1646372485634573e-06,5.1295143596460165e-05,7.634051077596902e-05,0.050785000870032244,1.0400771184135624e-08,1.3325077500786442e-07,0.00015058433471828406,7.646298365347795e-06,5.040505976741117e-06
+2.231908200482216e-06,5.2889255099823286e-05,7.871296317337271e-05,0.05127625392759781,1.0580514293903784e-08,1.3222429167495127e-07,0.00015526408113070899,7.883924260567968e-06,5.197151020899197e-06
+2.231579435653215e-06,5.288146439996155e-05,7.87013685863407e-05,0.05258851891122047,1.0753171205384817e-08,1.3847914438539308e-07,0.00015524120964308165,7.882762903254244e-06,5.1963854441192614e-06
+1.978010520677367e-06,4.687267289740538e-05,6.975872450174369e-05,0.047231285594161496,9.612926238450307e-09,1.2568332042234267e-07,0.00013760153033104457,6.987063816485214e-06,4.605932863733262e-06
+5.848451870118143e-07,1.3859004722097742e-05,2.0625802466893184e-05,0.049607255660212304,7.547045350518024e-09,2.0660201382011539e-07,4.068512049132219e-05,2.065889329648856e-06,1.361852103571048e-06
+5.761936146708425e-07,1.3653989472609715e-05,2.032068647022291e-05,0.05010198088212582,7.59757209973821e-09,2.093862682416432e-07,4.0083268073292265e-05,2.0353287592630178e-06,1.3417063114083287e-06
+5.529400174191081e-07,1.3102951828333034e-05,1.9500599181808116e-05,0.05024103574981059,7.576210426984561e-09,2.1120942604148646e-07,3.846561577362521e-05,1.953188394810197e-06,1.2875586731429337e-06
+6.565367257047587e-07,1.5557870328492652e-05,2.315415620642465e-05,0.05151798316555805,7.921708771033842e-09,2.1210270209105001e-07,4.567238485989629e-05,2.3191302226031435e-06,1.5287906892108827e-06
+5.383558029198229e-07,1.2757351484682434e-05,1.8986256011893336e-05,0.04636786181434223,7.040043401569917e-09,1.9352545529065755e-07,3.745105547231541e-05,1.9016715435522961e-06,1.253598319484079e-06
+0.0,0.0,0.0,0.049349879026189106,6.514163855967658e-09,2.346061217090295e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04989593577904572,6.586243124102528e-09,2.3720204006887277e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05026452408754903,6.634896630135872e-09,2.389542849632862e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05126107766202709,6.766441294466613e-09,2.4369183596883096e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.045876351349618504,6.055659622587565e-09,2.1809319658685374e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.049759421590721796,6.568223307054527e-09,2.3655306047839901e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05021446888480446,6.628289363838203e-09,2.387163257784343e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05019626699345947,6.625886721621291e-09,2.386297951683876e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05092954320503566,6.722678881680951e-09,2.4211574267928454e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04582326249865292,6.04865191596458e-09,2.1784081563524958e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.049486393214366674,6.532183672996614e-09,2.3525510129881937e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04994144050846251,6.592249729782005e-09,2.3741836659891613e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.050155312737005735,6.620480776512545e-09,2.3843510129144855e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.051407342863678165,6.78574824128183e-09,2.4438717124350836e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04602044965934198,6.074680540560233e-09,2.18778230598216e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05057850671978715,6.67634220922826e-09,2.4044693801713793e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04978217395559252,6.571226609915388e-09,2.3666122374417924e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.050332781181638565,6.643906538650447e-09,2.392787747581846e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.051436595904023726,6.789609630645081e-09,2.445262382984378e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04599769729462588,6.071677237720157e-09,2.186700673331872e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05037373543733202,6.649312483657431e-09,2.3947346863144834e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.049736669226099914,6.5652200042242495e-09,2.364448972137037e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.050469295369817674,6.661926355679605e-09,2.399277543479817e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.05155360806534939,6.805055188097033e-09,2.450825065181655e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04591427195738956,6.0606651273121386e-09,2.182734686949363e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.048599050990678704,6.4150548622274955e-09,2.310367339621946e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.0490540982859287,6.475120919157831e-09,2.3319999926745692e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.049227016258105064,6.497946020814128e-09,2.3402204008446275e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.04994469084729358,6.592678773125233e-09,2.3743381849641942e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.044624971290925214,5.890477966457192e-09,2.1214421701279712e-07,0.0,0.0,0.0
+0.0,0.0,0.0,0.041591527728768486,5.490064656523105e-09,1.9772342321707223e-07,0.0,0.0,0.0
+
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+

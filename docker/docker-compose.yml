@@ -1,0 +1,11 @@
+# Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
+
+version: "3"
+
+services:
+  kugelpy-dev:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/kugelpy
+    command: tail -f /dev/null

@@ -1,0 +1,1 @@
+{'conus': {'surface': 'surf conus_s cone 0.0 0.0 0.0 0.0 -0.0\ntrans s conus_s rot 0.0 0.0  0.0      0. 0. 1. 180.\nsurf upper_cone pz 0.0', 'cells': 'cell cone_c cone_u fill pebble_bed -conus_s  \n', 'universes': 'cell cone_u 0 fill cone_u -conus_s -upper_cone pebble_shoot_s \n'}}

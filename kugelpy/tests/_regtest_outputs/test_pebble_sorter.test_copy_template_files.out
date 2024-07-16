@@ -1,0 +1,2141 @@
+surf cr_31 cylz  132.5    0.0      6.5 223.5 260.5
+surf sr_32 cylz  124.5097    45.3164      6.5 223.5 260.5
+surf cr_33 cylz  101.5026    85.1673      6.5 223.5 260.5
+surf sr_34 cylz  66.2535    114.7463      6.5 223.5 260.5
+surf cr_35 cylz  23.0138    130.4861      6.5 223.5 260.5
+surf sr_36 cylz  -23.0017    130.4882      6.5 223.5 260.5
+surf cr_37 cylz  -66.2429    114.7525      6.5 223.5 260.5
+surf sr_38 cylz  -101.4948    85.1767      6.5 223.5 260.5
+surf cr_39 cylz  -124.5055    45.3279      6.5 223.5 260.5
+surf sr_310 cylz  -132.5    0.0123      6.5 223.5 260.5
+surf cr_311 cylz  -124.5139    -45.3049      6.5 223.5 260.5
+surf sr_312 cylz  -101.5105    -85.1579      6.5 223.5 260.5
+surf cr_313 cylz  -66.2642    -114.7402      6.5 223.5 260.5
+surf sr_314 cylz  -23.0258    -130.4839      6.5 223.5 260.5
+surf cr_315 cylz  22.9896    -130.4903      6.5 223.5 260.5
+surf sr_316 cylz  66.2323    -114.7586      6.5 223.5 260.5
+surf cr_317 cylz  101.4869    -85.1861      6.5 223.5 260.5
+surf sr_318 cylz  124.5013    -45.3395      6.5 223.5 260.5
+surf cr_41 cylz  132.5    0.0      6.5  260.5 338.41
+surf sr_42 cylz  124.5097    45.3164      6.5  260.5 338.41
+surf cr_43 cylz  101.5026    85.1673      6.5  260.5 338.41
+surf sr_44 cylz  66.2535    114.7463      6.5  260.5 338.41
+surf cr_45 cylz  23.0138    130.4861      6.5  260.5 338.41
+surf sr_46 cylz  -23.0017    130.4882      6.5  260.5 338.41
+surf cr_47 cylz  -66.2429    114.7525      6.5  260.5 338.41
+surf sr_48 cylz  -101.4948    85.1767      6.5  260.5 338.41
+surf cr_49 cylz  -124.5055    45.3279      6.5  260.5 338.41
+surf sr_410 cylz  -132.5    0.0123      6.5  260.5 338.41
+surf cr_411 cylz  -124.5139    -45.3049      6.5  260.5 338.41
+surf sr_412 cylz  -101.5105    -85.1579      6.5  260.5 338.41
+surf cr_413 cylz  -66.2642    -114.7402      6.5  260.5 338.41
+surf sr_414 cylz  -23.0258    -130.4839      6.5  260.5 338.41
+surf cr_415 cylz  22.9896    -130.4903      6.5  260.5 338.41
+surf sr_416 cylz  66.2323    -114.7586      6.5  260.5 338.41
+surf cr_417 cylz  101.4869    -85.1861      6.5  260.5 338.41
+surf sr_418 cylz  124.5013    -45.3395      6.5  260.5 338.41
+surf cr_51 cylz  132.5    0.0      6.5  338.41 416.32
+surf sr_52 cylz  124.5097    45.3164      6.5  338.41 416.32
+surf cr_53 cylz  101.5026    85.1673      6.5  338.41 416.32
+surf sr_54 cylz  66.2535    114.7463      6.5  338.41 416.32
+surf cr_55 cylz  23.0138    130.4861      6.5  338.41 416.32
+surf sr_56 cylz  -23.0017    130.4882      6.5  338.41 416.32
+surf cr_57 cylz  -66.2429    114.7525      6.5  338.41 416.32
+surf sr_58 cylz  -101.4948    85.1767      6.5  338.41 416.32
+surf cr_59 cylz  -124.5055    45.3279      6.5  338.41 416.32
+surf sr_510 cylz  -132.5    0.0123      6.5  338.41 416.32
+surf cr_511 cylz  -124.5139    -45.3049      6.5  338.41 416.32
+surf sr_512 cylz  -101.5105    -85.1579      6.5  338.41 416.32
+surf cr_513 cylz  -66.2642    -114.7402      6.5  338.41 416.32
+surf sr_514 cylz  -23.0258    -130.4839      6.5  338.41 416.32
+surf cr_515 cylz  22.9896    -130.4903      6.5  338.41 416.32
+surf sr_516 cylz  66.2323    -114.7586      6.5  338.41 416.32
+surf cr_517 cylz  101.4869    -85.1861      6.5  338.41 416.32
+surf sr_518 cylz  124.5013    -45.3395      6.5  338.41 416.32
+surf cr_61 cylz  132.5    0.0      6.5  416.32 494.23
+surf sr_62 cylz  124.5097    45.3164      6.5  416.32 494.23
+surf cr_63 cylz  101.5026    85.1673      6.5  416.32 494.23
+surf sr_64 cylz  66.2535    114.7463      6.5  416.32 494.23
+surf cr_65 cylz  23.0138    130.4861      6.5  416.32 494.23
+surf sr_66 cylz  -23.0017    130.4882      6.5  416.32 494.23
+surf cr_67 cylz  -66.2429    114.7525      6.5  416.32 494.23
+surf sr_68 cylz  -101.4948    85.1767      6.5  416.32 494.23
+surf cr_69 cylz  -124.5055    45.3279      6.5  416.32 494.23
+surf sr_610 cylz  -132.5    0.0123      6.5  416.32 494.23
+surf cr_611 cylz  -124.5139    -45.3049      6.5  416.32 494.23
+surf sr_612 cylz  -101.5105    -85.1579      6.5  416.32 494.23
+surf cr_613 cylz  -66.2642    -114.7402      6.5  416.32 494.23
+surf sr_614 cylz  -23.0258    -130.4839      6.5  416.32 494.23
+surf cr_615 cylz  22.9896    -130.4903      6.5  416.32 494.23
+surf sr_616 cylz  66.2323    -114.7586      6.5  416.32 494.23
+surf cr_617 cylz  101.4869    -85.1861      6.5  416.32 494.23
+surf sr_618 cylz  124.5013    -45.3395      6.5  416.32 494.23
+surf cr_71 cylz  132.5    0.0      6.5  494.23 572.14
+surf sr_72 cylz  124.5097    45.3164      6.5  494.23 572.14
+surf cr_73 cylz  101.5026    85.1673      6.5  494.23 572.14
+surf sr_74 cylz  66.2535    114.7463      6.5  494.23 572.14
+surf cr_75 cylz  23.0138    130.4861      6.5  494.23 572.14
+surf sr_76 cylz  -23.0017    130.4882      6.5  494.23 572.14
+surf cr_77 cylz  -66.2429    114.7525      6.5  494.23 572.14
+surf sr_78 cylz  -101.4948    85.1767      6.5  494.23 572.14
+surf cr_79 cylz  -124.5055    45.3279      6.5  494.23 572.14
+surf sr_710 cylz  -132.5    0.0123      6.5  494.23 572.14
+surf cr_711 cylz  -124.5139    -45.3049      6.5  494.23 572.14
+surf sr_712 cylz  -101.5105    -85.1579      6.5  494.23 572.14
+surf cr_713 cylz  -66.2642    -114.7402      6.5  494.23 572.14
+surf sr_714 cylz  -23.0258    -130.4839      6.5  494.23 572.14
+surf cr_715 cylz  22.9896    -130.4903      6.5  494.23 572.14
+surf sr_716 cylz  66.2323    -114.7586      6.5  494.23 572.14
+surf cr_717 cylz  101.4869    -85.1861      6.5  494.23 572.14
+surf sr_718 cylz  124.5013    -45.3395      6.5  494.23 572.14
+surf cr_81 cylz  132.5    0.0      6.5  572.14 650.05
+surf sr_82 cylz  124.5097    45.3164      6.5  572.14 650.05
+surf cr_83 cylz  101.5026    85.1673      6.5  572.14 650.05
+surf sr_84 cylz  66.2535    114.7463      6.5  572.14 650.05
+surf cr_85 cylz  23.0138    130.4861      6.5  572.14 650.05
+surf sr_86 cylz  -23.0017    130.4882      6.5  572.14 650.05
+surf cr_87 cylz  -66.2429    114.7525      6.5  572.14 650.05
+surf sr_88 cylz  -101.4948    85.1767      6.5  572.14 650.05
+surf cr_89 cylz  -124.5055    45.3279      6.5  572.14 650.05
+surf sr_810 cylz  -132.5    0.0123      6.5  572.14 650.05
+surf cr_811 cylz  -124.5139    -45.3049      6.5  572.14 650.05
+surf sr_812 cylz  -101.5105    -85.1579      6.5  572.14 650.05
+surf cr_813 cylz  -66.2642    -114.7402      6.5  572.14 650.05
+surf sr_814 cylz  -23.0258    -130.4839      6.5  572.14 650.05
+surf cr_815 cylz  22.9896    -130.4903      6.5  572.14 650.05
+surf sr_816 cylz  66.2323    -114.7586      6.5  572.14 650.05
+surf cr_817 cylz  101.4869    -85.1861      6.5  572.14 650.05
+surf sr_818 cylz  124.5013    -45.3395      6.5  572.14 650.05
+surf cr_91 cylz  132.5    0.0      6.5  650.05 727.96
+surf sr_92 cylz  124.5097    45.3164      6.5  650.05 727.96
+surf cr_93 cylz  101.5026    85.1673      6.5  650.05 727.96
+surf sr_94 cylz  66.2535    114.7463      6.5  650.05 727.96
+surf cr_95 cylz  23.0138    130.4861      6.5  650.05 727.96
+surf sr_96 cylz  -23.0017    130.4882      6.5  650.05 727.96
+surf cr_97 cylz  -66.2429    114.7525      6.5  650.05 727.96
+surf sr_98 cylz  -101.4948    85.1767      6.5  650.05 727.96
+surf cr_99 cylz  -124.5055    45.3279      6.5  650.05 727.96
+surf sr_910 cylz  -132.5    0.0123      6.5  650.05 727.96
+surf cr_911 cylz  -124.5139    -45.3049      6.5  650.05 727.96
+surf sr_912 cylz  -101.5105    -85.1579      6.5  650.05 727.96
+surf cr_913 cylz  -66.2642    -114.7402      6.5  650.05 727.96
+surf sr_914 cylz  -23.0258    -130.4839      6.5  650.05 727.96
+surf cr_915 cylz  22.9896    -130.4903      6.5  650.05 727.96
+surf sr_916 cylz  66.2323    -114.7586      6.5  650.05 727.96
+surf cr_917 cylz  101.4869    -85.1861      6.5  650.05 727.96
+surf sr_918 cylz  124.5013    -45.3395      6.5  650.05 727.96
+surf cr_101 cylz  132.5    0.0      6.5  727.96 805.87
+surf sr_102 cylz  124.5097    45.3164      6.5  727.96 805.87
+surf cr_103 cylz  101.5026    85.1673      6.5  727.96 805.87
+surf sr_104 cylz  66.2535    114.7463      6.5  727.96 805.87
+surf cr_105 cylz  23.0138    130.4861      6.5  727.96 805.87
+surf sr_106 cylz  -23.0017    130.4882      6.5  727.96 805.87
+surf cr_107 cylz  -66.2429    114.7525      6.5  727.96 805.87
+surf sr_108 cylz  -101.4948    85.1767      6.5  727.96 805.87
+surf cr_109 cylz  -124.5055    45.3279      6.5  727.96 805.87
+surf sr_1010 cylz  -132.5    0.0123      6.5  727.96 805.87
+surf cr_1011 cylz  -124.5139    -45.3049      6.5  727.96 805.87
+surf sr_1012 cylz  -101.5105    -85.1579      6.5  727.96 805.87
+surf cr_1013 cylz  -66.2642    -114.7402      6.5  727.96 805.87
+surf sr_1014 cylz  -23.0258    -130.4839      6.5  727.96 805.87
+surf cr_1015 cylz  22.9896    -130.4903      6.5  727.96 805.87
+surf sr_1016 cylz  66.2323    -114.7586      6.5  727.96 805.87
+surf cr_1017 cylz  101.4869    -85.1861      6.5  727.96 805.87
+surf sr_1018 cylz  124.5013    -45.3395      6.5  727.96 805.87
+surf cr_111 cylz  132.5    0.0      6.5  805.87 883.78
+surf sr_112 cylz  124.5097    45.3164      6.5  805.87 883.78
+surf cr_113 cylz  101.5026    85.1673      6.5  805.87 883.78
+surf sr_114 cylz  66.2535    114.7463      6.5  805.87 883.78
+surf cr_115 cylz  23.0138    130.4861      6.5  805.87 883.78
+surf sr_116 cylz  -23.0017    130.4882      6.5  805.87 883.78
+surf cr_117 cylz  -66.2429    114.7525      6.5  805.87 883.78
+surf sr_118 cylz  -101.4948    85.1767      6.5  805.87 883.78
+surf cr_119 cylz  -124.5055    45.3279      6.5  805.87 883.78
+surf sr_1110 cylz  -132.5    0.0123      6.5  805.87 883.78
+surf cr_1111 cylz  -124.5139    -45.3049      6.5  805.87 883.78
+surf sr_1112 cylz  -101.5105    -85.1579      6.5  805.87 883.78
+surf cr_1113 cylz  -66.2642    -114.7402      6.5  805.87 883.78
+surf sr_1114 cylz  -23.0258    -130.4839      6.5  805.87 883.78
+surf cr_1115 cylz  22.9896    -130.4903      6.5  805.87 883.78
+surf sr_1116 cylz  66.2323    -114.7586      6.5  805.87 883.78
+surf cr_1117 cylz  101.4869    -85.1861      6.5  805.87 883.78
+surf sr_1118 cylz  124.5013    -45.3395      6.5  805.87 883.78
+surf cr_121 cylz  132.5    0.0      6.5  883.78 961.69
+surf sr_122 cylz  124.5097    45.3164      6.5  883.78 961.69
+surf cr_123 cylz  101.5026    85.1673      6.5  883.78 961.69
+surf sr_124 cylz  66.2535    114.7463      6.5  883.78 961.69
+surf cr_125 cylz  23.0138    130.4861      6.5  883.78 961.69
+surf sr_126 cylz  -23.0017    130.4882      6.5  883.78 961.69
+surf cr_127 cylz  -66.2429    114.7525      6.5  883.78 961.69
+surf sr_128 cylz  -101.4948    85.1767      6.5  883.78 961.69
+surf cr_129 cylz  -124.5055    45.3279      6.5  883.78 961.69
+surf sr_1210 cylz  -132.5    0.0123      6.5  883.78 961.69
+surf cr_1211 cylz  -124.5139    -45.3049      6.5  883.78 961.69
+surf sr_1212 cylz  -101.5105    -85.1579      6.5  883.78 961.69
+surf cr_1213 cylz  -66.2642    -114.7402      6.5  883.78 961.69
+surf sr_1214 cylz  -23.0258    -130.4839      6.5  883.78 961.69
+surf cr_1215 cylz  22.9896    -130.4903      6.5  883.78 961.69
+surf sr_1216 cylz  66.2323    -114.7586      6.5  883.78 961.69
+surf cr_1217 cylz  101.4869    -85.1861      6.5  883.78 961.69
+surf sr_1218 cylz  124.5013    -45.3395      6.5  883.78 961.69
+surf cr_131 cylz  132.5    0.0      6.5  961.69 1039.6
+surf sr_132 cylz  124.5097    45.3164      6.5  961.69 1039.6
+surf cr_133 cylz  101.5026    85.1673      6.5  961.69 1039.6
+surf sr_134 cylz  66.2535    114.7463      6.5  961.69 1039.6
+surf cr_135 cylz  23.0138    130.4861      6.5  961.69 1039.6
+surf sr_136 cylz  -23.0017    130.4882      6.5  961.69 1039.6
+surf cr_137 cylz  -66.2429    114.7525      6.5  961.69 1039.6
+surf sr_138 cylz  -101.4948    85.1767      6.5  961.69 1039.6
+surf cr_139 cylz  -124.5055    45.3279      6.5  961.69 1039.6
+surf sr_1310 cylz  -132.5    0.0123      6.5  961.69 1039.6
+surf cr_1311 cylz  -124.5139    -45.3049      6.5  961.69 1039.6
+surf sr_1312 cylz  -101.5105    -85.1579      6.5  961.69 1039.6
+surf cr_1313 cylz  -66.2642    -114.7402      6.5  961.69 1039.6
+surf sr_1314 cylz  -23.0258    -130.4839      6.5  961.69 1039.6
+surf cr_1315 cylz  22.9896    -130.4903      6.5  961.69 1039.6
+surf sr_1316 cylz  66.2323    -114.7586      6.5  961.69 1039.6
+surf cr_1317 cylz  101.4869    -85.1861      6.5  961.69 1039.6
+surf sr_1318 cylz  124.5013    -45.3395      6.5  961.69 1039.6
+surf cr_141 cylz  132.5    0.0      6.5  1039.6 1117.5
+surf sr_142 cylz  124.5097    45.3164      6.5  1039.6 1117.5
+surf cr_143 cylz  101.5026    85.1673      6.5  1039.6 1117.5
+surf sr_144 cylz  66.2535    114.7463      6.5  1039.6 1117.5
+surf cr_145 cylz  23.0138    130.4861      6.5  1039.6 1117.5
+surf sr_146 cylz  -23.0017    130.4882      6.5  1039.6 1117.5
+surf cr_147 cylz  -66.2429    114.7525      6.5  1039.6 1117.5
+surf sr_148 cylz  -101.4948    85.1767      6.5  1039.6 1117.5
+surf cr_149 cylz  -124.5055    45.3279      6.5  1039.6 1117.5
+surf sr_1410 cylz  -132.5    0.0123      6.5  1039.6 1117.5
+surf cr_1411 cylz  -124.5139    -45.3049      6.5  1039.6 1117.5
+surf sr_1412 cylz  -101.5105    -85.1579      6.5  1039.6 1117.5
+surf cr_1413 cylz  -66.2642    -114.7402      6.5  1039.6 1117.5
+surf sr_1414 cylz  -23.0258    -130.4839      6.5  1039.6 1117.5
+surf cr_1415 cylz  22.9896    -130.4903      6.5  1039.6 1117.5
+surf sr_1416 cylz  66.2323    -114.7586      6.5  1039.6 1117.5
+surf cr_1417 cylz  101.4869    -85.1861      6.5  1039.6 1117.5
+surf sr_1418 cylz  124.5013    -45.3395      6.5  1039.6 1117.5
+%%%%%%%% Surfaces for CR/SR above the core
+surf cr_151 cylz  132.5    0.0             6.5  1117.5  1163.3
+surf sr_152 cylz  124.5097    45.3164      6.5  1117.5  1163.3
+surf cr_153 cylz  101.5026    85.1673      6.5  1117.5  1163.3
+surf sr_154 cylz  66.2535    114.7463      6.5  1117.5  1163.3
+surf cr_155 cylz  23.0138    130.4861      6.5  1117.5  1163.3
+surf sr_156 cylz  -23.0017    130.4882     6.5  1117.5  1163.3
+surf cr_157 cylz  -66.2429    114.7525     6.5  1117.5  1163.3
+surf sr_158 cylz  -101.4948    85.1767     6.5  1117.5  1163.3
+surf cr_159 cylz  -124.5055    45.3279     6.5  1117.5  1163.3
+surf sr_1510 cylz  -132.5    0.0123        6.5  1117.5  1163.3
+surf cr_1511 cylz  -124.5139    -45.3049   6.5  1117.5  1163.3
+surf sr_1512 cylz  -101.5105    -85.1579   6.5  1117.5  1163.3
+surf cr_1513 cylz  -66.2642    -114.7402   6.5  1117.5  1163.3
+surf sr_1514 cylz  -23.0258    -130.4839   6.5  1117.5  1163.3
+surf cr_1515 cylz  22.9896    -130.4903    6.5  1117.5  1163.3
+surf sr_1516 cylz  66.2323    -114.7586    6.5  1117.5  1163.3
+surf cr_1517 cylz  101.4869    -85.1861    6.5  1117.5  1163.3
+surf sr_1518 cylz  124.5013    -45.3395    6.5  1117.5  1163.3
+
+surf cr_161 cylz  132.5    0.0             6.5  1163.3  1215  
+surf sr_162 cylz  124.5097    45.3164      6.5  1163.3  1215  
+surf cr_163 cylz  101.5026    85.1673      6.5  1163.3  1215  
+surf sr_164 cylz  66.2535    114.7463      6.5  1163.3  1215  
+surf cr_165 cylz  23.0138    130.4861      6.5  1163.3  1215  
+surf sr_166 cylz  -23.0017    130.4882     6.5  1163.3  1215  
+surf cr_167 cylz  -66.2429    114.7525     6.5  1163.3  1215  
+surf sr_168 cylz  -101.4948    85.1767     6.5  1163.3  1215  
+surf cr_169 cylz  -124.5055    45.3279     6.5  1163.3  1215  
+surf sr_1610 cylz  -132.5    0.0123        6.5  1163.3  1215  
+surf cr_1611 cylz  -124.5139    -45.3049   6.5  1163.3  1215  
+surf sr_1612 cylz  -101.5105    -85.1579   6.5  1163.3  1215  
+surf cr_1613 cylz  -66.2642    -114.7402   6.5  1163.3  1215  
+surf sr_1614 cylz  -23.0258    -130.4839   6.5  1163.3  1215  
+surf cr_1615 cylz  22.9896    -130.4903    6.5  1163.3  1215  
+surf sr_1616 cylz  66.2323    -114.7586    6.5  1163.3  1215  
+surf cr_1617 cylz  101.4869    -85.1861    6.5  1163.3  1215  
+surf sr_1618 cylz  124.5013    -45.3395    6.5  1163.3  1215  
+
+surf cr_171 cylz  132.5    0.0             6.5  1215 1249.3
+surf sr_172 cylz  124.5097    45.3164      6.5  1215 1249.3
+surf cr_173 cylz  101.5026    85.1673      6.5  1215 1249.3
+surf sr_174 cylz  66.2535    114.7463      6.5  1215 1249.3
+surf cr_175 cylz  23.0138    130.4861      6.5  1215 1249.3
+surf sr_176 cylz  -23.0017    130.4882     6.5  1215 1249.3
+surf cr_177 cylz  -66.2429    114.7525     6.5  1215 1249.3
+surf sr_178 cylz  -101.4948    85.1767     6.5  1215 1249.3
+surf cr_179 cylz  -124.5055    45.3279     6.5  1215 1249.3
+surf sr_1710 cylz  -132.5    0.0123        6.5  1215 1249.3
+surf cr_1711 cylz  -124.5139    -45.3049   6.5  1215 1249.3
+surf sr_1712 cylz  -101.5105    -85.1579   6.5  1215 1249.3
+surf cr_1713 cylz  -66.2642    -114.7402   6.5  1215 1249.3
+surf sr_1714 cylz  -23.0258    -130.4839   6.5  1215 1249.3
+surf cr_1715 cylz  22.9896    -130.4903    6.5  1215 1249.3
+surf sr_1716 cylz  66.2323    -114.7586    6.5  1215 1249.3
+surf cr_1717 cylz  101.4869    -85.1861    6.5  1215 1249.3
+surf sr_1718 cylz  124.5013    -45.3395    6.5  1215 1249.3
+
+
+%%%%%%%% Control Rod Fill (Movable)
+
+cell cr_31         side_refl71  helium -cr_31
+cell cr_33         side_refl71  helium -cr_33
+cell cr_35         side_refl71  helium -cr_35
+cell cr_37         side_refl71  helium -cr_37
+cell cr_39         side_refl71  helium -cr_39
+cell cr_311        side_refl71  helium -cr_311
+cell cr_313        side_refl71  helium -cr_313
+cell cr_315        side_refl71  helium -cr_315
+cell cr_317        side_refl71  helium -cr_317
+cell cr_41         side_refl81  helium -cr_41
+cell cr_43         side_refl81  helium -cr_43
+cell cr_45         side_refl81  helium -cr_45
+cell cr_47         side_refl81  helium -cr_47
+cell cr_49         side_refl81  helium -cr_49
+cell cr_411        side_refl81  helium -cr_411
+cell cr_413        side_refl81  helium -cr_413
+cell cr_415        side_refl81  helium -cr_415
+cell cr_417        side_refl81  helium -cr_417
+cell cr_51         side_refl91  helium -cr_51
+cell cr_53         side_refl91  helium -cr_53
+cell cr_55         side_refl91  helium -cr_55
+cell cr_57         side_refl91  helium -cr_57
+cell cr_59         side_refl91  helium -cr_59
+cell cr_511        side_refl91  helium -cr_511
+cell cr_513        side_refl91  helium -cr_513
+cell cr_515        side_refl91  helium -cr_515
+cell cr_517        side_refl91  helium -cr_517
+cell cr_61         side_refl101 helium -cr_61
+cell cr_63         side_refl101 helium -cr_63
+cell cr_65         side_refl101 helium -cr_65
+cell cr_67         side_refl101 helium -cr_67
+cell cr_69         side_refl101 helium -cr_69
+cell cr_611        side_refl101 helium -cr_611
+cell cr_613        side_refl101 helium -cr_613
+cell cr_615        side_refl101 helium -cr_615
+cell cr_617        side_refl101 helium -cr_617
+cell cr_71         side_refl111 helium -cr_71
+cell cr_73         side_refl111 helium -cr_73
+cell cr_75         side_refl111 helium -cr_75
+cell cr_77         side_refl111 helium -cr_77
+cell cr_79         side_refl111 helium -cr_79
+cell cr_711        side_refl111 helium -cr_711
+cell cr_713        side_refl111 helium -cr_713
+cell cr_715        side_refl111 helium -cr_715
+cell cr_717        side_refl111 helium -cr_717
+cell cr_81         side_refl121 helium -cr_81
+cell cr_83         side_refl121 helium -cr_83
+cell cr_85         side_refl121 helium -cr_85
+cell cr_87         side_refl121 helium -cr_87
+cell cr_89         side_refl121 helium -cr_89
+cell cr_811        side_refl121 helium -cr_811
+cell cr_813        side_refl121 helium -cr_813
+cell cr_815        side_refl121 helium -cr_815
+cell cr_817        side_refl121 helium -cr_817
+cell cr_91         side_refl131 helium -cr_91
+cell cr_93         side_refl131 helium -cr_93
+cell cr_95         side_refl131 helium -cr_95
+cell cr_97         side_refl131 helium -cr_97
+cell cr_99         side_refl131 helium -cr_99
+cell cr_911        side_refl131 helium -cr_911
+cell cr_913        side_refl131 helium -cr_913
+cell cr_915        side_refl131 helium -cr_915
+cell cr_917        side_refl131 helium -cr_917
+cell cr_101        side_refl141 helium -cr_101
+cell cr_103        side_refl141 helium -cr_103
+cell cr_105        side_refl141 helium -cr_105
+cell cr_107        side_refl141 helium -cr_107
+cell cr_109        side_refl141 helium -cr_109
+cell cr_1011       side_refl141 helium -cr_1011
+cell cr_1013       side_refl141 helium -cr_1013
+cell cr_1015       side_refl141 helium -cr_1015
+cell cr_1017       side_refl141 helium -cr_1017
+cell cr_111        side_refl151 helium -cr_111
+cell cr_113        side_refl151 helium -cr_113
+cell cr_115        side_refl151 helium -cr_115
+cell cr_117        side_refl151 helium -cr_117
+cell cr_119        side_refl151 helium -cr_119
+cell cr_1111       side_refl151 helium -cr_1111
+cell cr_1113       side_refl151 helium -cr_1113
+cell cr_1115       side_refl151 helium -cr_1115
+cell cr_1117       side_refl151 helium -cr_1117
+cell cr_121        side_refl161 helium -cr_121
+cell cr_123        side_refl161 helium -cr_123
+cell cr_125        side_refl161 helium -cr_125
+cell cr_127        side_refl161 helium -cr_127
+cell cr_129        side_refl161 helium -cr_129
+cell cr_1211       side_refl161 helium -cr_1211
+cell cr_1213       side_refl161 helium -cr_1213
+cell cr_1215       side_refl161 helium -cr_1215
+cell cr_1217       side_refl161 helium -cr_1217
+cell cr_131        side_refl171 helium -cr_131
+cell cr_133        side_refl171 helium -cr_133
+cell cr_135        side_refl171 helium -cr_135
+cell cr_137        side_refl171 helium -cr_137
+cell cr_139        side_refl171 helium -cr_139
+cell cr_1311       side_refl171 helium -cr_1311
+cell cr_1313       side_refl171 helium -cr_1313
+cell cr_1315       side_refl171 helium -cr_1315
+cell cr_1317       side_refl171 helium -cr_1317
+cell cr_141        side_refl181 helium -cr_141
+cell cr_143        side_refl181 helium -cr_143
+cell cr_145        side_refl181 helium -cr_145
+cell cr_147        side_refl181 helium -cr_147
+cell cr_149        side_refl181 helium -cr_149
+cell cr_1411       side_refl181 helium -cr_1411
+cell cr_1413       side_refl181 helium -cr_1413
+cell cr_1415       side_refl181 helium -cr_1415
+cell cr_1417       side_refl181 helium -cr_1417
+
+
+% Control rod fill above core
+cell cr_151         side_refl191 control_rod -cr_151
+cell cr_153         side_refl191 control_rod -cr_153
+cell cr_155         side_refl191 control_rod -cr_155
+cell cr_157         side_refl191 control_rod -cr_157
+cell cr_159         side_refl191 control_rod -cr_159
+cell cr_1511        side_refl191 control_rod -cr_1511
+cell cr_1513        side_refl191 control_rod -cr_1513
+cell cr_1515        side_refl191 control_rod -cr_1515
+cell cr_1517        side_refl191 control_rod -cr_1517
+cell cr_161         side_refl201 control_rod -cr_161
+cell cr_163         side_refl201 control_rod -cr_163
+cell cr_165         side_refl201 control_rod -cr_165
+cell cr_167         side_refl201 control_rod -cr_167
+cell cr_169         side_refl201 control_rod -cr_169
+cell cr_1611        side_refl201 control_rod -cr_1611
+cell cr_1613        side_refl201 control_rod -cr_1613
+cell cr_1615        side_refl201 control_rod -cr_1615
+cell cr_1617        side_refl201 control_rod -cr_1617
+cell cr_171         side_refl211 control_rod -cr_171
+cell cr_173         side_refl211 control_rod -cr_173
+cell cr_175         side_refl211 control_rod -cr_175
+cell cr_177         side_refl211 control_rod -cr_177
+cell cr_179         side_refl211 control_rod -cr_179
+cell cr_1711        side_refl211 control_rod -cr_1711
+cell cr_1713        side_refl211 control_rod -cr_1713
+cell cr_1715        side_refl211 control_rod -cr_1715
+cell cr_1717        side_refl211 control_rod -cr_1717
+
+%%%%%%% Safety Rod Fill
+
+cell sr_32         side_refl71      helium -sr_32
+cell sr_34         side_refl71      helium -sr_34
+cell sr_36         side_refl71      helium -sr_36
+cell sr_38         side_refl71      helium -sr_38
+cell sr_310        side_refl71      helium -sr_310
+cell sr_312        side_refl71      helium -sr_312
+cell sr_314        side_refl71      helium -sr_314
+cell sr_316        side_refl71      helium -sr_316
+cell sr_318        side_refl71      helium -sr_318
+cell sr_42         side_refl81      helium -sr_42
+cell sr_44         side_refl81      helium -sr_44
+cell sr_46         side_refl81      helium -sr_46
+cell sr_48         side_refl81      helium -sr_48
+cell sr_410        side_refl81      helium -sr_410
+cell sr_412        side_refl81      helium -sr_412
+cell sr_414        side_refl81      helium -sr_414
+cell sr_416        side_refl81      helium -sr_416
+cell sr_418        side_refl81      helium -sr_418
+cell sr_52         side_refl91      helium -sr_52
+cell sr_54         side_refl91      helium -sr_54
+cell sr_56         side_refl91      helium -sr_56
+cell sr_58         side_refl91      helium -sr_58
+cell sr_510        side_refl91      helium -sr_510
+cell sr_512        side_refl91      helium -sr_512
+cell sr_514        side_refl91      helium -sr_514
+cell sr_516        side_refl91      helium -sr_516
+cell sr_518        side_refl91      helium -sr_518
+cell sr_62         side_refl101      helium -sr_62
+cell sr_64         side_refl101      helium -sr_64
+cell sr_66         side_refl101      helium -sr_66
+cell sr_68         side_refl101      helium -sr_68
+cell sr_610        side_refl101      helium -sr_610
+cell sr_612        side_refl101      helium -sr_612
+cell sr_614        side_refl101      helium -sr_614
+cell sr_616        side_refl101      helium -sr_616
+cell sr_618        side_refl101      helium -sr_618
+cell sr_72         side_refl111      helium -sr_72
+cell sr_74         side_refl111      helium -sr_74
+cell sr_76         side_refl111      helium -sr_76
+cell sr_78         side_refl111      helium -sr_78
+cell sr_710        side_refl111      helium -sr_710
+cell sr_712        side_refl111      helium -sr_712
+cell sr_714        side_refl111      helium -sr_714
+cell sr_716        side_refl111      helium -sr_716
+cell sr_718        side_refl111      helium -sr_718
+cell sr_82         side_refl121      helium -sr_82
+cell sr_84         side_refl121      helium -sr_84
+cell sr_86         side_refl121      helium -sr_86
+cell sr_88         side_refl121      helium -sr_88
+cell sr_810        side_refl121      helium -sr_810
+cell sr_812        side_refl121      helium -sr_812
+cell sr_814        side_refl121      helium -sr_814
+cell sr_816        side_refl121      helium -sr_816
+cell sr_818        side_refl121      helium -sr_818
+cell sr_92         side_refl131      helium -sr_92
+cell sr_94         side_refl131      helium -sr_94
+cell sr_96         side_refl131      helium -sr_96
+cell sr_98         side_refl131      helium -sr_98
+cell sr_910        side_refl131      helium -sr_910
+cell sr_912        side_refl131      helium -sr_912
+cell sr_914        side_refl131      helium -sr_914
+cell sr_916        side_refl131      helium -sr_916
+cell sr_918        side_refl131      helium -sr_918
+cell sr_102        side_refl141      helium -sr_102
+cell sr_104        side_refl141      helium -sr_104
+cell sr_106        side_refl141      helium -sr_106
+cell sr_108        side_refl141      helium -sr_108
+cell sr_1010       side_refl141      helium -sr_1010
+cell sr_1012       side_refl141      helium -sr_1012
+cell sr_1014       side_refl141      helium -sr_1014
+cell sr_1016       side_refl141      helium -sr_1016
+cell sr_1018       side_refl141      helium -sr_1018
+cell sr_112        side_refl151      helium -sr_112
+cell sr_114        side_refl151      helium -sr_114
+cell sr_116        side_refl151      helium -sr_116
+cell sr_118        side_refl151      helium -sr_118
+cell sr_1110       side_refl151      helium -sr_1110
+cell sr_1112       side_refl151      helium -sr_1112
+cell sr_1114       side_refl151      helium -sr_1114
+cell sr_1116       side_refl151      helium -sr_1116
+cell sr_1118       side_refl151      helium -sr_1118
+cell sr_122        side_refl161      helium -sr_122
+cell sr_124        side_refl161      helium -sr_124
+cell sr_126        side_refl161      helium -sr_126
+cell sr_128        side_refl161      helium -sr_128
+cell sr_1210       side_refl161      helium -sr_1210
+cell sr_1212       side_refl161      helium -sr_1212
+cell sr_1214       side_refl161      helium -sr_1214
+cell sr_1216       side_refl161      helium -sr_1216
+cell sr_1218       side_refl161      helium -sr_1218
+cell sr_132        side_refl171      helium -sr_132
+cell sr_134        side_refl171      helium -sr_134
+cell sr_136        side_refl171      helium -sr_136
+cell sr_138        side_refl171      helium -sr_138
+cell sr_1310       side_refl171      helium -sr_1310
+cell sr_1312       side_refl171      helium -sr_1312
+cell sr_1314       side_refl171      helium -sr_1314
+cell sr_1316       side_refl171      helium -sr_1316
+cell sr_1318       side_refl171      helium -sr_1318
+cell sr_142        side_refl181      helium -sr_142
+cell sr_144        side_refl181      helium -sr_144
+cell sr_146        side_refl181      helium -sr_146
+cell sr_148        side_refl181      helium -sr_148
+cell sr_1410       side_refl181      helium -sr_1410
+cell sr_1412       side_refl181      helium -sr_1412
+cell sr_1414       side_refl181      helium -sr_1414
+cell sr_1416       side_refl181      helium -sr_1416
+cell sr_1418       side_refl181      helium -sr_1418
+
+% Safety rod above the core
+cell sr_152         side_refl191      helium -sr_152
+cell sr_154         side_refl191      helium -sr_154
+cell sr_156         side_refl191      helium -sr_156
+cell sr_158         side_refl191      helium -sr_158
+cell sr_1510        side_refl191      helium -sr_1510
+cell sr_1512        side_refl191      helium -sr_1512
+cell sr_1514        side_refl191      helium -sr_1514
+cell sr_1516        side_refl191      helium -sr_1516
+cell sr_1518        side_refl191      helium -sr_1518
+cell sr_162         side_refl201      safety_rod -sr_162
+cell sr_164         side_refl201      safety_rod -sr_164
+cell sr_166         side_refl201      safety_rod -sr_166
+cell sr_168         side_refl201      safety_rod -sr_168
+cell sr_1610        side_refl201      safety_rod -sr_1610
+cell sr_1612        side_refl201      safety_rod -sr_1612
+cell sr_1614        side_refl201      safety_rod -sr_1614
+cell sr_1616        side_refl201      safety_rod -sr_1616
+cell sr_1618        side_refl201      safety_rod -sr_1618
+cell sr_172         side_refl211      safety_rod -sr_172
+cell sr_174         side_refl211      safety_rod -sr_174
+cell sr_176         side_refl211      safety_rod -sr_176
+cell sr_178         side_refl211      safety_rod -sr_178
+cell sr_1710        side_refl211      safety_rod -sr_1710
+cell sr_1712        side_refl211      safety_rod -sr_1712
+cell sr_1714        side_refl211      safety_rod -sr_1714
+cell sr_1716        side_refl211      safety_rod -sr_1716
+cell sr_1718        side_refl211      safety_rod -sr_1718
+
+%%%%%% Control Rod / Safety Rod Cells
+cell cr31         0 fill side_refl71         -cr_31
+cell sr32         0 fill side_refl71         -sr_32
+cell cr33         0 fill side_refl71         -cr_33
+cell sr34         0 fill side_refl71         -sr_34
+cell cr35         0 fill side_refl71         -cr_35
+cell sr36         0 fill side_refl71         -sr_36
+cell cr37         0 fill side_refl71         -cr_37
+cell sr38         0 fill side_refl71         -sr_38
+cell cr39         0 fill side_refl71         -cr_39
+cell sr310        0 fill side_refl71         -sr_310
+cell cr311        0 fill side_refl71         -cr_311
+cell sr312        0 fill side_refl71         -sr_312
+cell cr313        0 fill side_refl71         -cr_313
+cell sr314        0 fill side_refl71         -sr_314
+cell cr315        0 fill side_refl71         -cr_315
+cell sr316        0 fill side_refl71         -sr_316
+cell cr317        0 fill side_refl71         -cr_317
+cell sr318        0 fill side_refl71         -sr_318
+cell cr41         0 fill side_refl81         -cr_41
+cell sr42         0 fill side_refl81         -sr_42
+cell cr43         0 fill side_refl81         -cr_43
+cell sr44         0 fill side_refl81         -sr_44
+cell cr45         0 fill side_refl81         -cr_45
+cell sr46         0 fill side_refl81         -sr_46
+cell cr47         0 fill side_refl81         -cr_47
+cell sr48         0 fill side_refl81         -sr_48
+cell cr49         0 fill side_refl81         -cr_49
+cell sr410        0 fill side_refl81         -sr_410
+cell cr411        0 fill side_refl81         -cr_411
+cell sr412        0 fill side_refl81         -sr_412
+cell cr413        0 fill side_refl81         -cr_413
+cell sr414        0 fill side_refl81         -sr_414
+cell cr415        0 fill side_refl81         -cr_415
+cell sr416        0 fill side_refl81         -sr_416
+cell cr417        0 fill side_refl81         -cr_417
+cell sr418        0 fill side_refl81         -sr_418
+cell cr51         0 fill side_refl91         -cr_51
+cell sr52         0 fill side_refl91         -sr_52
+cell cr53         0 fill side_refl91         -cr_53
+cell sr54         0 fill side_refl91         -sr_54
+cell cr55         0 fill side_refl91         -cr_55
+cell sr56         0 fill side_refl91         -sr_56
+cell cr57         0 fill side_refl91         -cr_57
+cell sr58         0 fill side_refl91         -sr_58
+cell cr59         0 fill side_refl91         -cr_59
+cell sr510        0 fill side_refl91         -sr_510
+cell cr511        0 fill side_refl91         -cr_511
+cell sr512        0 fill side_refl91         -sr_512
+cell cr513        0 fill side_refl91         -cr_513
+cell sr514        0 fill side_refl91         -sr_514
+cell cr515        0 fill side_refl91         -cr_515
+cell sr516        0 fill side_refl91         -sr_516
+cell cr517        0 fill side_refl91         -cr_517
+cell sr518        0 fill side_refl91         -sr_518
+cell cr61         0 fill side_refl101         -cr_61
+cell sr62         0 fill side_refl101         -sr_62
+cell cr63         0 fill side_refl101         -cr_63
+cell sr64         0 fill side_refl101         -sr_64
+cell cr65         0 fill side_refl101         -cr_65
+cell sr66         0 fill side_refl101         -sr_66
+cell cr67         0 fill side_refl101         -cr_67
+cell sr68         0 fill side_refl101         -sr_68
+cell cr69         0 fill side_refl101         -cr_69
+cell sr610        0 fill side_refl101         -sr_610
+cell cr611        0 fill side_refl101         -cr_611
+cell sr612        0 fill side_refl101         -sr_612
+cell cr613        0 fill side_refl101         -cr_613
+cell sr614        0 fill side_refl101         -sr_614
+cell cr615        0 fill side_refl101         -cr_615
+cell sr616        0 fill side_refl101         -sr_616
+cell cr617        0 fill side_refl101         -cr_617
+cell sr618        0 fill side_refl101         -sr_618
+cell cr71         0 fill side_refl111         -cr_71
+cell sr72         0 fill side_refl111         -sr_72
+cell cr73         0 fill side_refl111         -cr_73
+cell sr74         0 fill side_refl111         -sr_74
+cell cr75         0 fill side_refl111         -cr_75
+cell sr76         0 fill side_refl111         -sr_76
+cell cr77         0 fill side_refl111         -cr_77
+cell sr78         0 fill side_refl111         -sr_78
+cell cr79         0 fill side_refl111         -cr_79
+cell sr710        0 fill side_refl111         -sr_710
+cell cr711        0 fill side_refl111         -cr_711
+cell sr712        0 fill side_refl111         -sr_712
+cell cr713        0 fill side_refl111         -cr_713
+cell sr714        0 fill side_refl111         -sr_714
+cell cr715        0 fill side_refl111         -cr_715
+cell sr716        0 fill side_refl111         -sr_716
+cell cr717        0 fill side_refl111         -cr_717
+cell sr718        0 fill side_refl111         -sr_718
+cell cr81         0 fill side_refl121         -cr_81
+cell sr82         0 fill side_refl121         -sr_82
+cell cr83         0 fill side_refl121         -cr_83
+cell sr84         0 fill side_refl121         -sr_84
+cell cr85         0 fill side_refl121         -cr_85
+cell sr86         0 fill side_refl121         -sr_86
+cell cr87         0 fill side_refl121         -cr_87
+cell sr88         0 fill side_refl121         -sr_88
+cell cr89         0 fill side_refl121         -cr_89
+cell sr810        0 fill side_refl121         -sr_810
+cell cr811        0 fill side_refl121         -cr_811
+cell sr812        0 fill side_refl121         -sr_812
+cell cr813        0 fill side_refl121         -cr_813
+cell sr814        0 fill side_refl121         -sr_814
+cell cr815        0 fill side_refl121         -cr_815
+cell sr816        0 fill side_refl121         -sr_816
+cell cr817        0 fill side_refl121         -cr_817
+cell sr818        0 fill side_refl121         -sr_818
+cell cr91         0 fill side_refl131         -cr_91
+cell sr92         0 fill side_refl131         -sr_92
+cell cr93         0 fill side_refl131         -cr_93
+cell sr94         0 fill side_refl131         -sr_94
+cell cr95         0 fill side_refl131         -cr_95
+cell sr96         0 fill side_refl131         -sr_96
+cell cr97         0 fill side_refl131         -cr_97
+cell sr98         0 fill side_refl131         -sr_98
+cell cr99         0 fill side_refl131         -cr_99
+cell sr910        0 fill side_refl131         -sr_910
+cell cr911        0 fill side_refl131         -cr_911
+cell sr912        0 fill side_refl131         -sr_912
+cell cr913        0 fill side_refl131         -cr_913
+cell sr914        0 fill side_refl131         -sr_914
+cell cr915        0 fill side_refl131         -cr_915
+cell sr916        0 fill side_refl131         -sr_916
+cell cr917        0 fill side_refl131         -cr_917
+cell sr918        0 fill side_refl131         -sr_918
+cell cr101        0 fill side_refl141         -cr_101
+cell sr102        0 fill side_refl141         -sr_102
+cell cr103        0 fill side_refl141         -cr_103
+cell sr104        0 fill side_refl141         -sr_104
+cell cr105        0 fill side_refl141         -cr_105
+cell sr106        0 fill side_refl141         -sr_106
+cell cr107        0 fill side_refl141         -cr_107
+cell sr108        0 fill side_refl141         -sr_108
+cell cr109        0 fill side_refl141         -cr_109
+cell sr1010       0 fill side_refl141         -sr_1010
+cell cr1011       0 fill side_refl141         -cr_1011
+cell sr1012       0 fill side_refl141         -sr_1012
+cell cr1013       0 fill side_refl141         -cr_1013
+cell sr1014       0 fill side_refl141         -sr_1014
+cell cr1015       0 fill side_refl141         -cr_1015
+cell sr1016       0 fill side_refl141         -sr_1016
+cell cr1017       0 fill side_refl141         -cr_1017
+cell sr1018       0 fill side_refl141         -sr_1018
+cell cr111        0 fill side_refl151         -cr_111
+cell sr112        0 fill side_refl151         -sr_112
+cell cr113        0 fill side_refl151         -cr_113
+cell sr114        0 fill side_refl151         -sr_114
+cell cr115        0 fill side_refl151         -cr_115
+cell sr116        0 fill side_refl151         -sr_116
+cell cr117        0 fill side_refl151         -cr_117
+cell sr118        0 fill side_refl151         -sr_118
+cell cr119        0 fill side_refl151         -cr_119
+cell sr1110       0 fill side_refl151         -sr_1110
+cell cr1111       0 fill side_refl151         -cr_1111
+cell sr1112       0 fill side_refl151         -sr_1112
+cell cr1113       0 fill side_refl151         -cr_1113
+cell sr1114       0 fill side_refl151         -sr_1114
+cell cr1115       0 fill side_refl151         -cr_1115
+cell sr1116       0 fill side_refl151         -sr_1116
+cell cr1117       0 fill side_refl151         -cr_1117
+cell sr1118       0 fill side_refl151         -sr_1118
+cell cr121        0 fill side_refl161         -cr_121
+cell sr122        0 fill side_refl161         -sr_122
+cell cr123        0 fill side_refl161         -cr_123
+cell sr124        0 fill side_refl161         -sr_124
+cell cr125        0 fill side_refl161         -cr_125
+cell sr126        0 fill side_refl161         -sr_126
+cell cr127        0 fill side_refl161         -cr_127
+cell sr128        0 fill side_refl161         -sr_128
+cell cr129        0 fill side_refl161         -cr_129
+cell sr1210       0 fill side_refl161         -sr_1210
+cell cr1211       0 fill side_refl161         -cr_1211
+cell sr1212       0 fill side_refl161         -sr_1212
+cell cr1213       0 fill side_refl161         -cr_1213
+cell sr1214       0 fill side_refl161         -sr_1214
+cell cr1215       0 fill side_refl161         -cr_1215
+cell sr1216       0 fill side_refl161         -sr_1216
+cell cr1217       0 fill side_refl161         -cr_1217
+cell sr1218       0 fill side_refl161         -sr_1218
+cell cr131        0 fill side_refl171         -cr_131
+cell sr132        0 fill side_refl171         -sr_132
+cell cr133        0 fill side_refl171         -cr_133
+cell sr134        0 fill side_refl171         -sr_134
+cell cr135        0 fill side_refl171         -cr_135
+cell sr136        0 fill side_refl171         -sr_136
+cell cr137        0 fill side_refl171         -cr_137
+cell sr138        0 fill side_refl171         -sr_138
+cell cr139        0 fill side_refl171         -cr_139
+cell sr1310       0 fill side_refl171         -sr_1310
+cell cr1311       0 fill side_refl171         -cr_1311
+cell sr1312       0 fill side_refl171         -sr_1312
+cell cr1313       0 fill side_refl171         -cr_1313
+cell sr1314       0 fill side_refl171         -sr_1314
+cell cr1315       0 fill side_refl171         -cr_1315
+cell sr1316       0 fill side_refl171         -sr_1316
+cell cr1317       0 fill side_refl171         -cr_1317
+cell sr1318       0 fill side_refl171         -sr_1318
+cell cr141        0 fill side_refl181         -cr_141
+cell sr142        0 fill side_refl181         -sr_142
+cell cr143        0 fill side_refl181         -cr_143
+cell sr144        0 fill side_refl181         -sr_144
+cell cr145        0 fill side_refl181         -cr_145
+cell sr146        0 fill side_refl181         -sr_146
+cell cr147        0 fill side_refl181         -cr_147
+cell sr148        0 fill side_refl181         -sr_148
+cell cr149        0 fill side_refl181         -cr_149
+cell sr1410       0 fill side_refl181         -sr_1410
+cell cr1411       0 fill side_refl181         -cr_1411
+cell sr1412       0 fill side_refl181         -sr_1412
+cell cr1413       0 fill side_refl181         -cr_1413
+cell sr1414       0 fill side_refl181         -sr_1414
+cell cr1415       0 fill side_refl181         -cr_1415
+cell sr1416       0 fill side_refl181         -sr_1416
+cell cr1417       0 fill side_refl181         -cr_1417
+cell sr1418       0 fill side_refl181         -sr_1418
+cell cr151        0 fill side_refl191         -cr_151
+cell sr152        0 fill side_refl191         -sr_152
+cell cr153        0 fill side_refl191         -cr_153
+cell sr154        0 fill side_refl191         -sr_154
+cell cr155        0 fill side_refl191         -cr_155
+cell sr156        0 fill side_refl191         -sr_156
+cell cr157        0 fill side_refl191         -cr_157
+cell sr158        0 fill side_refl191         -sr_158
+cell cr159        0 fill side_refl191         -cr_159
+cell sr1510       0 fill side_refl191         -sr_1510
+cell cr1511       0 fill side_refl191         -cr_1511
+cell sr1512       0 fill side_refl191         -sr_1512
+cell cr1513       0 fill side_refl191         -cr_1513
+cell sr1514       0 fill side_refl191         -sr_1514
+cell cr1515       0 fill side_refl191         -cr_1515
+cell sr1516       0 fill side_refl191         -sr_1516
+cell cr1517       0 fill side_refl191         -cr_1517
+cell sr1518       0 fill side_refl191         -sr_1518
+cell cr161        0 fill side_refl201         -cr_161
+cell sr162        0 fill side_refl201         -sr_162
+cell cr163        0 fill side_refl201         -cr_163
+cell sr164        0 fill side_refl201         -sr_164
+cell cr165        0 fill side_refl201         -cr_165
+cell sr166        0 fill side_refl201         -sr_166
+cell cr167        0 fill side_refl201         -cr_167
+cell sr168        0 fill side_refl201         -sr_168
+cell cr169        0 fill side_refl201         -cr_169
+cell sr1610       0 fill side_refl201         -sr_1610
+cell cr1611       0 fill side_refl201         -cr_1611
+cell sr1612       0 fill side_refl201         -sr_1612
+cell cr1613       0 fill side_refl201         -cr_1613
+cell sr1614       0 fill side_refl201         -sr_1614
+cell cr1615       0 fill side_refl201         -cr_1615
+cell sr1616       0 fill side_refl201         -sr_1616
+cell cr1617       0 fill side_refl201         -cr_1617
+cell sr1618       0 fill side_refl201         -sr_1618
+cell cr171        0 fill side_refl211         -cr_171
+cell sr172        0 fill side_refl211         -sr_172
+cell cr173        0 fill side_refl211         -cr_173
+cell sr174        0 fill side_refl211         -sr_174
+cell cr175        0 fill side_refl211         -cr_175
+cell sr176        0 fill side_refl211         -sr_176
+cell cr177        0 fill side_refl211         -cr_177
+cell sr178        0 fill side_refl211         -sr_178
+cell cr179        0 fill side_refl211         -cr_179
+cell sr1710       0 fill side_refl211         -sr_1710
+cell cr1711       0 fill side_refl211         -cr_1711
+cell sr1712       0 fill side_refl211         -sr_1712
+cell cr1713       0 fill side_refl211         -cr_1713
+cell sr1714       0 fill side_refl211         -sr_1714
+cell cr1715       0 fill side_refl211         -cr_1715
+cell sr1716       0 fill side_refl211         -sr_1716
+cell cr1717       0 fill side_refl211         -cr_1717
+cell sr1718       0 fill side_refl211         -sr_1718
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 80.1 enriched B-10
+mat control_rod sum tmp 900.0 moder grph900 6000
+ 6000.09c       2.7468E-2 
+ 5010.09c       8.799626E-2
+ 5011.09c       2.186174E-2
+ 
+% 80.1 enriched B-10
+mat safety_rod sum tmp 900.0 moder grph900 6000
+ 6000.09c       2.7468E-2 
+ 5010.09c       8.799626E-2
+ 5011.09c       2.186174E-2
+
+% boron concentration at 4.8366 ppm total boron concentration
+% graphite density is 1.76 g/cc
+mat reflector   sum tmp 900.0 moder grph900 6000 
+ 6000.09c       8.82418E-2 
+ 5010.09c       9.42800E-8
+ 5011.09c       3.79489E-7 
+ 
+% outlet channel graphite with porosity of 0.25
+% graphite density is 1.76 * 0.75
+mat outlet_channel   sum tmp 900.0 moder grph900 6000
+ 6000.09c       6.61814E-2 
+ 5010.09c       7.07100E-8
+ 5011.09c       2.84617E-7 
+ 
+% outlet plenum graphite with porosity of 0.34
+% graphite density is 1.76 * 0.66
+mat outlet_plenum   sum tmp 900.0 moder grph900 6000
+ 6000.09c       5.82396E-2 
+ 5010.09c       6.22248E-8
+ 5011.09c       2.50463E-7 
+
+% pebble shoot graphite with porosity of 0.25
+% graphite density is 1.76 * 0.75
+mat pebble_shoot   sum tmp 900.0 moder grph900 6000
+ 6000.09c       6.61814E-2 
+ 5010.09c       7.07100E-8
+ 5011.09c       2.84617E-7 
+
+% Carbon pebble shell
+mat pebshell    sum   tmp 900.0 moder grph900 6000
+ 6000.09c       8.67416E-2
+ 5010.09c       2.23273E-8
+ 5011.09c       9.04368E-7
+ 
+ % Helium
+mat helium    sum   tmp 900.0 
+ 2004.09c       5.28437E-4
+ 
+ % Carbon pebble shell
+mat graphite    sum   tmp 900.0 moder grph900 6000
+ 6000.09c       8.67416E-2
+ 5010.09c       2.23273E-8
+ 5011.09c       9.04368E-7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Riser Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Risers
+
+surf riser_0_0  cylz 178.5 0.0 8.5 224.5 260.5
+surf riser_0_1  cylz 178.5 0.0 8.5 260.5 338.41
+surf riser_0_2  cylz 178.5 0.0 8.5 338.41 416.32
+surf riser_0_3  cylz 178.5 0.0 8.5 416.32 494.23
+surf riser_0_4  cylz 178.5 0.0 8.5 494.23 572.14
+surf riser_0_5  cylz 178.5 0.0 8.5 572.14 650.05
+surf riser_0_6  cylz 178.5 0.0 8.5 650.05 727.96
+surf riser_0_7  cylz 178.5 0.0 8.5 727.96 805.87
+surf riser_0_8  cylz 178.5 0.0 8.5 805.87 883.78
+surf riser_0_9  cylz 178.5 0.0 8.5 883.78 961.69
+surf riser_0_10 cylz 178.5 0.0 8.5 961.69 1039.6
+surf riser_0_11 cylz 178.5 0.0 8.5 1039.6 1117.5
+surf riser_20_0  cylz 167.73513 61.0506 8.5 224.5 260.5
+surf riser_20_1  cylz 167.73513 61.0506 8.5 260.5 338.41
+surf riser_20_2  cylz 167.73513 61.0506 8.5 338.41 416.32
+surf riser_20_3  cylz 167.73513 61.0506 8.5 416.32 494.23
+surf riser_20_4  cylz 167.73513 61.0506 8.5 494.23 572.14
+surf riser_20_5  cylz 167.73513 61.0506 8.5 572.14 650.05
+surf riser_20_6  cylz 167.73513 61.0506 8.5 650.05 727.96
+surf riser_20_7  cylz 167.73513 61.0506 8.5 727.96 805.87
+surf riser_20_8  cylz 167.73513 61.0506 8.5 805.87 883.78
+surf riser_20_9  cylz 167.73513 61.0506 8.5 883.78 961.69
+surf riser_20_10 cylz 167.73513 61.0506 8.5 961.69 1039.6
+surf riser_20_11 cylz 167.73513 61.0506 8.5 1039.6 1117.5
+surf riser_40_0  cylz 136.73893 114.73759 8.5 224.5 260.5
+surf riser_40_1  cylz 136.73893 114.73759 8.5 260.5 338.41
+surf riser_40_2  cylz 136.73893 114.73759 8.5 338.41 416.32
+surf riser_40_3  cylz 136.73893 114.73759 8.5 416.32 494.23
+surf riser_40_4  cylz 136.73893 114.73759 8.5 494.23 572.14
+surf riser_40_5  cylz 136.73893 114.73759 8.5 572.14 650.05
+surf riser_40_6  cylz 136.73893 114.73759 8.5 650.05 727.96
+surf riser_40_7  cylz 136.73893 114.73759 8.5 727.96 805.87
+surf riser_40_8  cylz 136.73893 114.73759 8.5 805.87 883.78
+surf riser_40_9  cylz 136.73893 114.73759 8.5 883.78 961.69
+surf riser_40_10 cylz 136.73893 114.73759 8.5 961.69 1039.6
+surf riser_40_11 cylz 136.73893 114.73759 8.5 1039.6 1117.5
+surf riser_60_0  cylz 89.25 154.58553 8.5 224.5 260.5
+surf riser_60_1  cylz 89.25 154.58553 8.5 260.5 338.41
+surf riser_60_2  cylz 89.25 154.58553 8.5 338.41 416.32
+surf riser_60_3  cylz 89.25 154.58553 8.5 416.32 494.23
+surf riser_60_4  cylz 89.25 154.58553 8.5 494.23 572.14
+surf riser_60_5  cylz 89.25 154.58553 8.5 572.14 650.05
+surf riser_60_6  cylz 89.25 154.58553 8.5 650.05 727.96
+surf riser_60_7  cylz 89.25 154.58553 8.5 727.96 805.87
+surf riser_60_8  cylz 89.25 154.58553 8.5 805.87 883.78
+surf riser_60_9  cylz 89.25 154.58553 8.5 883.78 961.69
+surf riser_60_10 cylz 89.25 154.58553 8.5 961.69 1039.6
+surf riser_60_11 cylz 89.25 154.58553 8.5 1039.6 1117.5
+surf riser_80_0  cylz 30.9962 175.78818 8.5 224.5 260.5
+surf riser_80_1  cylz 30.9962 175.78818 8.5 260.5 338.41
+surf riser_80_2  cylz 30.9962 175.78818 8.5 338.41 416.32
+surf riser_80_3  cylz 30.9962 175.78818 8.5 416.32 494.23
+surf riser_80_4  cylz 30.9962 175.78818 8.5 494.23 572.14
+surf riser_80_5  cylz 30.9962 175.78818 8.5 572.14 650.05
+surf riser_80_6  cylz 30.9962 175.78818 8.5 650.05 727.96
+surf riser_80_7  cylz 30.9962 175.78818 8.5 727.96 805.87
+surf riser_80_8  cylz 30.9962 175.78818 8.5 805.87 883.78
+surf riser_80_9  cylz 30.9962 175.78818 8.5 883.78 961.69
+surf riser_80_10 cylz 30.9962 175.78818 8.5 961.69 1039.6
+surf riser_80_11 cylz 30.9962 175.78818 8.5 1039.6 1117.5
+surf riser_100_0  cylz -30.9962 175.78818 8.5 224.5 260.5
+surf riser_100_1  cylz -30.9962 175.78818 8.5 260.5 338.41
+surf riser_100_2  cylz -30.9962 175.78818 8.5 338.41 416.32
+surf riser_100_3  cylz -30.9962 175.78818 8.5 416.32 494.23
+surf riser_100_4  cylz -30.9962 175.78818 8.5 494.23 572.14
+surf riser_100_5  cylz -30.9962 175.78818 8.5 572.14 650.05
+surf riser_100_6  cylz -30.9962 175.78818 8.5 650.05 727.96
+surf riser_100_7  cylz -30.9962 175.78818 8.5 727.96 805.87
+surf riser_100_8  cylz -30.9962 175.78818 8.5 805.87 883.78
+surf riser_100_9  cylz -30.9962 175.78818 8.5 883.78 961.69
+surf riser_100_10 cylz -30.9962 175.78818 8.5 961.69 1039.6
+surf riser_100_11 cylz -30.9962 175.78818 8.5 1039.6 1117.5
+surf riser_120_0  cylz -89.25 154.58553 8.5 224.5 260.5
+surf riser_120_1  cylz -89.25 154.58553 8.5 260.5 338.41
+surf riser_120_2  cylz -89.25 154.58553 8.5 338.41 416.32
+surf riser_120_3  cylz -89.25 154.58553 8.5 416.32 494.23
+surf riser_120_4  cylz -89.25 154.58553 8.5 494.23 572.14
+surf riser_120_5  cylz -89.25 154.58553 8.5 572.14 650.05
+surf riser_120_6  cylz -89.25 154.58553 8.5 650.05 727.96
+surf riser_120_7  cylz -89.25 154.58553 8.5 727.96 805.87
+surf riser_120_8  cylz -89.25 154.58553 8.5 805.87 883.78
+surf riser_120_9  cylz -89.25 154.58553 8.5 883.78 961.69
+surf riser_120_10 cylz -89.25 154.58553 8.5 961.69 1039.6
+surf riser_120_11 cylz -89.25 154.58553 8.5 1039.6 1117.5
+surf riser_140_0  cylz -136.73893 114.73759 8.5 224.5 260.5
+surf riser_140_1  cylz -136.73893 114.73759 8.5 260.5 338.41
+surf riser_140_2  cylz -136.73893 114.73759 8.5 338.41 416.32
+surf riser_140_3  cylz -136.73893 114.73759 8.5 416.32 494.23
+surf riser_140_4  cylz -136.73893 114.73759 8.5 494.23 572.14
+surf riser_140_5  cylz -136.73893 114.73759 8.5 572.14 650.05
+surf riser_140_6  cylz -136.73893 114.73759 8.5 650.05 727.96
+surf riser_140_7  cylz -136.73893 114.73759 8.5 727.96 805.87
+surf riser_140_8  cylz -136.73893 114.73759 8.5 805.87 883.78
+surf riser_140_9  cylz -136.73893 114.73759 8.5 883.78 961.69
+surf riser_140_10 cylz -136.73893 114.73759 8.5 961.69 1039.6
+surf riser_140_11 cylz -136.73893 114.73759 8.5 1039.6 1117.5
+surf riser_160_0  cylz -167.73513 61.0506 8.5 224.5 260.5
+surf riser_160_1  cylz -167.73513 61.0506 8.5 260.5 338.41
+surf riser_160_2  cylz -167.73513 61.0506 8.5 338.41 416.32
+surf riser_160_3  cylz -167.73513 61.0506 8.5 416.32 494.23
+surf riser_160_4  cylz -167.73513 61.0506 8.5 494.23 572.14
+surf riser_160_5  cylz -167.73513 61.0506 8.5 572.14 650.05
+surf riser_160_6  cylz -167.73513 61.0506 8.5 650.05 727.96
+surf riser_160_7  cylz -167.73513 61.0506 8.5 727.96 805.87
+surf riser_160_8  cylz -167.73513 61.0506 8.5 805.87 883.78
+surf riser_160_9  cylz -167.73513 61.0506 8.5 883.78 961.69
+surf riser_160_10 cylz -167.73513 61.0506 8.5 961.69 1039.6
+surf riser_160_11 cylz -167.73513 61.0506 8.5 1039.6 1117.5
+surf riser_180_0  cylz -178.5 0.0 8.5 224.5 260.5
+surf riser_180_1  cylz -178.5 0.0 8.5 260.5 338.41
+surf riser_180_2  cylz -178.5 0.0 8.5 338.41 416.32
+surf riser_180_3  cylz -178.5 0.0 8.5 416.32 494.23
+surf riser_180_4  cylz -178.5 0.0 8.5 494.23 572.14
+surf riser_180_5  cylz -178.5 0.0 8.5 572.14 650.05
+surf riser_180_6  cylz -178.5 0.0 8.5 650.05 727.96
+surf riser_180_7  cylz -178.5 0.0 8.5 727.96 805.87
+surf riser_180_8  cylz -178.5 0.0 8.5 805.87 883.78
+surf riser_180_9  cylz -178.5 0.0 8.5 883.78 961.69
+surf riser_180_10 cylz -178.5 0.0 8.5 961.69 1039.6
+surf riser_180_11 cylz -178.5 0.0 8.5 1039.6 1117.5
+surf riser_200_0  cylz -167.73513 -61.0506 8.5 224.5 260.5
+surf riser_200_1  cylz -167.73513 -61.0506 8.5 260.5 338.41
+surf riser_200_2  cylz -167.73513 -61.0506 8.5 338.41 416.32
+surf riser_200_3  cylz -167.73513 -61.0506 8.5 416.32 494.23
+surf riser_200_4  cylz -167.73513 -61.0506 8.5 494.23 572.14
+surf riser_200_5  cylz -167.73513 -61.0506 8.5 572.14 650.05
+surf riser_200_6  cylz -167.73513 -61.0506 8.5 650.05 727.96
+surf riser_200_7  cylz -167.73513 -61.0506 8.5 727.96 805.87
+surf riser_200_8  cylz -167.73513 -61.0506 8.5 805.87 883.78
+surf riser_200_9  cylz -167.73513 -61.0506 8.5 883.78 961.69
+surf riser_200_10 cylz -167.73513 -61.0506 8.5 961.69 1039.6
+surf riser_200_11 cylz -167.73513 -61.0506 8.5 1039.6 1117.5
+surf riser_220_0  cylz -136.73893 -114.73759 8.5 224.5 260.5
+surf riser_220_1  cylz -136.73893 -114.73759 8.5 260.5 338.41
+surf riser_220_2  cylz -136.73893 -114.73759 8.5 338.41 416.32
+surf riser_220_3  cylz -136.73893 -114.73759 8.5 416.32 494.23
+surf riser_220_4  cylz -136.73893 -114.73759 8.5 494.23 572.14
+surf riser_220_5  cylz -136.73893 -114.73759 8.5 572.14 650.05
+surf riser_220_6  cylz -136.73893 -114.73759 8.5 650.05 727.96
+surf riser_220_7  cylz -136.73893 -114.73759 8.5 727.96 805.87
+surf riser_220_8  cylz -136.73893 -114.73759 8.5 805.87 883.78
+surf riser_220_9  cylz -136.73893 -114.73759 8.5 883.78 961.69
+surf riser_220_10 cylz -136.73893 -114.73759 8.5 961.69 1039.6
+surf riser_220_11 cylz -136.73893 -114.73759 8.5 1039.6 1117.5
+surf riser_240_0  cylz -89.25 -154.58553 8.5 224.5 260.5
+surf riser_240_1  cylz -89.25 -154.58553 8.5 260.5 338.41
+surf riser_240_2  cylz -89.25 -154.58553 8.5 338.41 416.32
+surf riser_240_3  cylz -89.25 -154.58553 8.5 416.32 494.23
+surf riser_240_4  cylz -89.25 -154.58553 8.5 494.23 572.14
+surf riser_240_5  cylz -89.25 -154.58553 8.5 572.14 650.05
+surf riser_240_6  cylz -89.25 -154.58553 8.5 650.05 727.96
+surf riser_240_7  cylz -89.25 -154.58553 8.5 727.96 805.87
+surf riser_240_8  cylz -89.25 -154.58553 8.5 805.87 883.78
+surf riser_240_9  cylz -89.25 -154.58553 8.5 883.78 961.69
+surf riser_240_10 cylz -89.25 -154.58553 8.5 961.69 1039.6
+surf riser_240_11 cylz -89.25 -154.58553 8.5 1039.6 1117.5
+surf riser_260_0  cylz -30.9962 -175.78818 8.5 224.5 260.5
+surf riser_260_1  cylz -30.9962 -175.78818 8.5 260.5 338.41
+surf riser_260_2  cylz -30.9962 -175.78818 8.5 338.41 416.32
+surf riser_260_3  cylz -30.9962 -175.78818 8.5 416.32 494.23
+surf riser_260_4  cylz -30.9962 -175.78818 8.5 494.23 572.14
+surf riser_260_5  cylz -30.9962 -175.78818 8.5 572.14 650.05
+surf riser_260_6  cylz -30.9962 -175.78818 8.5 650.05 727.96
+surf riser_260_7  cylz -30.9962 -175.78818 8.5 727.96 805.87
+surf riser_260_8  cylz -30.9962 -175.78818 8.5 805.87 883.78
+surf riser_260_9  cylz -30.9962 -175.78818 8.5 883.78 961.69
+surf riser_260_10 cylz -30.9962 -175.78818 8.5 961.69 1039.6
+surf riser_260_11 cylz -30.9962 -175.78818 8.5 1039.6 1117.5
+surf riser_280_0  cylz 30.9962 -175.78818 8.5 224.5 260.5
+surf riser_280_1  cylz 30.9962 -175.78818 8.5 260.5 338.41
+surf riser_280_2  cylz 30.9962 -175.78818 8.5 338.41 416.32
+surf riser_280_3  cylz 30.9962 -175.78818 8.5 416.32 494.23
+surf riser_280_4  cylz 30.9962 -175.78818 8.5 494.23 572.14
+surf riser_280_5  cylz 30.9962 -175.78818 8.5 572.14 650.05
+surf riser_280_6  cylz 30.9962 -175.78818 8.5 650.05 727.96
+surf riser_280_7  cylz 30.9962 -175.78818 8.5 727.96 805.87
+surf riser_280_8  cylz 30.9962 -175.78818 8.5 805.87 883.78
+surf riser_280_9  cylz 30.9962 -175.78818 8.5 883.78 961.69
+surf riser_280_10 cylz 30.9962 -175.78818 8.5 961.69 1039.6
+surf riser_280_11 cylz 30.9962 -175.78818 8.5 1039.6 1117.5
+surf riser_300_0  cylz 89.25 -154.58553 8.5 224.5 260.5
+surf riser_300_1  cylz 89.25 -154.58553 8.5 260.5 338.41
+surf riser_300_2  cylz 89.25 -154.58553 8.5 338.41 416.32
+surf riser_300_3  cylz 89.25 -154.58553 8.5 416.32 494.23
+surf riser_300_4  cylz 89.25 -154.58553 8.5 494.23 572.14
+surf riser_300_5  cylz 89.25 -154.58553 8.5 572.14 650.05
+surf riser_300_6  cylz 89.25 -154.58553 8.5 650.05 727.96
+surf riser_300_7  cylz 89.25 -154.58553 8.5 727.96 805.87
+surf riser_300_8  cylz 89.25 -154.58553 8.5 805.87 883.78
+surf riser_300_9  cylz 89.25 -154.58553 8.5 883.78 961.69
+surf riser_300_10 cylz 89.25 -154.58553 8.5 961.69 1039.6
+surf riser_300_11 cylz 89.25 -154.58553 8.5 1039.6 1117.5
+surf riser_320_0  cylz 136.73893 -114.73759 8.5 224.5 260.5
+surf riser_320_1  cylz 136.73893 -114.73759 8.5 260.5 338.41
+surf riser_320_2  cylz 136.73893 -114.73759 8.5 338.41 416.32
+surf riser_320_3  cylz 136.73893 -114.73759 8.5 416.32 494.23
+surf riser_320_4  cylz 136.73893 -114.73759 8.5 494.23 572.14
+surf riser_320_5  cylz 136.73893 -114.73759 8.5 572.14 650.05
+surf riser_320_6  cylz 136.73893 -114.73759 8.5 650.05 727.96
+surf riser_320_7  cylz 136.73893 -114.73759 8.5 727.96 805.87
+surf riser_320_8  cylz 136.73893 -114.73759 8.5 805.87 883.78
+surf riser_320_9  cylz 136.73893 -114.73759 8.5 883.78 961.69
+surf riser_320_10 cylz 136.73893 -114.73759 8.5 961.69 1039.6
+surf riser_320_11 cylz 136.73893 -114.73759 8.5 1039.6 1117.5
+surf riser_340_0  cylz 167.73513 -61.0506 8.5 224.5 260.5
+surf riser_340_1  cylz 167.73513 -61.0506 8.5 260.5 338.41
+surf riser_340_2  cylz 167.73513 -61.0506 8.5 338.41 416.32
+surf riser_340_3  cylz 167.73513 -61.0506 8.5 416.32 494.23
+surf riser_340_4  cylz 167.73513 -61.0506 8.5 494.23 572.14
+surf riser_340_5  cylz 167.73513 -61.0506 8.5 572.14 650.05
+surf riser_340_6  cylz 167.73513 -61.0506 8.5 650.05 727.96
+surf riser_340_7  cylz 167.73513 -61.0506 8.5 727.96 805.87
+surf riser_340_8  cylz 167.73513 -61.0506 8.5 805.87 883.78
+surf riser_340_9  cylz 167.73513 -61.0506 8.5 883.78 961.69
+surf riser_340_10 cylz 167.73513 -61.0506 8.5 961.69 1039.6
+surf riser_340_11 cylz 167.73513 -61.0506 8.5 1039.6 1117.5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Riser Cells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Risers
+
+cell riser_0_0  side_refl73   helium   -riser_0_0
+cell riser_0_1  side_refl83   helium   -riser_0_1
+cell riser_0_2  side_refl93   helium   -riser_0_2
+cell riser_0_3  side_refl103   helium   -riser_0_3
+cell riser_0_4  side_refl113   helium   -riser_0_4
+cell riser_0_5  side_refl123   helium   -riser_0_5
+cell riser_0_6  side_refl133   helium   -riser_0_6
+cell riser_0_7  side_refl143   helium   -riser_0_7
+cell riser_0_8  side_refl153   helium   -riser_0_8
+cell riser_0_9  side_refl163   helium   -riser_0_9
+cell riser_0_10  side_refl173   helium   -riser_0_10
+cell riser_0_11  side_refl183   helium   -riser_0_11
+cell riser_20_0  side_refl73   helium   -riser_20_0
+cell riser_20_1  side_refl83   helium   -riser_20_1
+cell riser_20_2  side_refl93   helium   -riser_20_2
+cell riser_20_3  side_refl103   helium   -riser_20_3
+cell riser_20_4  side_refl113   helium   -riser_20_4
+cell riser_20_5  side_refl123   helium   -riser_20_5
+cell riser_20_6  side_refl133   helium   -riser_20_6
+cell riser_20_7  side_refl143   helium   -riser_20_7
+cell riser_20_8  side_refl153   helium   -riser_20_8
+cell riser_20_9  side_refl163   helium   -riser_20_9
+cell riser_20_10  side_refl173   helium   -riser_20_10
+cell riser_20_11  side_refl183   helium   -riser_20_11
+cell riser_40_0  side_refl73   helium   -riser_40_0
+cell riser_40_1  side_refl83   helium   -riser_40_1
+cell riser_40_2  side_refl93   helium   -riser_40_2
+cell riser_40_3  side_refl103   helium   -riser_40_3
+cell riser_40_4  side_refl113   helium   -riser_40_4
+cell riser_40_5  side_refl123   helium   -riser_40_5
+cell riser_40_6  side_refl133   helium   -riser_40_6
+cell riser_40_7  side_refl143   helium   -riser_40_7
+cell riser_40_8  side_refl153   helium   -riser_40_8
+cell riser_40_9  side_refl163   helium   -riser_40_9
+cell riser_40_10  side_refl173   helium   -riser_40_10
+cell riser_40_11  side_refl183   helium   -riser_40_11
+cell riser_60_0  side_refl73   helium   -riser_60_0
+cell riser_60_1  side_refl83   helium   -riser_60_1
+cell riser_60_2  side_refl93   helium   -riser_60_2
+cell riser_60_3  side_refl103   helium   -riser_60_3
+cell riser_60_4  side_refl113   helium   -riser_60_4
+cell riser_60_5  side_refl123   helium   -riser_60_5
+cell riser_60_6  side_refl133   helium   -riser_60_6
+cell riser_60_7  side_refl143   helium   -riser_60_7
+cell riser_60_8  side_refl153   helium   -riser_60_8
+cell riser_60_9  side_refl163   helium   -riser_60_9
+cell riser_60_10  side_refl173   helium   -riser_60_10
+cell riser_60_11  side_refl183   helium   -riser_60_11
+cell riser_80_0  side_refl73   helium   -riser_80_0
+cell riser_80_1  side_refl83   helium   -riser_80_1
+cell riser_80_2  side_refl93   helium   -riser_80_2
+cell riser_80_3  side_refl103   helium   -riser_80_3
+cell riser_80_4  side_refl113   helium   -riser_80_4
+cell riser_80_5  side_refl123   helium   -riser_80_5
+cell riser_80_6  side_refl133   helium   -riser_80_6
+cell riser_80_7  side_refl143   helium   -riser_80_7
+cell riser_80_8  side_refl153   helium   -riser_80_8
+cell riser_80_9  side_refl163   helium   -riser_80_9
+cell riser_80_10  side_refl173   helium   -riser_80_10
+cell riser_80_11  side_refl183   helium   -riser_80_11
+cell riser_100_0  side_refl73   helium   -riser_100_0
+cell riser_100_1  side_refl83   helium   -riser_100_1
+cell riser_100_2  side_refl93   helium   -riser_100_2
+cell riser_100_3  side_refl103   helium   -riser_100_3
+cell riser_100_4  side_refl113   helium   -riser_100_4
+cell riser_100_5  side_refl123   helium   -riser_100_5
+cell riser_100_6  side_refl133   helium   -riser_100_6
+cell riser_100_7  side_refl143   helium   -riser_100_7
+cell riser_100_8  side_refl153   helium   -riser_100_8
+cell riser_100_9  side_refl163   helium   -riser_100_9
+cell riser_100_10  side_refl173   helium   -riser_100_10
+cell riser_100_11  side_refl183   helium   -riser_100_11
+cell riser_120_0  side_refl73   helium   -riser_120_0
+cell riser_120_1  side_refl83   helium   -riser_120_1
+cell riser_120_2  side_refl93   helium   -riser_120_2
+cell riser_120_3  side_refl103   helium   -riser_120_3
+cell riser_120_4  side_refl113   helium   -riser_120_4
+cell riser_120_5  side_refl123   helium   -riser_120_5
+cell riser_120_6  side_refl133   helium   -riser_120_6
+cell riser_120_7  side_refl143   helium   -riser_120_7
+cell riser_120_8  side_refl153   helium   -riser_120_8
+cell riser_120_9  side_refl163   helium   -riser_120_9
+cell riser_120_10  side_refl173   helium   -riser_120_10
+cell riser_120_11  side_refl183   helium   -riser_120_11
+cell riser_140_0  side_refl73   helium   -riser_140_0
+cell riser_140_1  side_refl83   helium   -riser_140_1
+cell riser_140_2  side_refl93   helium   -riser_140_2
+cell riser_140_3  side_refl103   helium   -riser_140_3
+cell riser_140_4  side_refl113   helium   -riser_140_4
+cell riser_140_5  side_refl123   helium   -riser_140_5
+cell riser_140_6  side_refl133   helium   -riser_140_6
+cell riser_140_7  side_refl143   helium   -riser_140_7
+cell riser_140_8  side_refl153   helium   -riser_140_8
+cell riser_140_9  side_refl163   helium   -riser_140_9
+cell riser_140_10  side_refl173   helium   -riser_140_10
+cell riser_140_11  side_refl183   helium   -riser_140_11
+cell riser_160_0  side_refl73   helium   -riser_160_0
+cell riser_160_1  side_refl83   helium   -riser_160_1
+cell riser_160_2  side_refl93   helium   -riser_160_2
+cell riser_160_3  side_refl103   helium   -riser_160_3
+cell riser_160_4  side_refl113   helium   -riser_160_4
+cell riser_160_5  side_refl123   helium   -riser_160_5
+cell riser_160_6  side_refl133   helium   -riser_160_6
+cell riser_160_7  side_refl143   helium   -riser_160_7
+cell riser_160_8  side_refl153   helium   -riser_160_8
+cell riser_160_9  side_refl163   helium   -riser_160_9
+cell riser_160_10  side_refl173   helium   -riser_160_10
+cell riser_160_11  side_refl183   helium   -riser_160_11
+cell riser_180_0  side_refl73   helium   -riser_180_0
+cell riser_180_1  side_refl83   helium   -riser_180_1
+cell riser_180_2  side_refl93   helium   -riser_180_2
+cell riser_180_3  side_refl103   helium   -riser_180_3
+cell riser_180_4  side_refl113   helium   -riser_180_4
+cell riser_180_5  side_refl123   helium   -riser_180_5
+cell riser_180_6  side_refl133   helium   -riser_180_6
+cell riser_180_7  side_refl143   helium   -riser_180_7
+cell riser_180_8  side_refl153   helium   -riser_180_8
+cell riser_180_9  side_refl163   helium   -riser_180_9
+cell riser_180_10  side_refl173   helium   -riser_180_10
+cell riser_180_11  side_refl183   helium   -riser_180_11
+cell riser_200_0  side_refl73   helium   -riser_200_0
+cell riser_200_1  side_refl83   helium   -riser_200_1
+cell riser_200_2  side_refl93   helium   -riser_200_2
+cell riser_200_3  side_refl103   helium   -riser_200_3
+cell riser_200_4  side_refl113   helium   -riser_200_4
+cell riser_200_5  side_refl123   helium   -riser_200_5
+cell riser_200_6  side_refl133   helium   -riser_200_6
+cell riser_200_7  side_refl143   helium   -riser_200_7
+cell riser_200_8  side_refl153   helium   -riser_200_8
+cell riser_200_9  side_refl163   helium   -riser_200_9
+cell riser_200_10  side_refl173   helium   -riser_200_10
+cell riser_200_11  side_refl183   helium   -riser_200_11
+cell riser_220_0  side_refl73   helium   -riser_220_0
+cell riser_220_1  side_refl83   helium   -riser_220_1
+cell riser_220_2  side_refl93   helium   -riser_220_2
+cell riser_220_3  side_refl103   helium   -riser_220_3
+cell riser_220_4  side_refl113   helium   -riser_220_4
+cell riser_220_5  side_refl123   helium   -riser_220_5
+cell riser_220_6  side_refl133   helium   -riser_220_6
+cell riser_220_7  side_refl143   helium   -riser_220_7
+cell riser_220_8  side_refl153   helium   -riser_220_8
+cell riser_220_9  side_refl163   helium   -riser_220_9
+cell riser_220_10  side_refl173   helium   -riser_220_10
+cell riser_220_11  side_refl183   helium   -riser_220_11
+cell riser_240_0  side_refl73   helium   -riser_240_0
+cell riser_240_1  side_refl83   helium   -riser_240_1
+cell riser_240_2  side_refl93   helium   -riser_240_2
+cell riser_240_3  side_refl103   helium   -riser_240_3
+cell riser_240_4  side_refl113   helium   -riser_240_4
+cell riser_240_5  side_refl123   helium   -riser_240_5
+cell riser_240_6  side_refl133   helium   -riser_240_6
+cell riser_240_7  side_refl143   helium   -riser_240_7
+cell riser_240_8  side_refl153   helium   -riser_240_8
+cell riser_240_9  side_refl163   helium   -riser_240_9
+cell riser_240_10  side_refl173   helium   -riser_240_10
+cell riser_240_11  side_refl183   helium   -riser_240_11
+cell riser_260_0  side_refl73   helium   -riser_260_0
+cell riser_260_1  side_refl83   helium   -riser_260_1
+cell riser_260_2  side_refl93   helium   -riser_260_2
+cell riser_260_3  side_refl103   helium   -riser_260_3
+cell riser_260_4  side_refl113   helium   -riser_260_4
+cell riser_260_5  side_refl123   helium   -riser_260_5
+cell riser_260_6  side_refl133   helium   -riser_260_6
+cell riser_260_7  side_refl143   helium   -riser_260_7
+cell riser_260_8  side_refl153   helium   -riser_260_8
+cell riser_260_9  side_refl163   helium   -riser_260_9
+cell riser_260_10  side_refl173   helium   -riser_260_10
+cell riser_260_11  side_refl183   helium   -riser_260_11
+cell riser_280_0  side_refl73   helium   -riser_280_0
+cell riser_280_1  side_refl83   helium   -riser_280_1
+cell riser_280_2  side_refl93   helium   -riser_280_2
+cell riser_280_3  side_refl103   helium   -riser_280_3
+cell riser_280_4  side_refl113   helium   -riser_280_4
+cell riser_280_5  side_refl123   helium   -riser_280_5
+cell riser_280_6  side_refl133   helium   -riser_280_6
+cell riser_280_7  side_refl143   helium   -riser_280_7
+cell riser_280_8  side_refl153   helium   -riser_280_8
+cell riser_280_9  side_refl163   helium   -riser_280_9
+cell riser_280_10  side_refl173   helium   -riser_280_10
+cell riser_280_11  side_refl183   helium   -riser_280_11
+cell riser_300_0  side_refl73   helium   -riser_300_0
+cell riser_300_1  side_refl83   helium   -riser_300_1
+cell riser_300_2  side_refl93   helium   -riser_300_2
+cell riser_300_3  side_refl103   helium   -riser_300_3
+cell riser_300_4  side_refl113   helium   -riser_300_4
+cell riser_300_5  side_refl123   helium   -riser_300_5
+cell riser_300_6  side_refl133   helium   -riser_300_6
+cell riser_300_7  side_refl143   helium   -riser_300_7
+cell riser_300_8  side_refl153   helium   -riser_300_8
+cell riser_300_9  side_refl163   helium   -riser_300_9
+cell riser_300_10  side_refl173   helium   -riser_300_10
+cell riser_300_11  side_refl183   helium   -riser_300_11
+cell riser_320_0  side_refl73   helium   -riser_320_0
+cell riser_320_1  side_refl83   helium   -riser_320_1
+cell riser_320_2  side_refl93   helium   -riser_320_2
+cell riser_320_3  side_refl103   helium   -riser_320_3
+cell riser_320_4  side_refl113   helium   -riser_320_4
+cell riser_320_5  side_refl123   helium   -riser_320_5
+cell riser_320_6  side_refl133   helium   -riser_320_6
+cell riser_320_7  side_refl143   helium   -riser_320_7
+cell riser_320_8  side_refl153   helium   -riser_320_8
+cell riser_320_9  side_refl163   helium   -riser_320_9
+cell riser_320_10  side_refl173   helium   -riser_320_10
+cell riser_320_11  side_refl183   helium   -riser_320_11
+cell riser_340_0  side_refl73   helium   -riser_340_0
+cell riser_340_1  side_refl83   helium   -riser_340_1
+cell riser_340_2  side_refl93   helium   -riser_340_2
+cell riser_340_3  side_refl103   helium   -riser_340_3
+cell riser_340_4  side_refl113   helium   -riser_340_4
+cell riser_340_5  side_refl123   helium   -riser_340_5
+cell riser_340_6  side_refl133   helium   -riser_340_6
+cell riser_340_7  side_refl143   helium   -riser_340_7
+cell riser_340_8  side_refl153   helium   -riser_340_8
+cell riser_340_9  side_refl163   helium   -riser_340_9
+cell riser_340_10  side_refl173   helium   -riser_340_10
+cell riser_340_11  side_refl183   helium   -riser_340_11
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Riser Universes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+cell riser0_0  0 fill  side_refl73  -riser_0_0
+cell riser0_1  0 fill  side_refl83  -riser_0_1
+cell riser0_2  0 fill  side_refl93  -riser_0_2
+cell riser0_3  0 fill  side_refl103  -riser_0_3
+cell riser0_4  0 fill  side_refl113  -riser_0_4
+cell riser0_5  0 fill  side_refl123  -riser_0_5
+cell riser0_6  0 fill  side_refl133  -riser_0_6
+cell riser0_7  0 fill  side_refl143  -riser_0_7
+cell riser0_8  0 fill  side_refl153  -riser_0_8
+cell riser0_9  0 fill  side_refl163  -riser_0_9
+cell riser0_10  0 fill  side_refl173  -riser_0_10
+cell riser0_11  0 fill  side_refl183  -riser_0_11
+cell riser20_0  0 fill  side_refl73  -riser_20_0
+cell riser20_1  0 fill  side_refl83  -riser_20_1
+cell riser20_2  0 fill  side_refl93  -riser_20_2
+cell riser20_3  0 fill  side_refl103  -riser_20_3
+cell riser20_4  0 fill  side_refl113  -riser_20_4
+cell riser20_5  0 fill  side_refl123  -riser_20_5
+cell riser20_6  0 fill  side_refl133  -riser_20_6
+cell riser20_7  0 fill  side_refl143  -riser_20_7
+cell riser20_8  0 fill  side_refl153  -riser_20_8
+cell riser20_9  0 fill  side_refl163  -riser_20_9
+cell riser20_10  0 fill  side_refl173  -riser_20_10
+cell riser20_11  0 fill  side_refl183  -riser_20_11
+cell riser40_0  0 fill  side_refl73  -riser_40_0
+cell riser40_1  0 fill  side_refl83  -riser_40_1
+cell riser40_2  0 fill  side_refl93  -riser_40_2
+cell riser40_3  0 fill  side_refl103  -riser_40_3
+cell riser40_4  0 fill  side_refl113  -riser_40_4
+cell riser40_5  0 fill  side_refl123  -riser_40_5
+cell riser40_6  0 fill  side_refl133  -riser_40_6
+cell riser40_7  0 fill  side_refl143  -riser_40_7
+cell riser40_8  0 fill  side_refl153  -riser_40_8
+cell riser40_9  0 fill  side_refl163  -riser_40_9
+cell riser40_10  0 fill  side_refl173  -riser_40_10
+cell riser40_11  0 fill  side_refl183  -riser_40_11
+cell riser60_0  0 fill  side_refl73  -riser_60_0
+cell riser60_1  0 fill  side_refl83  -riser_60_1
+cell riser60_2  0 fill  side_refl93  -riser_60_2
+cell riser60_3  0 fill  side_refl103  -riser_60_3
+cell riser60_4  0 fill  side_refl113  -riser_60_4
+cell riser60_5  0 fill  side_refl123  -riser_60_5
+cell riser60_6  0 fill  side_refl133  -riser_60_6
+cell riser60_7  0 fill  side_refl143  -riser_60_7
+cell riser60_8  0 fill  side_refl153  -riser_60_8
+cell riser60_9  0 fill  side_refl163  -riser_60_9
+cell riser60_10  0 fill  side_refl173  -riser_60_10
+cell riser60_11  0 fill  side_refl183  -riser_60_11
+cell riser80_0  0 fill  side_refl73  -riser_80_0
+cell riser80_1  0 fill  side_refl83  -riser_80_1
+cell riser80_2  0 fill  side_refl93  -riser_80_2
+cell riser80_3  0 fill  side_refl103  -riser_80_3
+cell riser80_4  0 fill  side_refl113  -riser_80_4
+cell riser80_5  0 fill  side_refl123  -riser_80_5
+cell riser80_6  0 fill  side_refl133  -riser_80_6
+cell riser80_7  0 fill  side_refl143  -riser_80_7
+cell riser80_8  0 fill  side_refl153  -riser_80_8
+cell riser80_9  0 fill  side_refl163  -riser_80_9
+cell riser80_10  0 fill  side_refl173  -riser_80_10
+cell riser80_11  0 fill  side_refl183  -riser_80_11
+cell riser100_0  0 fill  side_refl73  -riser_100_0
+cell riser100_1  0 fill  side_refl83  -riser_100_1
+cell riser100_2  0 fill  side_refl93  -riser_100_2
+cell riser100_3  0 fill  side_refl103  -riser_100_3
+cell riser100_4  0 fill  side_refl113  -riser_100_4
+cell riser100_5  0 fill  side_refl123  -riser_100_5
+cell riser100_6  0 fill  side_refl133  -riser_100_6
+cell riser100_7  0 fill  side_refl143  -riser_100_7
+cell riser100_8  0 fill  side_refl153  -riser_100_8
+cell riser100_9  0 fill  side_refl163  -riser_100_9
+cell riser100_10  0 fill  side_refl173  -riser_100_10
+cell riser100_11  0 fill  side_refl183  -riser_100_11
+cell riser120_0  0 fill  side_refl73  -riser_120_0
+cell riser120_1  0 fill  side_refl83  -riser_120_1
+cell riser120_2  0 fill  side_refl93  -riser_120_2
+cell riser120_3  0 fill  side_refl103  -riser_120_3
+cell riser120_4  0 fill  side_refl113  -riser_120_4
+cell riser120_5  0 fill  side_refl123  -riser_120_5
+cell riser120_6  0 fill  side_refl133  -riser_120_6
+cell riser120_7  0 fill  side_refl143  -riser_120_7
+cell riser120_8  0 fill  side_refl153  -riser_120_8
+cell riser120_9  0 fill  side_refl163  -riser_120_9
+cell riser120_10  0 fill  side_refl173  -riser_120_10
+cell riser120_11  0 fill  side_refl183  -riser_120_11
+cell riser140_0  0 fill  side_refl73  -riser_140_0
+cell riser140_1  0 fill  side_refl83  -riser_140_1
+cell riser140_2  0 fill  side_refl93  -riser_140_2
+cell riser140_3  0 fill  side_refl103  -riser_140_3
+cell riser140_4  0 fill  side_refl113  -riser_140_4
+cell riser140_5  0 fill  side_refl123  -riser_140_5
+cell riser140_6  0 fill  side_refl133  -riser_140_6
+cell riser140_7  0 fill  side_refl143  -riser_140_7
+cell riser140_8  0 fill  side_refl153  -riser_140_8
+cell riser140_9  0 fill  side_refl163  -riser_140_9
+cell riser140_10  0 fill  side_refl173  -riser_140_10
+cell riser140_11  0 fill  side_refl183  -riser_140_11
+cell riser160_0  0 fill  side_refl73  -riser_160_0
+cell riser160_1  0 fill  side_refl83  -riser_160_1
+cell riser160_2  0 fill  side_refl93  -riser_160_2
+cell riser160_3  0 fill  side_refl103  -riser_160_3
+cell riser160_4  0 fill  side_refl113  -riser_160_4
+cell riser160_5  0 fill  side_refl123  -riser_160_5
+cell riser160_6  0 fill  side_refl133  -riser_160_6
+cell riser160_7  0 fill  side_refl143  -riser_160_7
+cell riser160_8  0 fill  side_refl153  -riser_160_8
+cell riser160_9  0 fill  side_refl163  -riser_160_9
+cell riser160_10  0 fill  side_refl173  -riser_160_10
+cell riser160_11  0 fill  side_refl183  -riser_160_11
+cell riser180_0  0 fill  side_refl73  -riser_180_0
+cell riser180_1  0 fill  side_refl83  -riser_180_1
+cell riser180_2  0 fill  side_refl93  -riser_180_2
+cell riser180_3  0 fill  side_refl103  -riser_180_3
+cell riser180_4  0 fill  side_refl113  -riser_180_4
+cell riser180_5  0 fill  side_refl123  -riser_180_5
+cell riser180_6  0 fill  side_refl133  -riser_180_6
+cell riser180_7  0 fill  side_refl143  -riser_180_7
+cell riser180_8  0 fill  side_refl153  -riser_180_8
+cell riser180_9  0 fill  side_refl163  -riser_180_9
+cell riser180_10  0 fill  side_refl173  -riser_180_10
+cell riser180_11  0 fill  side_refl183  -riser_180_11
+cell riser200_0  0 fill  side_refl73  -riser_200_0
+cell riser200_1  0 fill  side_refl83  -riser_200_1
+cell riser200_2  0 fill  side_refl93  -riser_200_2
+cell riser200_3  0 fill  side_refl103  -riser_200_3
+cell riser200_4  0 fill  side_refl113  -riser_200_4
+cell riser200_5  0 fill  side_refl123  -riser_200_5
+cell riser200_6  0 fill  side_refl133  -riser_200_6
+cell riser200_7  0 fill  side_refl143  -riser_200_7
+cell riser200_8  0 fill  side_refl153  -riser_200_8
+cell riser200_9  0 fill  side_refl163  -riser_200_9
+cell riser200_10  0 fill  side_refl173  -riser_200_10
+cell riser200_11  0 fill  side_refl183  -riser_200_11
+cell riser220_0  0 fill  side_refl73  -riser_220_0
+cell riser220_1  0 fill  side_refl83  -riser_220_1
+cell riser220_2  0 fill  side_refl93  -riser_220_2
+cell riser220_3  0 fill  side_refl103  -riser_220_3
+cell riser220_4  0 fill  side_refl113  -riser_220_4
+cell riser220_5  0 fill  side_refl123  -riser_220_5
+cell riser220_6  0 fill  side_refl133  -riser_220_6
+cell riser220_7  0 fill  side_refl143  -riser_220_7
+cell riser220_8  0 fill  side_refl153  -riser_220_8
+cell riser220_9  0 fill  side_refl163  -riser_220_9
+cell riser220_10  0 fill  side_refl173  -riser_220_10
+cell riser220_11  0 fill  side_refl183  -riser_220_11
+cell riser240_0  0 fill  side_refl73  -riser_240_0
+cell riser240_1  0 fill  side_refl83  -riser_240_1
+cell riser240_2  0 fill  side_refl93  -riser_240_2
+cell riser240_3  0 fill  side_refl103  -riser_240_3
+cell riser240_4  0 fill  side_refl113  -riser_240_4
+cell riser240_5  0 fill  side_refl123  -riser_240_5
+cell riser240_6  0 fill  side_refl133  -riser_240_6
+cell riser240_7  0 fill  side_refl143  -riser_240_7
+cell riser240_8  0 fill  side_refl153  -riser_240_8
+cell riser240_9  0 fill  side_refl163  -riser_240_9
+cell riser240_10  0 fill  side_refl173  -riser_240_10
+cell riser240_11  0 fill  side_refl183  -riser_240_11
+cell riser260_0  0 fill  side_refl73  -riser_260_0
+cell riser260_1  0 fill  side_refl83  -riser_260_1
+cell riser260_2  0 fill  side_refl93  -riser_260_2
+cell riser260_3  0 fill  side_refl103  -riser_260_3
+cell riser260_4  0 fill  side_refl113  -riser_260_4
+cell riser260_5  0 fill  side_refl123  -riser_260_5
+cell riser260_6  0 fill  side_refl133  -riser_260_6
+cell riser260_7  0 fill  side_refl143  -riser_260_7
+cell riser260_8  0 fill  side_refl153  -riser_260_8
+cell riser260_9  0 fill  side_refl163  -riser_260_9
+cell riser260_10  0 fill  side_refl173  -riser_260_10
+cell riser260_11  0 fill  side_refl183  -riser_260_11
+cell riser280_0  0 fill  side_refl73  -riser_280_0
+cell riser280_1  0 fill  side_refl83  -riser_280_1
+cell riser280_2  0 fill  side_refl93  -riser_280_2
+cell riser280_3  0 fill  side_refl103  -riser_280_3
+cell riser280_4  0 fill  side_refl113  -riser_280_4
+cell riser280_5  0 fill  side_refl123  -riser_280_5
+cell riser280_6  0 fill  side_refl133  -riser_280_6
+cell riser280_7  0 fill  side_refl143  -riser_280_7
+cell riser280_8  0 fill  side_refl153  -riser_280_8
+cell riser280_9  0 fill  side_refl163  -riser_280_9
+cell riser280_10  0 fill  side_refl173  -riser_280_10
+cell riser280_11  0 fill  side_refl183  -riser_280_11
+cell riser300_0  0 fill  side_refl73  -riser_300_0
+cell riser300_1  0 fill  side_refl83  -riser_300_1
+cell riser300_2  0 fill  side_refl93  -riser_300_2
+cell riser300_3  0 fill  side_refl103  -riser_300_3
+cell riser300_4  0 fill  side_refl113  -riser_300_4
+cell riser300_5  0 fill  side_refl123  -riser_300_5
+cell riser300_6  0 fill  side_refl133  -riser_300_6
+cell riser300_7  0 fill  side_refl143  -riser_300_7
+cell riser300_8  0 fill  side_refl153  -riser_300_8
+cell riser300_9  0 fill  side_refl163  -riser_300_9
+cell riser300_10  0 fill  side_refl173  -riser_300_10
+cell riser300_11  0 fill  side_refl183  -riser_300_11
+cell riser320_0  0 fill  side_refl73  -riser_320_0
+cell riser320_1  0 fill  side_refl83  -riser_320_1
+cell riser320_2  0 fill  side_refl93  -riser_320_2
+cell riser320_3  0 fill  side_refl103  -riser_320_3
+cell riser320_4  0 fill  side_refl113  -riser_320_4
+cell riser320_5  0 fill  side_refl123  -riser_320_5
+cell riser320_6  0 fill  side_refl133  -riser_320_6
+cell riser320_7  0 fill  side_refl143  -riser_320_7
+cell riser320_8  0 fill  side_refl153  -riser_320_8
+cell riser320_9  0 fill  side_refl163  -riser_320_9
+cell riser320_10  0 fill  side_refl173  -riser_320_10
+cell riser320_11  0 fill  side_refl183  -riser_320_11
+cell riser340_0  0 fill  side_refl73  -riser_340_0
+cell riser340_1  0 fill  side_refl83  -riser_340_1
+cell riser340_2  0 fill  side_refl93  -riser_340_2
+cell riser340_3  0 fill  side_refl103  -riser_340_3
+cell riser340_4  0 fill  side_refl113  -riser_340_4
+cell riser340_5  0 fill  side_refl123  -riser_340_5
+cell riser340_6  0 fill  side_refl133  -riser_340_6
+cell riser340_7  0 fill  side_refl143  -riser_340_7
+cell riser340_8  0 fill  side_refl153  -riser_340_8
+cell riser340_9  0 fill  side_refl163  -riser_340_9
+cell riser340_10  0 fill  side_refl173  -riser_340_10
+cell riser340_11  0 fill  side_refl183  -riser_340_11
+
+
+#!/bin/bash
+#PBS -l select=12:ncpus=48:mpiprocs=1
+#PBS -N shuf
+#PBS -l walltime=01:00:00
+#PBS -ko
+#PBS -j oe
+#PBS -P neams
+#PBS -l software=Serpent
+#PBS -m abe
+#
+cat $PBS_NODEFILE
+#
+source /etc/profile.d/modules.sh
+module load use.exp_ctl
+module load serpent/2.1.32-intel-19.0
+#module load serpent/2.1.32
+#
+cd $PBS_O_WORKDIR
+#
+JOB_NUM=${PBS_JOBID%\.*}
+if [ $PBS_O_WORKDIR != $HOME ]
+then
+ln -s $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_JOBNAME.o$JOB_NUM
+fi
+#
+export TMPDIR=<tmpdir_from_tempfile_module>
+#
+#
+#
+mpiexec sss2 pbr_run_in.inp -omp 48
+
+#
+#
+if [ $PBS_O_WORKDIR != $HOME ]
+then
+rm $PBS_O_WORKDIR/$PBS_JOBNAME.o$JOB_NUM
+mv $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_O_WORKDIR/$PBS_JOBNAME.o$JOB_NUM
+fi
+% Created by RHS@INL on 12/20/21 
+% Updated from core created by SS
+% Open Source Xe-100 core design with Depleted Pebbles from 
+
+include "pebble_materials.inp"
+include "pebble_surfaces.inp"
+include "materials.inp"
+
+% add TRISO and pebble definitions
+include "pebble_cells.inp"
+
+% ------ pebble dims ------
+surf inf_surf inf  % infinite surface
+
+surf pebble_inner sph 0. 0. 0. 2.5  % fueled region
+surf pebble_outer sph 0. 0. 0. 3.0  % pebble
+
+% add pebble distribution based on randomly packed pebbles 
+cell c_he helium_u helium  -inf_surf  % helium filler
+pbed pebble_bed helium_u "pebble_distribution_Step1.pbed" pow
+
+% add control rods and risers
+include "control_rods.inp"
+include "risers.inp"
+include "material_detectors.inp"
+
+% Diameter of the fuel region is 2.4 m
+% Core height is approximately 8.93 m
+
+%Lower Reflector, Outlet Plenum and Outlet Channel regions
+surf  bottom_refl_s     cylz  0.0 0.0  206.6    -14.6    43.8
+surf  outlet_plenum_s   cylz  0.0 0.0  120.0    43.8    140.5
+surf  outlet_channel_s  cylz  0.0 0.0  120.0    140.5   223.5
+
+% Begining of Reflector region for cone
+surf side_refl12   cylz  0.0 0.0    206.6     43.8      140.5
+surf side_refl62   cylz  0.0 0.0    206.6     140.5     223.5
+
+% Pebble shoot
+surf pebble_shoot cylz 0.0 0.0 26.0 -14.6 165.5
+
+% Conus height is 54 cm
+% Begining of conus -
+surf cone  cone  0.0 0.0  208.5      96.0  -59
+trans s cone rot 0.0 0.0  208.5      0. 0. 1. 180.
+
+% Trim the cone at the top with a plane
+surf upper_cone pz 223.5
+
+% Begining of full core
+surf cylinder11    cylz  0.0 0.0  36.0      223.5   260.5
+surf cylinder12    cylz  0.0 0.0  57.0      223.5   260.5
+surf cylinder13    cylz  0.0 0.0  78.0      223.5   260.5
+surf cylinder14    cylz  0.0 0.0  99.0      223.5   260.5
+surf cylinder15    cylz  0.0 0.0  120.0     223.5   260.5
+surf cylinder21    cylz  0.0 0.0  36.0      260.5   338.41
+surf cylinder22    cylz  0.0 0.0  57.0      260.5   338.41
+surf cylinder23    cylz  0.0 0.0  78.0      260.5   338.41
+surf cylinder24    cylz  0.0 0.0  99.0      260.5   338.41
+surf cylinder25    cylz  0.0 0.0  120.0     260.5   338.41
+surf cylinder31    cylz  0.0 0.0  36.0      338.41  416.32
+surf cylinder32    cylz  0.0 0.0  57.0      338.41  416.32
+surf cylinder33    cylz  0.0 0.0  78.0      338.41  416.32
+surf cylinder34    cylz  0.0 0.0  99.0      338.41  416.32
+surf cylinder35    cylz  0.0 0.0  120.0     338.41  416.32
+surf cylinder41    cylz  0.0 0.0  36.0      416.32  494.23
+surf cylinder42    cylz  0.0 0.0  57.0      416.32  494.23
+surf cylinder43    cylz  0.0 0.0  78.0      416.32  494.23
+surf cylinder44    cylz  0.0 0.0  99.0      416.32  494.23
+surf cylinder45    cylz  0.0 0.0  120.0     416.32  494.23
+surf cylinder51    cylz  0.0 0.0  36.0      494.23  572.14
+surf cylinder52    cylz  0.0 0.0  57.0      494.23  572.14
+surf cylinder53    cylz  0.0 0.0  78.0      494.23  572.14
+surf cylinder54    cylz  0.0 0.0  99.0      494.23  572.14
+surf cylinder55    cylz  0.0 0.0  120.0     494.23  572.14
+surf cylinder61    cylz  0.0 0.0  36.0      572.14  650.05
+surf cylinder62    cylz  0.0 0.0  57.0      572.14  650.05
+surf cylinder63    cylz  0.0 0.0  78.0      572.14  650.05
+surf cylinder64    cylz  0.0 0.0  99.0      572.14  650.05
+surf cylinder65    cylz  0.0 0.0  120.0     572.14  650.05
+surf cylinder71    cylz  0.0 0.0  36.0      650.05  727.96
+surf cylinder72    cylz  0.0 0.0  57.0      650.05  727.96
+surf cylinder73    cylz  0.0 0.0  78.0      650.05  727.96
+surf cylinder74    cylz  0.0 0.0  99.0      650.05  727.96
+surf cylinder75    cylz  0.0 0.0  120.0     650.05  727.96
+surf cylinder81    cylz  0.0 0.0  36.0      727.96  805.87
+surf cylinder82    cylz  0.0 0.0  57.0      727.96  805.87
+surf cylinder83    cylz  0.0 0.0  78.0      727.96  805.87
+surf cylinder84    cylz  0.0 0.0  99.0      727.96  805.87
+surf cylinder85    cylz  0.0 0.0  120.0     727.96  805.87
+surf cylinder91    cylz  0.0 0.0  36.0      805.87  883.78
+surf cylinder92    cylz  0.0 0.0  57.0      805.87  883.78
+surf cylinder93    cylz  0.0 0.0  78.0      805.87  883.78
+surf cylinder94    cylz  0.0 0.0  99.0      805.87  883.78
+surf cylinder95    cylz  0.0 0.0  120.0     805.87  883.78
+surf cylinder101   cylz  0.0 0.0  36.0      883.78  961.69
+surf cylinder102   cylz  0.0 0.0  57.0      883.78  961.69
+surf cylinder103   cylz  0.0 0.0  78.0      883.78  961.69
+surf cylinder104   cylz  0.0 0.0  99.0      883.78  961.69
+surf cylinder105   cylz  0.0 0.0  120.0     883.78  961.69
+surf cylinder111   cylz  0.0 0.0  36.0      961.69  1039.6
+surf cylinder112   cylz  0.0 0.0  57.0      961.69  1039.6
+surf cylinder113   cylz  0.0 0.0  78.0      961.69  1039.6
+surf cylinder114   cylz  0.0 0.0  99.0      961.69  1039.6
+surf cylinder115   cylz  0.0 0.0  120.0     961.69  1039.6
+surf cylinder121   cylz  0.0 0.0  36.0      1039.6  1117.5
+surf cylinder122   cylz  0.0 0.0  57.0      1039.6  1117.5
+surf cylinder123   cylz  0.0 0.0  78.0      1039.6  1117.5
+surf cylinder124   cylz  0.0 0.0  99.0      1039.6  1117.5
+surf cylinder125   cylz  0.0 0.0  120.0     1039.6  1117.5
+
+%Begining of the void region
+surf cavity11       cylz  0.0 0.0  120.0   1117.5 1163.3 
+
+% Begining of full core region
+surf side_refl71   cylz  0.0 0.0  146.0     223.5    260.5
+surf side_refl72   cylz  0.0 0.0  170.0     223.5    260.5
+surf side_refl73   cylz  0.0 0.0  187.0     223.5    260.5
+surf side_refl74   cylz  0.0 0.0  206.6     223.5    260.5
+
+surf side_refl81   cylz  0.0 0.0  146.0     260.5   338.41
+surf side_refl82   cylz  0.0 0.0  170.0     260.5   338.41
+surf side_refl83   cylz  0.0 0.0  187.0     260.5   338.41
+surf side_refl84   cylz  0.0 0.0  206.6     260.5   338.41
+
+surf side_refl91   cylz  0.0 0.0  146.0     338.41   416.32
+surf side_refl92   cylz  0.0 0.0  170.0     338.41   416.32
+surf side_refl93   cylz  0.0 0.0  187.0     338.41   416.32
+surf side_refl94   cylz  0.0 0.0  206.6     338.41   416.32
+
+surf side_refl101  cylz  0.0 0.0  146.0     416.32   494.23
+surf side_refl102  cylz  0.0 0.0  170.0     416.32   494.23
+surf side_refl103  cylz  0.0 0.0  187.0     416.32   494.23
+surf side_refl104  cylz  0.0 0.0  206.6     416.32   494.23
+
+surf side_refl111  cylz  0.0 0.0  146.0     494.23  572.14
+surf side_refl112  cylz  0.0 0.0  170.0     494.23  572.14
+surf side_refl113  cylz  0.0 0.0  187.0     494.23  572.14
+surf side_refl114  cylz  0.0 0.0  206.6     494.23  572.14
+
+surf side_refl121  cylz  0.0 0.0  146.0     572.14  650.05
+surf side_refl122  cylz  0.0 0.0  170.0     572.14  650.05
+surf side_refl123  cylz  0.0 0.0  187.0     572.14  650.05
+surf side_refl124  cylz  0.0 0.0  206.6     572.14  650.05
+
+surf side_refl131  cylz  0.0 0.0  146.0     650.05  727.96
+surf side_refl132  cylz  0.0 0.0  170.0     650.05  727.96
+surf side_refl133  cylz  0.0 0.0  187.0     650.05  727.96
+surf side_refl134  cylz  0.0 0.0  206.6     650.05  727.96
+
+surf side_refl141  cylz  0.0 0.0  146.0     727.96  805.87
+surf side_refl142  cylz  0.0 0.0  170.0     727.96  805.87
+surf side_refl143  cylz  0.0 0.0  187.0     727.96  805.87
+surf side_refl144  cylz  0.0 0.0  206.6     727.96  805.87
+
+surf side_refl151  cylz  0.0 0.0  146.0     805.87 883.78
+surf side_refl152  cylz  0.0 0.0  170.0     805.87 883.78
+surf side_refl153  cylz  0.0 0.0  187.0     805.87 883.78
+surf side_refl154  cylz  0.0 0.0  206.6     805.87 883.78
+
+surf side_refl161  cylz  0.0 0.0  146.0     883.78 961.69
+surf side_refl162  cylz  0.0 0.0  170.0     883.78 961.69
+surf side_refl163  cylz  0.0 0.0  187.0     883.78 961.69
+surf side_refl164  cylz  0.0 0.0  206.6     883.78 961.69
+
+surf side_refl171  cylz  0.0 0.0  146.0     961.69 1039.6
+surf side_refl172  cylz  0.0 0.0  170.0     961.69 1039.6
+surf side_refl173  cylz  0.0 0.0  187.0     961.69 1039.6
+surf side_refl174  cylz  0.0 0.0  206.6     961.69 1039.6
+
+surf side_refl181  cylz  0.0 0.0  146.0     1039.6 1117.5
+surf side_refl182  cylz  0.0 0.0  170.0     1039.6 1117.5
+surf side_refl183  cylz  0.0 0.0  187.0     1039.6 1117.5
+surf side_refl184  cylz  0.0 0.0  206.6     1039.6 1117.5
+
+% Side reflectors around cavity
+surf side_refl191  cylz  0.0 0.0  146.0    1117.5  1163.3
+surf side_refl192  cylz  0.0 0.0  170.0    1117.5  1163.3
+surf side_refl193  cylz  0.0 0.0  187.0    1117.5  1163.3
+surf side_refl194  cylz  0.0 0.0  206.6    1117.5  1163.3
+
+% Side reflectors above core
+surf side_refl201  cylz  0.0 0.0  146.0    1163.3  1215.0
+surf side_refl211  cylz  0.0 0.0  146.0    1215.0  1249.3
+
+surf side_refl212  cylz  0.0 0.0  206.6    1163.3  1249.3
+
+%Upper Reflector region 0.5 meters above the pebbles
+surf  top_refl15  cylz  0.0 0.0  120.0   1163.3 1249.3
+
+surf  outside_cyl       cylz  0.0 0.0  206.6    -14.6     1249.3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pebble shoot
+cell pebble_shoot pebble_shoot pebble_shoot -pebble_shoot
+
+% Cone Region
+cell cone_c     cone_u fill pebble_bed   -cone
+
+% Cells for bottom reflectors (inner cells)
+cell  bottom_refl_c       bottom_refl_u      reflector  -bottom_refl_s    
+cell  outlet_plenum_c   outlet_plenum_u  outlet_plenum  -outlet_plenum_s  
+cell  outlet_channel_c  outlet_channel_u outlet_channel -outlet_channel_s 
+
+% Radial reflector surrounding the bottom reflector (Axial: -126.5 cm to -101.5 cm, Radial: 120 cm to 220 cm)
+cell side_refl12   side_refl12  reflector      -side_refl12 outlet_plenum_s
+
+%% Radial reflector surrounding the first cone region (Axial: -36 cm to 0 cm, Radial: 96 cm to 220 cm)
+cell side_refl62   side_refl62  reflector      -side_refl62 outlet_channel_s 
+
+% Radial reflector surrounding the core (Axial 0.0 cm to 1117.5 cm, Radial 120 cm to 145 cm)
+cell side_refl71   side_refl71  reflector      -side_refl71 cylinder15    cr_31 sr_32 cr_33 sr_34 cr_35 sr_36 cr_37 sr_38 cr_39 sr_310 cr_311 sr_312 cr_313 sr_314 cr_315 sr_316 cr_317 sr_318 
+cell side_refl81   side_refl81  reflector      -side_refl81 cylinder25    cr_41 sr_42 cr_43 sr_44 cr_45 sr_46 cr_47 sr_48 cr_49 sr_410 cr_411 sr_412 cr_413 sr_414 cr_415 sr_416 cr_417 sr_418
+cell side_refl91   side_refl91  reflector      -side_refl91 cylinder35    cr_51 sr_52 cr_53 sr_54 cr_55 sr_56 cr_57 sr_58 cr_59 sr_510 cr_511 sr_512 cr_513 sr_514 cr_515 sr_516 cr_517 sr_518
+cell side_refl101  side_refl101 reflector      -side_refl101 cylinder45   cr_61 sr_62 cr_63 sr_64 cr_65 sr_66 cr_67 sr_68 cr_69 sr_610 cr_611 sr_612 cr_613 sr_614 cr_615 sr_616 cr_617 sr_618
+cell side_refl111  side_refl111 reflector      -side_refl111 cylinder55   cr_71 sr_72 cr_73 sr_74 cr_75 sr_76 cr_77 sr_78 cr_79 sr_710 cr_711 sr_712 cr_713 sr_714 cr_715 sr_716 cr_717 sr_718
+cell side_refl121  side_refl121 reflector      -side_refl121 cylinder65   cr_81 sr_82 cr_83 sr_84 cr_85 sr_86 cr_87 sr_88 cr_89 sr_810 cr_811 sr_812 cr_813 sr_814 cr_815 sr_816 cr_817 sr_818
+cell side_refl131  side_refl131 reflector      -side_refl131 cylinder75   cr_91 sr_92 cr_93 sr_94 cr_95 sr_96 cr_97 sr_98 cr_99 sr_910 cr_911 sr_912 cr_913 sr_914 cr_915 sr_916 cr_917 sr_918
+cell side_refl141  side_refl141 reflector      -side_refl141 cylinder85   cr_101 sr_102 cr_103 sr_104 cr_105 sr_106 cr_107 sr_108 cr_109 sr_1010 cr_1011 sr_1012 cr_1013 sr_1014 cr_1015 sr_1016 cr_1017 sr_1018
+cell side_refl151  side_refl151 reflector      -side_refl151 cylinder95   cr_111 sr_112 cr_113 sr_114 cr_115 sr_116 cr_117 sr_118 cr_119 sr_1110 cr_1111 sr_1112 cr_1113 sr_1114 cr_1115 sr_1116 cr_1117 sr_1118
+cell side_refl161  side_refl161 reflector      -side_refl161 cylinder105  cr_121 sr_122 cr_123 sr_124 cr_125 sr_126 cr_127 sr_128 cr_129 sr_1210 cr_1211 sr_1212 cr_1213 sr_1214 cr_1215 sr_1216 cr_1217 sr_1218
+cell side_refl171  side_refl171 reflector      -side_refl171 cylinder115  cr_131 sr_132 cr_133 sr_134 cr_135 sr_136 cr_137 sr_138 cr_139 sr_1310 cr_1311 sr_1312 cr_1313 sr_1314 cr_1315 sr_1316 cr_1317 sr_1318
+cell side_refl181  side_refl181 reflector      -side_refl181 cylinder125  cr_141 sr_142 cr_143 sr_144 cr_145 sr_146 cr_147 sr_148 cr_149 sr_1410 cr_1411 sr_1412 cr_1413 sr_1414 cr_1415 sr_1416 cr_1417 sr_1418
+
+% Radial reflector surrounding the core (Axial 0.0 cm to 1117.5 cm, Radial 145 cm to 170 cm)
+cell side_refl72   side_refl72  reflector      -side_refl72  side_refl71     
+cell side_refl82   side_refl82  reflector      -side_refl82  side_refl81     
+cell side_refl92   side_refl92  reflector      -side_refl92  side_refl91     
+cell side_refl102  side_refl102 reflector      -side_refl102 side_refl101     
+cell side_refl112  side_refl112 reflector      -side_refl112 side_refl111     
+cell side_refl122  side_refl122 reflector      -side_refl122 side_refl121     
+cell side_refl132  side_refl132 reflector      -side_refl132 side_refl131     
+cell side_refl142  side_refl142 reflector      -side_refl142 side_refl141   
+cell side_refl152  side_refl152 reflector      -side_refl152 side_refl151   
+cell side_refl162  side_refl162 reflector      -side_refl162 side_refl161   
+cell side_refl172  side_refl172 reflector      -side_refl172 side_refl171   
+cell side_refl182  side_refl182 reflector      -side_refl182 side_refl181   
+
+% Radial reflector surrounding the core (Axial 0.0 cm to 1117.5 cm, Radial 170 cm to 195 cm)
+% Radial reflector surrounding the core (Axial 0.0 cm to 1117.5 cm, Radial 170 cm to 195 cm)
+cell side_refl73   side_refl73  reflector     -side_refl73 side_refl72     riser_0_0 riser_20_0 riser_40_0 riser_60_0 riser_80_0 riser_100_0 riser_120_0 riser_140_0 riser_160_0 riser_180_0 riser_200_0 riser_220_0 riser_240_0 riser_260_0 riser_280_0 riser_300_0 riser_320_0 riser_340_0  
+cell side_refl83   side_refl83  reflector     -side_refl83 side_refl82     riser_0_1 riser_20_1 riser_40_1 riser_60_1 riser_80_1 riser_100_1 riser_120_1 riser_140_1 riser_160_1 riser_180_1 riser_200_1 riser_220_1 riser_240_1 riser_260_1 riser_280_1 riser_300_1 riser_320_1 riser_340_1
+cell side_refl93   side_refl93  reflector     -side_refl93 side_refl92     riser_0_2 riser_20_2 riser_40_2 riser_60_2 riser_80_2 riser_100_2 riser_120_2 riser_140_2 riser_160_2 riser_180_2 riser_200_2 riser_220_2 riser_240_2 riser_260_2 riser_280_2 riser_300_2 riser_320_2 riser_340_2
+cell side_refl103   side_refl103  reflector   -side_refl103 side_refl102   riser_0_3 riser_20_3 riser_40_3 riser_60_3 riser_80_3 riser_100_3 riser_120_3 riser_140_3 riser_160_3 riser_180_3 riser_200_3 riser_220_3 riser_240_3 riser_260_3 riser_280_3 riser_300_3 riser_320_3 riser_340_3
+cell side_refl113   side_refl113  reflector   -side_refl113 side_refl112   riser_0_4 riser_20_4 riser_40_4 riser_60_4 riser_80_4 riser_100_4 riser_120_4 riser_140_4 riser_160_4 riser_180_4 riser_200_4 riser_220_4 riser_240_4 riser_260_4 riser_280_4 riser_300_4 riser_320_4 riser_340_4
+cell side_refl123   side_refl123  reflector   -side_refl123 side_refl122   riser_0_5 riser_20_5 riser_40_5 riser_60_5 riser_80_5 riser_100_5 riser_120_5 riser_140_5 riser_160_5 riser_180_5 riser_200_5 riser_220_5 riser_240_5 riser_260_5 riser_280_5 riser_300_5 riser_320_5 riser_340_5
+cell side_refl133   side_refl133  reflector   -side_refl133 side_refl132   riser_0_6 riser_20_6 riser_40_6 riser_60_6 riser_80_6 riser_100_6 riser_120_6 riser_140_6 riser_160_6 riser_180_6 riser_200_6 riser_220_6 riser_240_6 riser_260_6 riser_280_6 riser_300_6 riser_320_6 riser_340_6
+cell side_refl143  side_refl143 reflector     -side_refl143 side_refl142   riser_0_7 riser_20_7 riser_40_7 riser_60_7 riser_80_7 riser_100_7 riser_120_7 riser_140_7 riser_160_7 riser_180_7 riser_200_7 riser_220_7 riser_240_7 riser_260_7 riser_280_7 riser_300_7 riser_320_7 riser_340_7
+cell side_refl153  side_refl153 reflector     -side_refl153 side_refl152   riser_0_8 riser_20_8 riser_40_8 riser_60_8 riser_80_8 riser_100_8 riser_120_8 riser_140_8 riser_160_8 riser_180_8 riser_200_8 riser_220_8 riser_240_8 riser_260_8 riser_280_8 riser_300_8 riser_320_8 riser_340_8
+cell side_refl163  side_refl163 reflector     -side_refl163 side_refl162   riser_0_9 riser_20_9 riser_40_9 riser_60_9 riser_80_9 riser_100_9 riser_120_9 riser_140_9 riser_160_9 riser_180_9 riser_200_9 riser_220_9 riser_240_9 riser_260_9 riser_280_9 riser_300_9 riser_320_9 riser_340_9
+cell side_refl173  side_refl173 reflector     -side_refl173 side_refl172   riser_0_10 riser_20_10 riser_40_10 riser_60_10 riser_80_10 riser_100_10 riser_120_10 riser_140_10 riser_160_10 riser_180_10 riser_200_10 riser_220_10 riser_240_10 riser_260_10 riser_280_10 riser_300_10 riser_320_10 riser_340_10
+cell side_refl183  side_refl183 reflector     -side_refl183 side_refl182   riser_0_11 riser_20_11 riser_40_11 riser_60_11 riser_80_11 riser_100_11 riser_120_11 riser_140_11 riser_160_11 riser_180_11 riser_200_11 riser_220_11 riser_240_11 riser_260_11 riser_280_11 riser_300_11 riser_320_11 riser_340_11
+
+% Radial reflector surrounding the core (Axial 0.0 cm to 1117.5 cm, Radial 195 cm to 220 cm)
+cell side_refl74   side_refl74  reflector      -side_refl74 side_refl73
+cell side_refl84   side_refl84  reflector      -side_refl84 side_refl83
+cell side_refl94   side_refl94  reflector      -side_refl94 side_refl93
+cell side_refl104  side_refl104  reflector      -side_refl104 side_refl103
+cell side_refl114  side_refl114  reflector      -side_refl114 side_refl113
+cell side_refl124  side_refl124  reflector      -side_refl124 side_refl123
+cell side_refl134  side_refl134  reflector      -side_refl134 side_refl133
+cell side_refl144  side_refl144 reflector      -side_refl144 side_refl143
+cell side_refl154  side_refl154 reflector      -side_refl154 side_refl153
+cell side_refl164  side_refl164 reflector      -side_refl164 side_refl163
+cell side_refl174  side_refl174 reflector      -side_refl174 side_refl173
+cell side_refl184  side_refl184 reflector      -side_refl184 side_refl183
+
+% Cell for the cavity region
+cell cavity11        cavity11       helium         -cavity11
+
+% Radial reflector surrounding the cavity (Axial: 1117.5 cm to 1172.5 cm, Radial: 120 cm to 240 cm)
+cell side_refl191   side_refl191  reflector    -side_refl191  cavity11       cr_151 sr_152 cr_153 sr_154 cr_155 sr_156 cr_157 sr_158 cr_159 sr_1510 cr_1511 sr_1512 cr_1513 sr_1514 cr_1515 sr_1516 cr_1517 sr_1518
+cell side_refl192   side_refl192  reflector       -side_refl192  side_refl191
+cell side_refl193   side_refl193  helium       -side_refl193  side_refl192
+cell side_refl194   side_refl194  reflector    -side_refl194  side_refl193
+
+% Radial reflector surrounding the top reflector (Axial: 1172.5 cm to 973.0 cm, Radial: 120 cm to 240 cm)
+cell side_refl201   side_refl201  reflector    -side_refl201  top_refl15   cr_161 sr_162 cr_163 sr_164 cr_165 sr_166 cr_167 sr_168 cr_169 sr_1610 cr_1611 sr_1612 cr_1613 sr_1614 cr_1615 sr_1616 cr_1617 sr_1618
+
+% Radial reflector surrounding the top reflector (Axial: 973.0 cm to 998.0 cm, Radial: 120 cm to 240 cm)
+cell side_refl211   side_refl211  reflector    -side_refl211 top_refl15   cr_171 sr_172 cr_173 sr_174 cr_175 sr_176 cr_177 sr_178 cr_179 sr_1710 cr_1711 sr_1712 cr_1713 sr_1714 cr_1715 sr_1716 cr_1717 sr_1718
+cell side_refl212   side_refl212  reflector    -side_refl212
+
+
+% Cells for top reflectors (inner cells)
+cell  top_refl15   top_refl15 reflector      -top_refl15 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Universe Filling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bottom reflector
+cell bottom_refl_fu    0 fill bottom_refl_u   -bottom_refl_s pebble_shoot
+
+% pebble shoot universe
+cell pebble_shoot_fu 0 fill pebble_shoot -pebble_shoot
+
+% 1nd outer rings of reflectors below the core
+cell srefl12    0 fill side_refl12   -side_refl12 pebble_shoot outlet_plenum_s 
+
+% Cone Region
+cell cone_fu      0       fill cone_u      -cone -upper_cone pebble_shoot
+
+% Core Region 
+cell core_11  core_11   fill pebble_bed  -cylinder11 
+cell core11   0         fill core_11     -cylinder11
+cell core_12  core_12   fill pebble_bed  -cylinder12  cylinder11
+cell core12   0         fill core_12     -cylinder12  cylinder11 
+cell core_13  core_13   fill pebble_bed  -cylinder13  cylinder12
+cell core13   0         fill core_13     -cylinder13  cylinder12 
+cell core_14  core_14   fill pebble_bed  -cylinder14  cylinder13
+cell core14   0         fill core_14     -cylinder14  cylinder13 
+cell core_15  core_15   fill pebble_bed  -cylinder15  cylinder14
+cell core15   0         fill core_15     -cylinder15  cylinder14 
+cell core_21  core_21   fill pebble_bed  -cylinder21
+cell core21   0         fill core_21     -cylinder21
+cell core_22  core_22   fill pebble_bed  -cylinder22  cylinder21
+cell core22   0         fill core_22     -cylinder22  cylinder21 
+cell core_23  core_23   fill pebble_bed  -cylinder23  cylinder22
+cell core23   0         fill core_23     -cylinder23  cylinder22 
+cell core_24  core_24   fill pebble_bed  -cylinder24  cylinder23
+cell core24   0         fill core_24     -cylinder24  cylinder23 
+cell core_25  core_25   fill pebble_bed  -cylinder25  cylinder24
+cell core25   0         fill core_25     -cylinder25  cylinder24 
+cell core_31  core_31   fill pebble_bed  -cylinder31
+cell core31   0         fill core_31     -cylinder31
+cell core_32  core_32   fill pebble_bed  -cylinder32  cylinder31
+cell core32   0         fill core_32     -cylinder32  cylinder31 
+cell core_33  core_33   fill pebble_bed  -cylinder33  cylinder32
+cell core33   0         fill core_33     -cylinder33  cylinder32 
+cell core_34  core_34   fill pebble_bed  -cylinder34  cylinder33
+cell core34   0         fill core_34     -cylinder34  cylinder33 
+cell core_35  core_35   fill pebble_bed  -cylinder35  cylinder34
+cell core35   0         fill core_35     -cylinder35  cylinder34 
+cell core_41  core_41   fill pebble_bed  -cylinder41
+cell core41   0         fill core_41     -cylinder41
+cell core_42  core_42   fill pebble_bed  -cylinder42  cylinder41
+cell core42   0         fill core_42     -cylinder42  cylinder41 
+cell core_43  core_43   fill pebble_bed  -cylinder43  cylinder42
+cell core43   0         fill core_43     -cylinder43  cylinder42 
+cell core_44  core_44   fill pebble_bed  -cylinder44  cylinder43
+cell core44   0         fill core_44     -cylinder44  cylinder43 
+cell core_45  core_45   fill pebble_bed  -cylinder45  cylinder44
+cell core45   0         fill core_45     -cylinder45  cylinder44 
+cell core_51  core_51   fill pebble_bed  -cylinder51
+cell core51   0         fill core_51     -cylinder51
+cell core_52  core_52   fill pebble_bed  -cylinder52  cylinder51
+cell core52   0         fill core_52     -cylinder52  cylinder51 
+cell core_53  core_53   fill pebble_bed  -cylinder53  cylinder52
+cell core53   0         fill core_53     -cylinder53  cylinder52 
+cell core_54  core_54   fill pebble_bed  -cylinder54  cylinder53
+cell core54   0         fill core_54     -cylinder54  cylinder53 
+cell core_55  core_55   fill pebble_bed  -cylinder55  cylinder54
+cell core55   0         fill core_55     -cylinder55  cylinder54 
+cell core_61  core_61   fill pebble_bed  -cylinder61
+cell core61   0         fill core_61     -cylinder61
+cell core_62  core_62   fill pebble_bed  -cylinder62  cylinder61
+cell core62   0         fill core_62     -cylinder62  cylinder61 
+cell core_63  core_63   fill pebble_bed  -cylinder63  cylinder62
+cell core63   0         fill core_63     -cylinder63  cylinder62 
+cell core_64  core_64   fill pebble_bed  -cylinder64  cylinder63
+cell core64   0         fill core_64     -cylinder64  cylinder63 
+cell core_65  core_65   fill pebble_bed  -cylinder65  cylinder64
+cell core65   0         fill core_65     -cylinder65  cylinder64 
+cell core_71  core_71   fill pebble_bed  -cylinder71
+cell core71   0         fill core_71     -cylinder71
+cell core_72  core_72   fill pebble_bed  -cylinder72  cylinder71
+cell core72   0         fill core_72     -cylinder72  cylinder71 
+cell core_73  core_73   fill pebble_bed  -cylinder73  cylinder72
+cell core73   0         fill core_73     -cylinder73  cylinder72 
+cell core_74  core_74   fill pebble_bed  -cylinder74  cylinder73
+cell core74   0         fill core_74     -cylinder74  cylinder73 
+cell core_75  core_75   fill pebble_bed  -cylinder75  cylinder74
+cell core75   0         fill core_75     -cylinder75  cylinder74 
+cell core_81  core_81   fill pebble_bed  -cylinder81
+cell core81   0         fill core_81     -cylinder81
+cell core_82  core_82   fill pebble_bed  -cylinder82  cylinder81
+cell core82   0         fill core_82     -cylinder82  cylinder81 
+cell core_83  core_83   fill pebble_bed  -cylinder83  cylinder82
+cell core83   0         fill core_83     -cylinder83  cylinder82 
+cell core_84  core_84   fill pebble_bed  -cylinder84  cylinder83
+cell core84   0         fill core_84     -cylinder84  cylinder83 
+cell core_85  core_85   fill pebble_bed  -cylinder85  cylinder84
+cell core85   0         fill core_85     -cylinder85  cylinder84 
+cell core_91  core_91   fill pebble_bed  -cylinder91
+cell core91   0         fill core_91     -cylinder91
+cell core_92  core_92   fill pebble_bed  -cylinder92  cylinder91
+cell core92   0         fill core_92     -cylinder92  cylinder91 
+cell core_93  core_93   fill pebble_bed  -cylinder93  cylinder92
+cell core93   0         fill core_93     -cylinder93  cylinder92 
+cell core_94  core_94   fill pebble_bed  -cylinder94  cylinder93
+cell core94   0         fill core_94     -cylinder94  cylinder93 
+cell core_95  core_95   fill pebble_bed  -cylinder95  cylinder94
+cell core95   0         fill core_95     -cylinder95  cylinder94 
+cell core_101 core_101  fill pebble_bed  -cylinder101
+cell core101  0         fill core_101    -cylinder101
+cell core_102 core_102  fill pebble_bed  -cylinder102  cylinder101
+cell core102  0         fill core_102    -cylinder102  cylinder101 
+cell core_103 core_103  fill pebble_bed  -cylinder103  cylinder102
+cell core103  0         fill core_103    -cylinder103  cylinder102 
+cell core_104 core_104  fill pebble_bed  -cylinder104  cylinder103
+cell core104  0         fill core_104    -cylinder104  cylinder103 
+cell core_105 core_105  fill pebble_bed  -cylinder105  cylinder104
+cell core105  0         fill core_105    -cylinder105  cylinder104 
+cell core_111 core_111  fill pebble_bed  -cylinder111
+cell core111  0         fill core_111    -cylinder111
+cell core_112 core_112  fill pebble_bed  -cylinder112  cylinder111
+cell core112  0         fill core_112    -cylinder112  cylinder111 
+cell core_113 core_113  fill pebble_bed  -cylinder113  cylinder112
+cell core113  0         fill core_113    -cylinder113  cylinder112 
+cell core_114 core_114  fill pebble_bed  -cylinder114  cylinder113
+cell core114  0         fill core_114    -cylinder114  cylinder113 
+cell core_115 core_115  fill pebble_bed  -cylinder115  cylinder114
+cell core115  0         fill core_115    -cylinder115  cylinder114 
+cell core_121 core_121  fill pebble_bed  -cylinder121
+cell core121  0         fill core_121    -cylinder121
+cell core_122 core_122  fill pebble_bed  -cylinder122  cylinder121
+cell core122  0         fill core_122    -cylinder122  cylinder121 
+cell core_123 core_123  fill pebble_bed  -cylinder123  cylinder122
+cell core123  0         fill core_123    -cylinder123  cylinder122 
+cell core_124 core_124  fill pebble_bed  -cylinder124  cylinder123
+cell core124  0         fill core_124    -cylinder124  cylinder123 
+cell core_125 core_125  fill pebble_bed  -cylinder125  cylinder124
+cell core125  0         fill core_125    -cylinder125  cylinder124 
+
+cell void_cavity 0 fill cavity11         -cavity11
+
+% 1st Ring of reflectors surrounding fuel (0.0m - 0.25m)
+cell srefl71    0 fill side_refl71     -side_refl71   cylinder15       cr_31 sr_32 cr_33 sr_34 cr_35 sr_36 cr_37 sr_38 cr_39 sr_310 cr_311 sr_312 cr_313 sr_314 cr_315 sr_316 cr_317 sr_318
+cell srefl81    0 fill side_refl81     -side_refl81   cylinder25       cr_41 sr_42 cr_43 sr_44 cr_45 sr_46 cr_47 sr_48 cr_49 sr_410 cr_411 sr_412 cr_413 sr_414 cr_415 sr_416 cr_417 sr_418
+cell srefl91    0 fill side_refl91     -side_refl91   cylinder35       cr_51 sr_52 cr_53 sr_54 cr_55 sr_56 cr_57 sr_58 cr_59 sr_510 cr_511 sr_512 cr_513 sr_514 cr_515 sr_516 cr_517 sr_518
+cell srefl101   0 fill side_refl101    -side_refl101  cylinder45       cr_61 sr_62 cr_63 sr_64 cr_65 sr_66 cr_67 sr_68 cr_69 sr_610 cr_611 sr_612 cr_613 sr_614 cr_615 sr_616 cr_617 sr_618
+cell srefl111   0 fill side_refl111    -side_refl111  cylinder55       cr_71 sr_72 cr_73 sr_74 cr_75 sr_76 cr_77 sr_78 cr_79 sr_710 cr_711 sr_712 cr_713 sr_714 cr_715 sr_716 cr_717 sr_718
+cell srefl121   0 fill side_refl121    -side_refl121  cylinder65       cr_81 sr_82 cr_83 sr_84 cr_85 sr_86 cr_87 sr_88 cr_89 sr_810 cr_811 sr_812 cr_813 sr_814 cr_815 sr_816 cr_817 sr_818
+cell srefl131   0 fill side_refl131    -side_refl131  cylinder75       cr_91 sr_92 cr_93 sr_94 cr_95 sr_96 cr_97 sr_98 cr_99 sr_910 cr_911 sr_912 cr_913 sr_914 cr_915 sr_916 cr_917 sr_918
+cell srefl141   0 fill side_refl141    -side_refl141  cylinder85       cr_101 sr_102 cr_103 sr_104 cr_105 sr_106 cr_107 sr_108 cr_109 sr_1010 cr_1011 sr_1012 cr_1013 sr_1014 cr_1015 sr_1016 cr_1017 sr_1018
+cell srefl151   0 fill side_refl151    -side_refl151  cylinder95       cr_111 sr_112 cr_113 sr_114 cr_115 sr_116 cr_117 sr_118 cr_119 sr_1110 cr_1111 sr_1112 cr_1113 sr_1114 cr_1115 sr_1116 cr_1117 sr_1118
+cell srefl161   0 fill side_refl161    -side_refl161  cylinder105      cr_121 sr_122 cr_123 sr_124 cr_125 sr_126 cr_127 sr_128 cr_129 sr_1210 cr_1211 sr_1212 cr_1213 sr_1214 cr_1215 sr_1216 cr_1217 sr_1218
+cell srefl171   0 fill side_refl171    -side_refl171  cylinder115      cr_131 sr_132 cr_133 sr_134 cr_135 sr_136 cr_137 sr_138 cr_139 sr_1310 cr_1311 sr_1312 cr_1313 sr_1314 cr_1315 sr_1316 cr_1317 sr_1318
+cell srefl181   0 fill side_refl181    -side_refl181  cylinder125      cr_141 sr_142 cr_143 sr_144 cr_145 sr_146 cr_147 sr_148 cr_149 sr_1410 cr_1411 sr_1412 cr_1413 sr_1414 cr_1415 sr_1416 cr_1417 sr_1418
+
+% 2nd Ring of reflectors surrounding fuel (0.25m - 0.5m)
+cell srefl62    0 fill  side_refl62    -side_refl62  outlet_channel_s  
+cell srefl72    0 fill  side_refl72    -side_refl72  side_refl71   
+cell srefl82    0 fill  side_refl82    -side_refl82  side_refl81   
+cell srefl92    0 fill  side_refl92    -side_refl92  side_refl91   
+cell srefl102   0 fill side_refl102   -side_refl102 side_refl101   
+cell srefl112   0 fill side_refl112   -side_refl112 side_refl111   
+cell srefl122   0 fill side_refl122   -side_refl122 side_refl121   
+cell srefl132   0 fill side_refl132   -side_refl132 side_refl131   
+cell srefl142   0 fill side_refl142   -side_refl142 side_refl141  
+cell srefl152   0 fill side_refl152   -side_refl152 side_refl151  
+cell srefl162   0 fill side_refl162   -side_refl162 side_refl161  
+cell srefl172   0 fill side_refl172   -side_refl172 side_refl171  
+cell srefl182   0 fill side_refl182   -side_refl182 side_refl181  
+
+% 3rd Ring of reflectors surrounding fuel (0.5m - 0.75m)
+cell srefl73     0 fill side_refl73    -side_refl73  side_refl72     riser_0_0 riser_20_0 riser_40_0 riser_60_0 riser_80_0 riser_100_0 riser_120_0 riser_140_0 riser_160_0 riser_180_0 riser_200_0 riser_220_0 riser_240_0 riser_260_0 riser_280_0 riser_300_0 riser_320_0 riser_340_0  
+cell srefl83     0 fill side_refl83    -side_refl83  side_refl82     riser_0_1 riser_20_1 riser_40_1 riser_60_1 riser_80_1 riser_100_1 riser_120_1 riser_140_1 riser_160_1 riser_180_1 riser_200_1 riser_220_1 riser_240_1 riser_260_1 riser_280_1 riser_300_1 riser_320_1 riser_340_1
+cell srefl93     0 fill side_refl93    -side_refl93  side_refl92     riser_0_2 riser_20_2 riser_40_2 riser_60_2 riser_80_2 riser_100_2 riser_120_2 riser_140_2 riser_160_2 riser_180_2 riser_200_2 riser_220_2 riser_240_2 riser_260_2 riser_280_2 riser_300_2 riser_320_2 riser_340_2
+cell srefl103    0 fill side_refl103   -side_refl103  side_refl102   riser_0_3 riser_20_3 riser_40_3 riser_60_3 riser_80_3 riser_100_3 riser_120_3 riser_140_3 riser_160_3 riser_180_3 riser_200_3 riser_220_3 riser_240_3 riser_260_3 riser_280_3 riser_300_3 riser_320_3 riser_340_3
+cell srefl113    0 fill side_refl113   -side_refl113  side_refl112   riser_0_4 riser_20_4 riser_40_4 riser_60_4 riser_80_4 riser_100_4 riser_120_4 riser_140_4 riser_160_4 riser_180_4 riser_200_4 riser_220_4 riser_240_4 riser_260_4 riser_280_4 riser_300_4 riser_320_4 riser_340_4
+cell srefl123    0 fill side_refl123   -side_refl123  side_refl122   riser_0_5 riser_20_5 riser_40_5 riser_60_5 riser_80_5 riser_100_5 riser_120_5 riser_140_5 riser_160_5 riser_180_5 riser_200_5 riser_220_5 riser_240_5 riser_260_5 riser_280_5 riser_300_5 riser_320_5 riser_340_5
+cell srefl133    0 fill side_refl133   -side_refl133  side_refl132   riser_0_6 riser_20_6 riser_40_6 riser_60_6 riser_80_6 riser_100_6 riser_120_6 riser_140_6 riser_160_6 riser_180_6 riser_200_6 riser_220_6 riser_240_6 riser_260_6 riser_280_6 riser_300_6 riser_320_6 riser_340_6
+cell srefl143    0 fill side_refl143   -side_refl143 side_refl142    riser_0_7 riser_20_7 riser_40_7 riser_60_7 riser_80_7 riser_100_7 riser_120_7 riser_140_7 riser_160_7 riser_180_7 riser_200_7 riser_220_7 riser_240_7 riser_260_7 riser_280_7 riser_300_7 riser_320_7 riser_340_7
+cell srefl153    0 fill side_refl153   -side_refl153 side_refl152    riser_0_8 riser_20_8 riser_40_8 riser_60_8 riser_80_8 riser_100_8 riser_120_8 riser_140_8 riser_160_8 riser_180_8 riser_200_8 riser_220_8 riser_240_8 riser_260_8 riser_280_8 riser_300_8 riser_320_8 riser_340_8
+cell srefl163    0 fill side_refl163   -side_refl163 side_refl162    riser_0_9 riser_20_9 riser_40_9 riser_60_9 riser_80_9 riser_100_9 riser_120_9 riser_140_9 riser_160_9 riser_180_9 riser_200_9 riser_220_9 riser_240_9 riser_260_9 riser_280_9 riser_300_9 riser_320_9 riser_340_9
+cell srefl173    0 fill side_refl173   -side_refl173 side_refl172    riser_0_10 riser_20_10 riser_40_10 riser_60_10 riser_80_10 riser_100_10 riser_120_10 riser_140_10 riser_160_10 riser_180_10 riser_200_10 riser_220_10 riser_240_10 riser_260_10 riser_280_10 riser_300_10 riser_320_10 riser_340_10
+cell srefl183    0 fill side_refl183   -side_refl183 side_refl182    riser_0_11 riser_20_11 riser_40_11 riser_60_11 riser_80_11 riser_100_11 riser_120_11 riser_140_11 riser_160_11 riser_180_11 riser_200_11 riser_220_11 riser_240_11 riser_260_11 riser_280_11 riser_300_11 riser_320_11 riser_340_11
+
+% 4th Ring of reflectors surrounding fuel (0.75m - 1.0m)
+cell srefl74     0 fill side_refl74     -side_refl74  side_refl73 
+cell srefl84     0 fill side_refl84     -side_refl84  side_refl83
+cell srefl94     0 fill side_refl94     -side_refl94  side_refl93
+cell srefl104    0 fill side_refl104   -side_refl104 side_refl103
+cell srefl114    0 fill side_refl114   -side_refl114 side_refl113
+cell srefl124    0 fill side_refl124   -side_refl124 side_refl123
+cell srefl134    0 fill side_refl134   -side_refl134 side_refl133
+cell srefl144    0 fill side_refl144   -side_refl144 side_refl143
+cell srefl154    0 fill side_refl154   -side_refl154 side_refl153
+cell srefl164    0 fill side_refl164   -side_refl164 side_refl163
+cell srefl174    0 fill side_refl174   -side_refl174 side_refl173
+cell srefl184    0 fill side_refl184   -side_refl184 side_refl183
+
+%%%%%%%%%%%%%%%%%
+cell srefl191   0 fill side_refl191  -side_refl191  cavity11       cr_151 sr_152 cr_153 sr_154 cr_155 sr_156 cr_157 sr_158 cr_159 sr_1510 cr_1511 sr_1512 cr_1513 sr_1514 cr_1515 sr_1516 cr_1517 sr_1518
+cell srefl192   0 fill side_refl192  -side_refl192  side_refl191
+cell srefl193   0 fill side_refl193  -side_refl193  side_refl192
+cell srefl194   0 fill side_refl194  -side_refl194  side_refl193
+
+% 1st outer rings of reflectors above the core
+cell srefl201   0 fill side_refl201  -side_refl201  top_refl15  cr_161 sr_162 cr_163 sr_164 cr_165 sr_166 cr_167 sr_168 cr_169 sr_1610 cr_1611 sr_1612 cr_1613 sr_1614 cr_1615 sr_1616 cr_1617 sr_1618
+
+% 2nd outer rings of reflectors above the core
+cell srefl211   0 fill side_refl211  -side_refl211  top_refl15  cr_171 sr_172 cr_173 sr_174 cr_175 sr_176 cr_177 sr_178 cr_179 sr_1710 cr_1711 sr_1712 cr_1713 sr_1714 cr_1715 sr_1716 cr_1717 sr_1718
+cell srefl212   0 fill side_refl212  -side_refl212  side_refl211 side_refl201
+
+% 1st inner rings of reflectors above the core
+cell trefl15    0 fill top_refl15   -top_refl15 
+
+% 1st inner rings of reflectors below the core
+cell outlet_plenum_fu    0 fill outlet_plenum_u    -outlet_plenum_s  pebble_shoot
+cell outlet_channel_fu   0 fill outlet_channel_u   -outlet_channel_s pebble_shoot cone
+
+cell out        0 outside            outside_cyl
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Geometry and output plotters
+%plot 12 1200  1200     
+plot 22 2500  2500    
+%plot 33 1800  1800 1040
+mesh 1 1000 1000
+%mesh 2 1000 1000
+%mesh 3 1000 1000
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cross section data libraries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ENDF 7 XS data
+set acelib "/hpc-common/data/serpent/xsdata/endfb71_edep/endfb71_edep.xsdata" 
+set declib "/hpc-common/data/serpent/xsdata/sss_endfb7.dec"
+set nfylib "/hpc-common/data/serpent/xsdata/sss_endfb7.nfy"
+
+% Thermal scattering data
+therm grph300 300 grph.03t grph.04t
+therm grph600 600 grph.05t grph.06t
+therm grph900 900 grph.08t grph.10t
+therm grph1200 1200 grph.10t grph.12t
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Run Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+set pop 20000 400 40 1.05
+%
+set power 30000000.0 %Start burning at 10 kw 200E+6
+set opti 1 % (1-large # depletion zones ..... 4-small # depletion zones)
+set pcc 0
+
+dep daystep
+11
+set printm yes
+set depout 3
+

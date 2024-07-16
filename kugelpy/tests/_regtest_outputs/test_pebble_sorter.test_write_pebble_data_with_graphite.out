@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Pebble Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pebbles for Channel: 0, Volume Zone: 0 
+
+mat fuel_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000 vol 468.6329 burn 1
+  92234.09c      2.500000e+00
+mat buffer_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      5.264660e-02
+  5010.09c      1.355120e-08
+  5011.09c      5.488940e-08
+mat inner_pyc_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat sic_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000
+  14028.09c      4.432710e-02
+  14029.09c      2.250820e-03
+  14030.09c      1.483760e-03
+  6000.09c      4.806160e-02
+  5010.09c      1.237110e-08
+  5011.09c      5.010900e-08
+mat outer_pyc_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat matrix_f0_c0v0_c0v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      8.674160e-02
+  5010.09c      2.232730e-08
+  5011.09c      9.043680e-08
+
+% Pebbles for Channel: 0, Volume Zone: 1 
+
+mat fuel_f0_c0v1 sum tmp 900.0 moder grph900 6000 vol 468.6329 burn 1
+  92234.09c      4.000000e+00
+mat buffer_f0_c0v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      5.264660e-02
+  5010.09c      1.355120e-08
+  5011.09c      5.488940e-08
+mat inner_pyc_f0_c0v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat sic_f0_c0v1 sum tmp 900.0 moder grph900 6000
+  14028.09c      4.432710e-02
+  14029.09c      2.250820e-03
+  14030.09c      1.483760e-03
+  6000.09c      4.806160e-02
+  5010.09c      1.237110e-08
+  5011.09c      5.010900e-08
+mat outer_pyc_f0_c0v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat matrix_f0_c0v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      8.674160e-02
+  5010.09c      2.232730e-08
+  5011.09c      9.043680e-08
+
+% Pebbles for Channel: 0, Volume Zone: 2 
+
+mat fuel_f0_c0v2 sum tmp 900.0 moder grph900 6000 vol 467.87826 burn 1
+  92234.09c      5.000000e+00
+mat buffer_f0_c0v2 sum tmp 900.0 moder grph900 6000
+  6000.09c      5.264660e-02
+  5010.09c      1.355120e-08
+  5011.09c      5.488940e-08
+mat inner_pyc_f0_c0v2 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat sic_f0_c0v2 sum tmp 900.0 moder grph900 6000
+  14028.09c      4.432710e-02
+  14029.09c      2.250820e-03
+  14030.09c      1.483760e-03
+  6000.09c      4.806160e-02
+  5010.09c      1.237110e-08
+  5011.09c      5.010900e-08
+mat outer_pyc_f0_c0v2 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat matrix_f0_c0v2 sum tmp 900.0 moder grph900 6000
+  6000.09c      8.674160e-02
+  5010.09c      2.232730e-08
+  5011.09c      9.043680e-08
+
+% Pebbles for Channel: 1, Volume Zone: 0 
+
+mat fuel_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000 vol 1794.53951 burn 1
+  92234.09c      2.500000e+00
+mat buffer_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      5.264660e-02
+  5010.09c      1.355120e-08
+  5011.09c      5.488940e-08
+mat inner_pyc_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat sic_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000
+  14028.09c      4.432710e-02
+  14029.09c      2.250820e-03
+  14030.09c      1.483760e-03
+  6000.09c      4.806160e-02
+  5010.09c      1.237110e-08
+  5011.09c      5.010900e-08
+mat outer_pyc_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat matrix_f0_c0v0_c1v0 sum tmp 900.0 moder grph900 6000
+  6000.09c      8.674160e-02
+  5010.09c      2.232730e-08
+  5011.09c      9.043680e-08
+
+% Pebbles for Channel: 1, Volume Zone: 1 
+
+mat fuel_f0_c1v1 sum tmp 900.0 moder grph900 6000 vol 1794.53951 burn 1
+  92234.09c      1.000000e+00
+mat buffer_f0_c1v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      5.264660e-02
+  5010.09c      1.355120e-08
+  5011.09c      5.488940e-08
+mat inner_pyc_f0_c1v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat sic_f0_c1v1 sum tmp 900.0 moder grph900 6000
+  14028.09c      4.432710e-02
+  14029.09c      2.250820e-03
+  14030.09c      1.483760e-03
+  6000.09c      4.806160e-02
+  5010.09c      1.237110e-08
+  5011.09c      5.010900e-08
+mat outer_pyc_f0_c1v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      9.526530e-02
+  5010.09c      2.452130e-08
+  5011.09c      9.932360e-08
+mat matrix_f0_c1v1 sum tmp 900.0 moder grph900 6000
+  6000.09c      8.674160e-02
+  5010.09c      2.232730e-08
+  5011.09c      9.043680e-08
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Pebble Cells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pebbles for Channel: 0, Volume Zone: 0 
+
+cell pebble_f0_c0v0_c0v0 f0_c0v0_c0v0 fill triso_f0_c0v0_c0v0 -pebble_inner
+cell matrix_cf0_c0v0_c0v0 matrix_uf0_c0v0_c0v0 matrix_f0_c0v0_c0v0 -inf_surf
+cell pebble_f0_c0v0_c0v0_matrix f0_c0v0_c0v0 matrix_f0_c0v0_c0v0 pebble_inner -pebble_outer
+cell pebble_f0_c0v0_c0v0_he f0_c0v0_c0v0 helium pebble_outer
+
+% Pebbles for Channel: 0, Volume Zone: 1 
+
+cell pebble_f0_c0v1 f0_c0v1 fill triso_f0_c0v1 -pebble_inner
+cell matrix_cf0_c0v1 matrix_uf0_c0v1 matrix_f0_c0v1 -inf_surf
+cell pebble_f0_c0v1_matrix f0_c0v1 matrix_f0_c0v1 pebble_inner -pebble_outer
+cell pebble_f0_c0v1_he f0_c0v1 helium pebble_outer
+
+% Pebbles for Channel: 0, Volume Zone: 2 
+
+cell pebble_f0_c0v2 f0_c0v2 fill triso_f0_c0v2 -pebble_inner
+cell matrix_cf0_c0v2 matrix_uf0_c0v2 matrix_f0_c0v2 -inf_surf
+cell pebble_f0_c0v2_matrix f0_c0v2 matrix_f0_c0v2 pebble_inner -pebble_outer
+cell pebble_f0_c0v2_he f0_c0v2 helium pebble_outer
+
+% Pebbles for Channel: 1, Volume Zone: 0 
+
+cell pebble_f0_c0v0_c1v0 f0_c0v0_c1v0 fill triso_f0_c0v0_c1v0 -pebble_inner
+cell matrix_cf0_c0v0_c1v0 matrix_uf0_c0v0_c1v0 matrix_f0_c0v0_c1v0 -inf_surf
+cell pebble_f0_c0v0_c1v0_matrix f0_c0v0_c1v0 matrix_f0_c0v0_c1v0 pebble_inner -pebble_outer
+cell pebble_f0_c0v0_c1v0_he f0_c0v0_c1v0 helium pebble_outer
+
+% Pebbles for Channel: 1, Volume Zone: 1 
+
+cell pebble_f0_c1v1 f0_c1v1 fill triso_f0_c1v1 -pebble_inner
+cell matrix_cf0_c1v1 matrix_uf0_c1v1 matrix_f0_c1v1 -inf_surf
+cell pebble_f0_c1v1_matrix f0_c1v1 matrix_f0_c1v1 pebble_inner -pebble_outer
+cell pebble_f0_c1v1_he f0_c1v1 helium pebble_outer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Pebble Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pebbles for Channel: 0, Volume Zone: 0 
+
+particle 1
+fuel_f0_c0v0_c0v0 0.02125
+buffer_f0_c0v0_c0v0 0.03125
+inner_pyc_f0_c0v0_c0v0 0.03525
+sic_f0_c0v0_c0v0 0.03875
+outer_pyc_f0_c0v0_c0v0 0.04275
+matrix_f0_c0v0_c0v0
+pbed triso_f0_c0v0_c0v0 matrix_uf0_c0v0_c0v0 "triso/triso_dist_u1.triso"
+
+
+% Pebbles for Channel: 0, Volume Zone: 1 
+
+particle 2
+fuel_f0_c0v1 0.02125
+buffer_f0_c0v1 0.03125
+inner_pyc_f0_c0v1 0.03525
+sic_f0_c0v1 0.03875
+outer_pyc_f0_c0v1 0.04275
+matrix_f0_c0v1
+pbed triso_f0_c0v1 matrix_uf0_c0v1 "triso/triso_dist_u2.triso"
+
+
+% Pebbles for Channel: 0, Volume Zone: 2 
+
+particle 3
+fuel_f0_c0v2 0.02125
+buffer_f0_c0v2 0.03125
+inner_pyc_f0_c0v2 0.03525
+sic_f0_c0v2 0.03875
+outer_pyc_f0_c0v2 0.04275
+matrix_f0_c0v2
+pbed triso_f0_c0v2 matrix_uf0_c0v2 "triso/triso_dist_u3.triso"
+
+
+% Pebbles for Channel: 1, Volume Zone: 0 
+
+particle 4
+fuel_f0_c0v0_c1v0 0.02125
+buffer_f0_c0v0_c1v0 0.03125
+inner_pyc_f0_c0v0_c1v0 0.03525
+sic_f0_c0v0_c1v0 0.03875
+outer_pyc_f0_c0v0_c1v0 0.04275
+matrix_f0_c0v0_c1v0
+pbed triso_f0_c0v0_c1v0 matrix_uf0_c0v0_c1v0 "triso/triso_dist_u4.triso"
+
+
+% Pebbles for Channel: 1, Volume Zone: 1 
+
+particle 5
+fuel_f0_c1v1 0.02125
+buffer_f0_c1v1 0.03125
+inner_pyc_f0_c1v1 0.03525
+sic_f0_c1v1 0.03875
+outer_pyc_f0_c1v1 0.04275
+matrix_f0_c1v1
+pbed triso_f0_c1v1 matrix_uf0_c1v1 "triso/triso_dist_u5.triso"
+
+

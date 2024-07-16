@@ -1,0 +1,38 @@
+#!/bin/bash
+#PBS -l select=24:ncpus=48:mpiprocs=1
+#PBS -N ri_up_geo
+#PBS -l walltime=120:00:00
+#PBS -ko
+#PBS -j oe
+#PBS -P neams
+#PBS -l software=Serpent
+#PBS -m abe
+#
+cat $PBS_NODEFILE
+#
+source /etc/profile.d/modules.sh
+module load use.exp_ctl
+module load serpent/2.1.32-intel-19.0
+module load python
+conda activate pyrates
+#
+cd $PBS_O_WORKDIR
+#
+JOB_NUM=${PBS_JOBID%\.*}
+if [ $PBS_O_WORKDIR != $HOME ]
+then
+ln -s $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_JOBNAME.o$JOB_NUM
+fi
+#
+export TMPDIR=/tmp
+#
+#
+#
+python3 python_script.py -omp 48
+#
+#
+if [ $PBS_O_WORKDIR != $HOME ]
+then
+rm $PBS_O_WORKDIR/$PBS_JOBNAME.o$JOB_NUM
+mv $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_O_WORKDIR/$PBS_JOBNAME.o$JOB_NUM
+fi
