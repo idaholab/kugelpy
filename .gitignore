@@ -1,0 +1,44 @@
+# Mac
+.DS_Store
+
+# Temporary
+tmp/
+_tmp/
+*.cache
+
+# Python
+/.pytest_cache/
+*.pyc
+*__pycache__*
+*.ipynb_checkpoints*
+*/.pytest_cache
+
+# Eclipse
+.project
+.pydevproject
+
+# Serpent
+*inp.seed
+*inp_*
+*.inp_res*
+
+# Specific Files
+input/gpbr200/cpld_eq/gpbr200_7ge15_microxs*
+pyrates/cartagropher/data/os200mw_gcpbr_
+
+# Privateer outputs
+privateer/flintlock/mesh_study/time_mesh/xenon/no_xenon/no_xenon_daystep_results/
+privateer/flintlock/mesh_study/time_mesh/xenon/with_xenon/with_xenon_daystep_results/
+
+privateer/flintlock/mesh_study/axial_mesh/double/normal_time_mesh_results/
+privateer/flintlock/mesh_study/axial_mesh/double/normal_time_mesh_results/
+privateer/flintlock/mesh_study/axial_mesh/half/normal_time_mesh_results/
+privateer/flintlock/mesh_study/axial_mesh/oneAndAHalf/normal_time_mesh_results/
+privateer/flintlock/mesh_study/axial_mesh/half/halved_axial_mesh_results
+privateer/flintlock/mesh_study/time_mesh/xenon/no_xenon/with_xenon_daystep_results
+privateer/flintlock/mesh_study/time_mesh/xenon/with_xenon/with_xenon_daystep_results
+pyrates/kugelpy_open_source/kugelpy.egg-info/
+pyrates/kugelpy_open_source/build/
+
+privateer/flintlock/parametic_study/critical_heights/
+privateer/flintlock/parametic_study/parametric_runs/
