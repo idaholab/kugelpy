@@ -46,7 +46,7 @@ Note that there is a separate convention for builtin names: most builtin names a
 
 ### Pip Installation
 
-kugelpy is setup to enable pip installation. Ensure that pip is installed, then navigate to the base directory ```~/pymodules/kugelpy/``` and run the following command in terminal
+kugelpy is setup to enable pip installation. Ensure that pip is installed, then navigate to the base directory ```~/kugelpy/``` and run the following command in terminal
 
 ```
 pip install .

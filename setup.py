@@ -1,3 +1,5 @@
+
+
 from setuptools import setup
 
 with open("README.md", 'r') as f:
@@ -13,7 +15,7 @@ setup(
    #author_email='foomail@foo.example',
    url="https://github.com/idaholab/kugelpy",
    packages=['kugelpy', 
-             'kugelpy.first_mate', 
+             'kugelpy.mutineer', 
              'kugelpy.kugelpy',
              'kugelpy.sea_serpent'],  #same as name
    install_requires=['numpy', 'pandas', 'py', 'pytest', 'pytest-regtest', 'pytest-xdist', 'pyglet', 'matplotlib', 'scipy'], #external packages as dependencies
