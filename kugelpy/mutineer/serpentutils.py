@@ -1,6 +1,6 @@
 '''
 Created on mar 30, 2020
-@author: balep, stewryan
+@author: balep, stewryan, ethan-fowler
 
 Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''

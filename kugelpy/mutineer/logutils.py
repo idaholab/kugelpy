@@ -2,7 +2,7 @@
 
 Created on Jan 27, 2022
 
-@authors: balep, stewryan
+@authors: balep, stewryan, ethan-fowler
 
 Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''
