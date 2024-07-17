@@ -4,9 +4,9 @@
 Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''
 
-import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble_bed_reactor as pbr
+import kugelpy.kugelpy.kugelpy.pebble_bed_reactor as pbr
 from os import remove, path
-from pyrates.kugelpy_open_source.kugelpy.mutineer.testutils import gen_tmp_folder
+from kugelpy.kugelpy.mutineer.testutils import gen_tmp_folder
 
 #===============================================================================
 # Shared objects

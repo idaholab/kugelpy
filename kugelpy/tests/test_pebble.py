@@ -4,8 +4,8 @@
 Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''
 
-import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble as pebble
-from pyrates.kugelpy_open_source.kugelpy.mutineer.testutils import gen_tmp_folder
+import kugelpy.kugelpy.kugelpy.pebble as pebble
+from kugelpy.kugelpy.mutineer.testutils import gen_tmp_folder
 from os import path
 
 main_dir = path.dirname(path.realpath(__file__))

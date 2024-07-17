@@ -7,9 +7,9 @@ Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 import os
 from os import path
 import shutil
-import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble_sorter as psp
+import kugelpy.kugelpy.kugelpy.pebble_sorter as psp
 import copy
-from pyrates.kugelpy_open_source.kugelpy.mutineer.testutils import gen_tmp_folder, find_pbed_input, compare_pbeds
+from kugelpy.kugelpy.mutineer.testutils import gen_tmp_folder, find_pbed_input, compare_pbeds
 
 #===============================================================================
 # Shared objects

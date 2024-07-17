@@ -5,7 +5,7 @@ Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''
 
 import math
-from pyrates.kugelpy_open_source.kugelpy.sea_serpent.reactor import SerpentReactor
+from kugelpy.kugelpy.sea_serpent.reactor import SerpentReactor
 import os
 
 class PebbleBedReactor(SerpentReactor):

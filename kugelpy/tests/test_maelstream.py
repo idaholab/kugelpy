@@ -11,9 +11,9 @@ Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 #===============================================================================
 from os import path
 
-from pyrates.kugelpy_open_source.kugelpy.kugelpy.maelstream import GenPBDist
-from pyrates.kugelpy_open_source.kugelpy.mutineer.logutils import LogTracker
-from pyrates.kugelpy_open_source.kugelpy.mutineer.testutils import gen_tmp_folder, find_pbed_input, compare_pbeds
+from kugelpy.kugelpy.kugelpy.maelstream import GenPBDist
+from kugelpy.kugelpy.mutineer.logutils import LogTracker
+from kugelpy.kugelpy.mutineer.testutils import gen_tmp_folder, find_pbed_input, compare_pbeds
 
 #===============================================================================
 # Shared objects
