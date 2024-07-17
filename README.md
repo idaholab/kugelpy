@@ -103,28 +103,28 @@ You now have a Dockerized python environment with all the packages required to r
 
 ### Testing
 
-To test the modules available in this repository run the following (note depending on the python version you may need to use `python -m pytest -vv` rather than `py.test -vv` for the following commands).
+To test the modules available in this repository navigate to the base directory (~/kugelpy/) and run the following (note depending on the python version you may need to use `python -m pytest -vv` rather than `py.test -vv` for the following commands).
 
 ```shell
-py.test -vv kugelpy/tests
+py.test -vv ./kugelpy/tests
 ```
 
 To run specific tests (e.g. `test_file.py`) run the following command instead:
 
 ```shell
-py.test -vv kugelpy/tests/test_file.py
+py.test -vv ./kugelpy/tests/test_file.py
 ```
 
 To regenerate the `gold` files, the following command can be used:
 
 ```shell
-py.test -vv --regtest-reset kugelpy/tests/test_file.py
+py.test -vv --regtest-reset ./kugelpy/tests/test_file.py
 ```
 
 To print the time needed by each test, the following command can be used:
 
 ```shell
-py.test --durations=0 kugelpy/tests/test_file.py
+py.test --durations=0 ./kugelpy/tests/test_file.py
 ```
 
 #### Test markers
