@@ -15,12 +15,12 @@ from scipy.interpolate import interp1d
 import _pickle as pickle
 import json
 
-from kugelpy.kugelpy.kugelpy.maelstream import GenPBDist
-import kugelpy.kugelpy.kugelpy.pebble_bed_reactor as pbr
-from kugelpy.kugelpy.sea_serpent.reactor import SerpentReactor
-import kugelpy.kugelpy.kugelpy.pebble as pbl
-from kugelpy.kugelpy.mutineer import serpentutils as su
-from kugelpy.kugelpy.mutineer import logutils
+from pyrates.kugelpy_open_source.kugelpy.kugelpy.maelstream import GenPBDist
+import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble_bed_reactor as pbr
+from pyrates.kugelpy_open_source.kugelpy.sea_serpent.reactor import SerpentReactor
+import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble as pbl
+from pyrates.kugelpy_open_source.kugelpy.mutineer import serpentutils as su
+from pyrates.kugelpy_open_source.kugelpy.mutineer import logutils
 import subprocess
 
 main_dir = os.path.dirname(os.path.realpath(__file__))
@@ -245,9 +245,9 @@ class PebbleSorter(SerpentReactor):
             # If we did not do this, each pebble would only every stay in one channel
             new_pebble = recycled_pebble
             if self.homogenize_passes: # If we homogenize the pass, we need to udpate the universe again to account for the homogenization
-                uni = f'f{new_pebble.homogenization_group}_' + '_'.join([f'c0v0' for n in range(0,new_pebble.num_passes)])
+                uni = f'f{new_pebble._homogenization_group}_' + '_'.join([f'c0v0' for n in range(0,new_pebble._num_passes)])
                 new_pebble.set_previous_universe(uni)
-                new_pebble.material['fuel'] = self._homogenized_materials_dict[new_pebble.num_passes][new_pebble.homogenization_group]['mats']
+                new_pebble._material['fuel'] = self._homogenized_materials_dict[new_pebble._num_passes][new_pebble._homogenization_group]['mats']
             new_pebble.update_position(x, y, z, r, channel, volume, shuffled=True)    
         return new_pebble
         
@@ -287,8 +287,8 @@ class PebbleSorter(SerpentReactor):
         for ch in self._pebble_array:
             for vol in ch:
                 for pebble in vol:
-                    if pebble.pebble_type == 'fuel':
-                        feature_dict[pebble.num_passes][pebble.homogenization_group].append(getattr(pebble, feature))
+                    if pebble._pebble_type == 'fuel':
+                        feature_dict[pebble._num_passes][pebble._homogenization_group].append(getattr(pebble, feature))
         
         for pass_num, pass_group in feature_dict.items():
             for group_num, group in pass_group.items():
@@ -306,7 +306,7 @@ class PebbleSorter(SerpentReactor):
         final_feature_dict = {'max': {}, 'min': {}, 'average': {}}
 
         for pebble in self.discarded_pebbles[self._burnstep]:
-            feature_dict[pebble.homogenization_group].append(pebble.burnup)
+            feature_dict[pebble._homogenization_group].append(pebble._burnup)
         
         for group_num, group in feature_dict.items():
             final_feature_dict['average'][group_num] = sum(group) / len(group) if len(group) > 0 else 0
@@ -375,7 +375,7 @@ class PebbleSorter(SerpentReactor):
         """
         Utilize the cartographer mapping module to create a Griffin input file
         """
-        from kugelpy.kugelpy.kugelpy_open_source.cartographer.griffin_mapper import GriffinMap
+        from pyrates.kugelpy_open_source.kugelpy.kugelpy_open_source.cartographer.griffin_mapper import GriffinMap
 
         pebble_file_path = os.path.join(self.output_dir, self._step_pebble_distribution_file)
 
@@ -445,19 +445,25 @@ class PebbleSorter(SerpentReactor):
         Update the number of days.
         """
         self.read_keff()
+        print("Finished reading in res file")
 
         initial_keff = self.keff[0]
         max_keff = self.keff[1:].max()
 
         if self.allow_sub_crit_flag == True:
+            print("Option 1")
             val_keff = self.keff[-1]
         elif max_keff >= self.target_keff:
+            print("Option 2")
             val_keff = self.keff[self.keff >= self.target_keff].min()
         elif max_keff >= self.allowable_keff:
+            print("Option 3")
             val_keff = max_keff
         elif self.refine_burnstep:
+            print("Option 4")
             val_keff = initial_keff
         else:
+            print("Option 5")
             print('Warning: Core failed to create a viable time step, refining the time step and trying again.')
             val_keff = None
             self.refine_burnstep = True
@@ -477,18 +483,18 @@ class PebbleSorter(SerpentReactor):
         """
         fuel_material, pebble_pass = random.choice(self.equilibrium_materials[f'c{channel_num}v{volume_num}'])
         pebble = pbl.FuelPebble(x,y,z,r,pr,channel_num,volume_num, homogenization_group=self._homogenization_group, fuel_material=fuel_material, temperature=pebble_temp, pass_limit=self.pass_limit, fuel_temperature=fuel_temp, pebble_number=self._pebble_number, kernel_data=self._kernel_data)
-        pebble.num_passes = pebble_pass
+        pebble._num_passes = pebble_pass
         uni = f'f{self._homogenization_group}_' + '_'.join(['c0v0' for n in range(0,pebble_pass)])
-        pebble.universe = f'{uni}_c{channel_num}v{volume_num}' if pebble_pass > 0 else f'{uni}c{channel_num}v{volume_num}'
+        pebble._universe = f'{uni}_c{channel_num}v{volume_num}' if pebble_pass > 0 else f'{uni}c{channel_num}v{volume_num}'
         pebble.set_previous_universe(uni)
-        pebble.shuffled = True if pebble_pass > 0 else False
+        pebble._shuffled = True if pebble_pass > 0 else False
         return pebble
 
     def filter_by_burnup(self, pebble):
         """
         Flag pebbles that have accrued a BU greater than the BU limit
         """
-        if pebble.burnup >= self.burnup_limit:
+        if pebble._burnup >= self.burnup_limit:
             return True
         return False
         
@@ -496,7 +502,7 @@ class PebbleSorter(SerpentReactor):
         """
         Glag pebbles that have taken more passes through the core than the pass limit
         """
-        if pebble.num_passes >= pebble.pass_limit:
+        if pebble._num_passes >= pebble._pass_limit:
             return True
         return False
 
@@ -507,7 +513,7 @@ class PebbleSorter(SerpentReactor):
         last_uni = universe.split('_')[-1]
         volume_num = int(last_uni.split('v')[1])
         channel_num = int(last_uni.split('v')[0].split('c')[1])
-        return len([x for x in self._pebble_array[channel_num][volume_num] if x.universe == universe])
+        return len([x for x in self._pebble_array[channel_num][volume_num] if x._universe == universe])
     
     def get_temperature(self, channel_num, volume_num):
         """
@@ -583,8 +589,10 @@ class PebbleSorter(SerpentReactor):
         if self.save_state_point and self._burnstep % self.save_state_point_frequency == 0:
             self.save(step)
 
+        print("Checking keff now...")
         self.determine_reactor_state()
         if self.refine_burnstep == True:
+           print("Should be updating time step here!!")
            self.update_time_stepper(step)
         self.refine_burnstep = False
         
@@ -764,7 +772,7 @@ class PebbleSorter(SerpentReactor):
                     else:
                         peb_class = pbl.Pebble(x,y,z,r,pr,channel_num,volume_num,temperature=pebble_temp,pebble_number=self._pebble_number)
                     self._pebble_array[channel_num][volume_num].append(peb_class)
-                self._pebble_array[channel_num][volume_num].sort(key=lambda pebble : pebble.z, reverse=True) # Order the pebbles based on based on pebble height
+                self._pebble_array[channel_num][volume_num].sort(key=lambda pebble : pebble._z, reverse=True) # Order the pebbles based on based on pebble height
     
     def read_volume_powers(self):
         """
@@ -808,13 +816,13 @@ class PebbleSorter(SerpentReactor):
         Place pebbles that were shifted out of the core back into the top of the core. We filter based on BU/# of passses and add fresh fuel/graphite pebbles if necesssary.
         """
         random.shuffle(self._unloaded_pebbles)
-        self._unloaded_fuel_pebbles = [pebble for pebble in self._unloaded_pebbles if pebble.pebble_type == 'fuel']
+        self._unloaded_fuel_pebbles = [pebble for pebble in self._unloaded_pebbles if pebble._pebble_type == 'fuel']
         self.pebbles_per_volume_unload = {}
         for pebble in self._unloaded_fuel_pebbles:
-            if pebble.universe in self.pebbles_per_volume_unload.keys():
-                self.pebbles_per_volume_unload[pebble.universe] += 1
+            if pebble._universe in self.pebbles_per_volume_unload.keys():
+                self.pebbles_per_volume_unload[pebble._universe] += 1
             else:
-                self.pebbles_per_volume_unload[pebble.universe] = 1
+                self.pebbles_per_volume_unload[pebble._universe] = 1
                        
         reload_volume = []
         new_channel = {}
@@ -829,8 +837,8 @@ class PebbleSorter(SerpentReactor):
             if len(self._unloaded_fuel_pebbles):
                 recycle_pebble = self._unloaded_fuel_pebbles.pop()
                 recycle_pebble.increase_pass()
-                pebble_power_days = self.volume_powers[recycle_pebble.universe] 
-                pebbles_per_volume = self.pebbles_per_volume_unload[recycle_pebble.universe]
+                pebble_power_days = self.volume_powers[recycle_pebble._universe] 
+                pebbles_per_volume = self.pebbles_per_volume_unload[recycle_pebble._universe]
                 recycle_pebble.update_burnup((pebble_power_days[0] / pebbles_per_volume), self.current_efpd)
                 new_pebble = self.assign_fuel_pebble(x, y, z, r, pr, channel_num, 0, recycle_pebble)
                 fuel_temp, pebble_temp = self.get_temperature(channel_num, 0)
@@ -850,7 +858,7 @@ class PebbleSorter(SerpentReactor):
         
         for channel_num, channel in enumerate(self.pebble_mesh):    
             self._pebble_array[channel_num][0] = new_channel[channel_num]
-            self._pebble_array[channel_num][0].sort(key=lambda pebble : pebble.z, reverse=True) # Order the pebbles based on based on pebble height
+            self._pebble_array[channel_num][0].sort(key=lambda pebble : pebble._z, reverse=True) # Order the pebbles based on based on pebble height
  
     def set_xs_set(self, temperature):
         """
@@ -892,26 +900,36 @@ class PebbleSorter(SerpentReactor):
         self._unloaded_pebbles = []
 
         new_mesh = [[[] for volume in column] for column in self._pebble_array]
+        #print(self.volume_powers)
+        #print(self.pebbles_per_volume)
         for channel_num, channel in enumerate(self._pebble_array):
+            print("Channel_num: ", channel_num)
             for prev_vol_num, volume in enumerate(channel[1:]): #Skip the first axial volume, as this will be refilled with discharged pebbles
                 volume_num = prev_vol_num + 1
                 prev_vol = self._pebble_array[channel_num][prev_vol_num]
+                #print("Previous Volume: ", prev_vol)
+                # for peb_pos, pebble in enumerate(prev_vol):
+                #     if pebble._universe == 'f0_c0v0':
+                #         print("Found f0_c0v0: ", pebble._universe)
                 for peb_pos, pebble in enumerate(prev_vol):
-                    if pebble.universe not in self.pebbles_per_volume.keys():
-                        self.pebbles_per_volume[pebble.universe] = self.get_number_of_pebbles_in_volume(f'{pebble.universe}')
+                    if pebble._universe not in self.pebbles_per_volume.keys():
+                        self.pebbles_per_volume[pebble._universe] = self.get_number_of_pebbles_in_volume(f'{pebble._universe}')
                     pebble = copy.deepcopy(pebble) # Grab each pebble in the current volume
                     if peb_pos < len(volume): # Make sure the previous volume has enough pebbles to pull from 
-                        if pebble.pebble_type =='fuel': # Update fuel pebbles with material compositions from the previous volume
-                            if pebble.universe not in self.volume_powers:
+                        if pebble._pebble_type =='fuel': # Update fuel pebbles with material compositions from the previous volume
+                            if pebble._universe not in self.volume_powers.keys():
+                                print()
+                                print("Not in volume_powers!!!")
                                 print(self.volume_powers)
-                                print(pebble.universe)
-                            pebble_power_days = self.volume_powers[pebble.universe]
-                            num_pebbles_in_volume = self.pebbles_per_volume[pebble.universe]
+                                print(pebble._universe)
+                                print("------------")
+                            pebble_power_days = self.volume_powers[pebble._universe]
+                            num_pebbles_in_volume = self.pebbles_per_volume[pebble._universe]
                             pebble.update_burnup((pebble_power_days[0] / num_pebbles_in_volume), self.current_efpd)
                             fuel_temp, pebble_temp = self.get_temperature(channel_num,volume_num)
                             self.update_fuel_pebble(pebble, fuel_temp, pebble_temp)
                         new_pebble = volume[peb_pos]
-                        pebble.update_position(new_pebble.x, new_pebble.y, new_pebble.z, new_pebble.r, new_pebble.channel_num, new_pebble.volume_num)
+                        pebble.update_position(new_pebble._x, new_pebble._y, new_pebble._z, new_pebble._r, new_pebble._channel_num, new_pebble._volume_num)
                         new_mesh[channel_num][volume_num].append(pebble)
                     else:
                         self.lost_pebbles += 1
@@ -949,7 +967,7 @@ class PebbleSorter(SerpentReactor):
         """
         Update the universe, material, and temperatures for fuel pebbles
         """
-        prev_univ = pebble.universe
+        prev_univ = pebble._universe
         pebble.set_previous_universe(prev_univ)
         pebble.update_fuel_material(self._burnup_materials[self.critical_timestep][f'{prev_univ}'])
         pebble.update_pebble_temperature(pebble_temp, fuel_temp=fuel_temp)
@@ -992,8 +1010,8 @@ class PebbleSorter(SerpentReactor):
         solution_path = os.path.join(self.output_dir, 'reactor_status.csv')
 
         discharge_bu = self.calculate_discharge_bu()
-        bu = self.calculate_average_pebble_feature('burnup')
-        power = self.calculate_average_pebble_feature('power_density')
+        bu = self.calculate_average_pebble_feature('_burnup')
+        power = self.calculate_average_pebble_feature('_power_density')
 
         if not os.path.isfile(solution_path):
             with open(solution_path, 'w',  encoding='UTF8') as f:
@@ -1042,9 +1060,9 @@ class PebbleSorter(SerpentReactor):
         """        
         solution_path = os.path.join(self.output_dir, 'reactor_status.csv')
 
-        power = self.calculate_average_pebble_feature('power_density')
+        power = self.calculate_average_pebble_feature('_power_density')
         max_power, max_power_err, max_univ = self.calculate_maximum_pebble_power()
-        bu = self.calculate_average_pebble_feature('burnup')
+        bu = self.calculate_average_pebble_feature('_burnup')
         discharge_bu = self.calculate_discharge_bu()
         
         pass_dict, pebbles = self.calculate_pebble_fractions()
@@ -1079,8 +1097,8 @@ class PebbleSorter(SerpentReactor):
         """
         Write the pebble cells file
         """
-        peb_type = pebble.pebble_type
-        univ = pebble.universe
+        peb_type = pebble._pebble_type
+        univ = pebble._universe
         if peb_type == 'graphite':
             f.write(f'cell pebble_{univ} {univ} matrix_{univ} -pebble_inner\n')
             f.write(f'cell shell_{univ} {univ} pebshell_{univ} pebble_inner -pebble_outer\n')
@@ -1093,8 +1111,8 @@ class PebbleSorter(SerpentReactor):
         """
         Create a material detector using the 'create_detector' function in sea_serpent
         """
-        peb_type = pebble.pebble_type
-        univ = pebble.universe
+        peb_type = pebble._pebble_type
+        univ = pebble._universe
         if peb_type == 'fuel':
             self.create_detector(univ, particle_type='n', materials=[f'fuel_{univ}'], responses=['-8'], micro_xs=False)
         
@@ -1102,10 +1120,13 @@ class PebbleSorter(SerpentReactor):
         """
         Write the detectors present in the detector dictionary
         """
+        print("Writing detectors!!!")
         for det, values in self.user_detector_dict.items():
             f.write(f'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%% User Detector {det}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n')
             f.write(values['detector_str'] + '\n')
-        for det, values in self.detector_dict.items():
+        print("Number of detectors: ", len(self._detector_dict))
+        print(self._detector_dict)
+        for det, values in self._detector_dict.items():
             f.write(f'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%% Detector {det}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n')
             f.write(values['detector_str'] + '\n')
     
@@ -1122,32 +1143,32 @@ class PebbleSorter(SerpentReactor):
         """
         Write the materials for pebbles
         """
-        u = pebble.universe
+        u = pebble._universe
         num_pebbles = self.get_number_of_pebbles_in_volume(u) # Grab the number of fuel pebbles
         self.pebble_material_volume_data[u] = {'pebble_count': num_pebbles, 'burnup': [], 'power': []}
 
-        for mat, mat_dict in pebble.material.items():
-            volume = round(num_pebbles * pebble.geometry[mat]['volume'], 5) # grab the volume of the component and multpiply this by the number of pebbles to get the total volume
+        for mat, mat_dict in pebble._material.items():
+            volume = round(num_pebbles * pebble._geometry[mat]['volume'], 5) # grab the volume of the component and multpiply this by the number of pebbles to get the total volume
             if 'fuel' in mat:
-                f.write(f'mat {mat}_{u} sum tmp {pebble.fuel_temperature} vol {volume} burn 1\n')
+                f.write(f'mat {mat}_{u} sum tmp {pebble._fuel_temperature} vol {volume} burn 1\n')
             elif mat in ['inner_pyc', 'outer_pyc', 'pebshell']:
-                f.write(f'mat {mat}_{u} sum tmp {pebble.temperature} vol {volume} moder {pebble.scattering_library} 6000\n')               
+                f.write(f'mat {mat}_{u} sum tmp {pebble._temperature} vol {volume} moder {pebble._scattering_library} 6000\n')               
             else:
-                f.write(f'mat {mat}_{u} sum tmp {pebble.temperature} vol {volume}\n')
+                f.write(f'mat {mat}_{u} sum tmp {pebble._temperature} vol {volume}\n')
                 
             self.pebble_material_volume_data[u][mat] = {'volume': volume, 'atom_densities': mat_dict}
             for elem, atom_den in mat_dict.items():
                 if 'volume' not in elem:
                     if 'fuel' in mat:
-                        f.write(f'  {elem}.{pebble.xs_fuel_library}      {atom_den:e}\n')
+                        f.write(f'  {elem}.{pebble._xs_fuel_library}      {atom_den:e}\n')
                     else:
-                        f.write(f'  {elem}.{pebble.xs_library}      {atom_den:e}\n')       
+                        f.write(f'  {elem}.{pebble._xs_library}      {atom_den:e}\n')       
 
     def write_pebble_data(self):
         """
         Write down the pebble data
         """            
-        self.detector_dict = {}
+        self._detector_dict = {}
         pebble_surface_input = os.path.join(self.output_dir,self.pebble_surface_file)
         pebble_material_input = os.path.join(self.output_dir,self.pebble_material_file)
         pebble_cell_input = os.path.join(self.output_dir,self.pebble_cell_file)
@@ -1170,8 +1191,8 @@ class PebbleSorter(SerpentReactor):
                 self.write_region_header(f2, channel_num, volume_num)
                 self.write_region_header(f3, channel_num, volume_num)
                 for peb_pos, pebble in enumerate(volume):
-                    u = pebble.universe
-                    peb_type = pebble.pebble_type
+                    u = pebble._universe
+                    peb_type = pebble._pebble_type
                     if u not in pebble_list:
                         if peb_type == 'fuel':
                             self.write_surfaces(f1, pebble, pebble_number)
@@ -1181,9 +1202,9 @@ class PebbleSorter(SerpentReactor):
                         self.create_pebble_detectors(pebble)
                         pebble_list.append(u)
                     if peb_type == 'fuel' and self.multiphysics_run:
-                        #self.pebble_material_volume_data[u]['burnup'].append(pebble.burnup)
-                        #self.pebble_material_volume_data[u]['power'].append(pebble.power_density) # power density is power / pebble
-                        self.pebble_material_volume_data[u]['burnup'].append(pebble.burnup_j_cm3)
+                        #self.pebble_material_volume_data[u]['burnup'].append(pebble._burnup)
+                        #self.pebble_material_volume_data[u]['power'].append(pebble._power_density) # power density is power / pebble
+                        self.pebble_material_volume_data[u]['burnup'].append(pebble._burnup_j_cm3)
         
         self.write_energy_grids(f4)    
         self.write_detectors(f4)
@@ -1207,7 +1228,7 @@ class PebbleSorter(SerpentReactor):
         for channel_num, channel in enumerate(self._pebble_array):
             for volume_num, volume in enumerate(channel):
                 for peb_pos, pebble in enumerate(volume):
-                    x, y, z, radius, univ = pebble.x, pebble.y, pebble.z, pebble.radius, pebble.universe
+                    x, y, z, radius, univ = pebble._x, pebble._y, pebble._z, pebble._radius, pebble._universe
                     f.write(f'{x:<10} {y:<10} {z:<10} {radius:<5} {univ:<31}\n')
         f.close()
         
@@ -1295,10 +1316,10 @@ class PebbleSorter(SerpentReactor):
         Write the pebble surfaces file
         """
         f.write(f'particle {pebble_num}\n')
-        for surf, radius in pebble.kernel_data.items():
-            f.write(f'{surf}_{pebble.universe} {radius}\n')
-        f.write(f'matrix_{pebble.universe}\n')
-        f.write(f'pbed triso_{pebble.universe} matrix_u{pebble.universe} "triso/triso_dist_u{pebble_num}.triso"\n\n')
+        for surf, radius in pebble._kernel_data.items():
+            f.write(f'{surf}_{pebble._universe} {radius}\n')
+        f.write(f'matrix_{pebble._universe}\n')
+        f.write(f'pbed triso_{pebble._universe} matrix_u{pebble._universe} "triso/triso_dist_u{pebble_num}.triso"\n\n')
         self.write_triso_file(pebble_num)
 
     def write_triso_file(self, pebble_num):
