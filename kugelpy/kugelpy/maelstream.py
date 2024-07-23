@@ -1,7 +1,7 @@
 '''
 Created on Jan 27, 2022
 
-@authors: balep, stewryan, ethan-fowler
+@authors: balep, stewryan
 
 Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 '''
@@ -10,7 +10,7 @@ Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 # Importing
 #===============================================================================
 import numpy as np
-from kugelpy.kugelpy.mutineer.logutils import LogTracker
+from pyrates.kugelpy_open_source.kugelpy.mutineer.logutils import LogTracker
 
 
 #===============================================================================

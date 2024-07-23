@@ -451,19 +451,14 @@ class PebbleSorter(SerpentReactor):
         max_keff = self.keff[1:].max()
 
         if self.allow_sub_crit_flag == True:
-            print("Option 1")
             val_keff = self.keff[-1]
         elif max_keff >= self.target_keff:
-            print("Option 2")
             val_keff = self.keff[self.keff >= self.target_keff].min()
         elif max_keff >= self.allowable_keff:
-            print("Option 3")
             val_keff = max_keff
         elif self.refine_burnstep:
-            print("Option 4")
             val_keff = initial_keff
         else:
-            print("Option 5")
             print('Warning: Core failed to create a viable time step, refining the time step and trying again.')
             val_keff = None
             self.refine_burnstep = True
@@ -589,10 +584,8 @@ class PebbleSorter(SerpentReactor):
         if self.save_state_point and self._burnstep % self.save_state_point_frequency == 0:
             self.save(step)
 
-        print("Checking keff now...")
         self.determine_reactor_state()
         if self.refine_burnstep == True:
-           print("Should be updating time step here!!")
            self.update_time_stepper(step)
         self.refine_burnstep = False
         
@@ -900,29 +893,16 @@ class PebbleSorter(SerpentReactor):
         self._unloaded_pebbles = []
 
         new_mesh = [[[] for volume in column] for column in self._pebble_array]
-        #print(self.volume_powers)
-        #print(self.pebbles_per_volume)
         for channel_num, channel in enumerate(self._pebble_array):
-            print("Channel_num: ", channel_num)
             for prev_vol_num, volume in enumerate(channel[1:]): #Skip the first axial volume, as this will be refilled with discharged pebbles
                 volume_num = prev_vol_num + 1
                 prev_vol = self._pebble_array[channel_num][prev_vol_num]
-                #print("Previous Volume: ", prev_vol)
-                # for peb_pos, pebble in enumerate(prev_vol):
-                #     if pebble._universe == 'f0_c0v0':
-                #         print("Found f0_c0v0: ", pebble._universe)
                 for peb_pos, pebble in enumerate(prev_vol):
                     if pebble._universe not in self.pebbles_per_volume.keys():
                         self.pebbles_per_volume[pebble._universe] = self.get_number_of_pebbles_in_volume(f'{pebble._universe}')
                     pebble = copy.deepcopy(pebble) # Grab each pebble in the current volume
                     if peb_pos < len(volume): # Make sure the previous volume has enough pebbles to pull from 
                         if pebble._pebble_type =='fuel': # Update fuel pebbles with material compositions from the previous volume
-                            if pebble._universe not in self.volume_powers.keys():
-                                print()
-                                print("Not in volume_powers!!!")
-                                print(self.volume_powers)
-                                print(pebble._universe)
-                                print("------------")
                             pebble_power_days = self.volume_powers[pebble._universe]
                             num_pebbles_in_volume = self.pebbles_per_volume[pebble._universe]
                             pebble.update_burnup((pebble_power_days[0] / num_pebbles_in_volume), self.current_efpd)
@@ -1125,7 +1105,6 @@ class PebbleSorter(SerpentReactor):
             f.write(f'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%% User Detector {det}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n')
             f.write(values['detector_str'] + '\n')
         print("Number of detectors: ", len(self._detector_dict))
-        print(self._detector_dict)
         for det, values in self._detector_dict.items():
             f.write(f'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%%% Detector {det}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n')
             f.write(values['detector_str'] + '\n')
