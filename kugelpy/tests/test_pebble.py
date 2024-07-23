@@ -54,8 +54,8 @@ def test_update_pebble_temperature(regtest):
 def test_calculate_volumes(regtest):
     peb = pebble.Pebble(111,111,111,111,3,4,5)
     peb.calculate_volumes()
-    print(peb.geometry, file=regtest)
+    print(peb._geometry, file=regtest)
     
     fpeb = pebble.FuelPebble(111,111,111,111,3,4,5)
     fpeb.calculate_volumes()
-    print(fpeb.geometry, file=regtest)    
+    print(fpeb._geometry, file=regtest)    

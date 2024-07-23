@@ -330,7 +330,7 @@ def test_read_in_pebble_dist(regtest):
                            log='', trgtchnv=trgtchnv)
     
     ps.read_in_pebble_dist()
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
@@ -356,7 +356,7 @@ def test_shift_pebbles(regtest):
                            log='', trgtchnv=trgtchnv)
     ps.read_in_pebble_dist()
 
-    pebble_order = [copy.deepcopy(pebble.pebble_type) for pebble in ps._pebble_array[0][0]]
+    pebble_order = [copy.deepcopy(pebble._pebble_type) for pebble in ps._pebble_array[0][0]]
     ps._burnup_materials = {0:{}, 1: {'f0_c1v0': {'92234':  1, 'volume': 1},
                                      'f0_c1v1': {'92234':  2, 'volume': 1},
                                      'f0_c0v2': {'92234':  3, 'volume': 1},
@@ -365,7 +365,7 @@ def test_shift_pebbles(regtest):
     ps.read_volume_powers()
     ps._pebble_array[0][1][-1].homogenization_group = 1
     ps.shift_pebbles()
-    print(pebble_order == [pebble.pebble_type for pebble in ps._pebble_array[0][1]], file=regtest)    
+    print(pebble_order == [pebble._pebble_type for pebble in ps._pebble_array[0][1]], file=regtest)    
     print(len(ps._unloaded_pebbles) , file=regtest)
 
 def test_refuel_pebbles_homogenize(regtest):
@@ -401,9 +401,9 @@ def test_refuel_pebbles_homogenize(regtest):
     print(len(ps._unloaded_fuel_pebbles), file=regtest)
     print(len(ps._unloaded_pebbles), file=regtest)
     ps.refuel_pebbles()
-    print([x.pebble_type for x in ps._pebble_array[0][0]], file=regtest)
-    print([x.pebble_type for x in ps._pebble_array[1][0]], file=regtest) 
-    print([x.material['fuel'] for x in ps._pebble_array[0][0] if x.pebble_type == 'fuel'], file=regtest) 
+    print([x._pebble_type for x in ps._pebble_array[0][0]], file=regtest)
+    print([x._pebble_type for x in ps._pebble_array[1][0]], file=regtest) 
+    print([x._material['fuel'] for x in ps._pebble_array[0][0] if x._pebble_type == 'fuel'], file=regtest) 
     print(len(ps._unloaded_fuel_pebbles), file=regtest)
     print(len(ps._unloaded_pebbles), file=regtest)
 
@@ -438,9 +438,9 @@ def test_refuel_pebbles(regtest):
     print(len(ps._unloaded_fuel_pebbles), file=regtest)
     print(len(ps._unloaded_pebbles), file=regtest)
     ps.refuel_pebbles()
-    print([x.pebble_type for x in ps._pebble_array[0][0]], file=regtest)
-    print([x.pebble_type for x in ps._pebble_array[0][0]], file=regtest) 
-    print([x.material['fuel'] for x in ps._pebble_array[0][0] if x.pebble_type == 'fuel' ], file=regtest)
+    print([x._pebble_type for x in ps._pebble_array[0][0]], file=regtest)
+    print([x._pebble_type for x in ps._pebble_array[0][0]], file=regtest) 
+    print([x._material['fuel'] for x in ps._pebble_array[0][0] if x._pebble_type == 'fuel' ], file=regtest)
     print(len(ps._unloaded_fuel_pebbles), file=regtest)
     print(len(ps._unloaded_pebbles), file=regtest)
     
@@ -560,174 +560,93 @@ def test_refuel_pebbles_homogenize3(regtest):
                                   'f1_c0v0_c0v0_c1v1': (1E6,0),
                                   'f1_c0v0_c0v0_c0v2': (1E6,0), 
                           }
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
 
     pebble = ps._pebble_array[1][0][0]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     ps.homogenization_group=1
     ps.graphite_fraction = 0.0
     ps.shift_pebbles()
     ps.refuel_pebbles()
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
     print(peb_nums, file=regtest)
     
     pebble = ps._pebble_array[1][1][0]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')   
     pebble = ps._pebble_array[1][0][0]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
     ps.shift_pebbles()
     ps.refuel_pebbles()
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
     print(peb_nums, file=regtest)    
  
     pebble = ps._pebble_array[0][0][232]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
     pebble = ps._pebble_array[1][1][0]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
 
 
     ps.shift_pebbles()
     ps.refuel_pebbles()
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
     print(peb_nums, file=regtest)
     
     pebble = ps._pebble_array[0][1][232]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
     
     pebble = ps._pebble_array[1][0][1390]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
     ps.create_temperature_profile(500,900,'fuel',axial_zones=5)
 
     ps.shift_pebbles()
     ps.refuel_pebbles()
-    peb_nums = [(pebble.pebble_number, pebble.num_passes, pebble.material, pebble.universe, pebble.previous_universe, pebble.temperature)
+    peb_nums = [(pebble._pebble_number, pebble._num_passes, pebble._material, pebble._universe, pebble._previous_universe, pebble._temperature)
                 for channel in ps._pebble_array
                 for volume in channel
                 for pebble in volume]
     print(peb_nums, file=regtest)
     pebble = ps._pebble_array[1][1][1390]
-    fuel=pebble.material['fuel'] if pebble.pebble_type == 'fuel' else 'graphite'
-    power = round(pebble.power_days,5) if pebble.pebble_type == 'fuel' else 0.0
+    fuel=pebble._material['fuel'] if pebble._pebble_type == 'fuel' else 'graphite'
+    power = round(pebble._power_days,5) if pebble._pebble_type == 'fuel' else 0.0
     print('*****************************************************************************************************************************************************************************')   
-    print(f'Pebble Num: {pebble.pebble_number}, Pass Num: {pebble.num_passes}, BU Num: {round(pebble.burnup,5)}, Power Days: {power} Universe: {pebble.universe}, \nMaterial: {fuel}')
+    print(f'Pebble Num: {pebble._pebble_number}, Pass Num: {pebble._num_passes}, BU Num: {round(pebble._burnup,5)}, Power Days: {power} Universe: {pebble._universe}, \nMaterial: {fuel}')
     print('*****************************************************************************************************************************************************************************')
-
-# def test_create_griffin_file(regtest):
-#     main_dir = os.path.dirname(os.path.realpath(psp.__file__))
-#     data_dir = os.path.join(main_dir, 'data')
-
-#     temp_path = path.join(main_tests_dir, 'test_create_griffin_file')
-#     gen_tmp_folder(temp_path)
-
-#     chcurvs = [[[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]],
-#     [[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [44.211, 44.211, 44.211, 44.211, 44.211, 44.20345, 44.18431, 44.15973, 44.12076, 44.05477, 43.96634, 43.86105, 43.74685, 43.62336, 43.49642, 43.37785, 43.26327, 43.14269, 43.02477, 42.89514, 42.77098, 42.64801, 42.53059, 42.41545, 42.31044, 42.21782, 42.14349, 42.05958, 41.92575, 41.63257, 41.42335, 41.12016, 40.68085, 40.05544, 39.098, 37.47593, 34.54502, 30.21314, 25.3088, 20.6561, 16.72857, 13.54777, 10.99466, 9.14798, 8.12596, 8.19874]],
-#     [[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [82.105, 82.105, 82.105, 82.105, 82.105, 82.087, 82.02266, 81.9622, 81.89196, 81.77948, 81.66513, 81.53734, 81.40771, 81.26746, 81.10857, 80.96155, 80.81659, 80.67267, 80.53068, 80.38331, 80.23166, 80.08721, 79.94035, 79.79063, 79.63851, 79.48877, 79.35236, 79.20133, 79.01734, 78.70429, 78.51402, 78.25401, 77.89377, 77.39389, 76.66375, 75.52775, 73.41357, 69.3007, 61.96307, 52.28305, 42.07782, 33.06554, 25.70736, 20.15169, 16.61293, 16.09318]],
-#     [[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [94.737, 94.737, 94.737, 94.737, 94.737, 94.71306, 94.62775, 94.59489, 94.557, 94.44693, 94.3595, 94.30034, 94.2407, 94.13986, 94.03026, 93.9561, 93.87629, 93.78233, 93.68947, 93.60143, 93.53932, 93.43703, 93.33228, 93.23621, 93.14022, 93.0316, 92.93193, 92.82167, 92.71202, 92.47871, 92.32607, 92.1331, 91.8812, 91.51028, 90.98523, 90.22885, 89.00353, 86.55365, 81.18153, 71.71382, 59.76636, 47.45436, 36.29467, 27.19942, 20.96119, 19.2266]],
-#     [[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [107.37, 107.37, 107.37, 107.37, 107.37, 107.33419, 107.34077, 107.49045, 107.47701, 107.29504, 107.22586, 107.36764, 107.36501, 107.19078, 107.09066, 107.22299, 107.23292, 107.10503, 106.95589, 107.00479, 107.12655, 107.02795, 106.86841, 106.87822, 106.94322, 106.86412, 106.69916, 106.63512, 106.7939, 106.66, 106.5303, 106.29289, 106.27, 106.137, 105.71554, 105.34689, 104.9322, 104.011, 102.05009, 96.23443, 83.67145, 69.222, 54.54269, 40.42161, 28.33431, 22.96025]],
-#     [[1126.49, 1099.74, 1072.99, 1046.23, 1019.48, 992.73, 965.98, 939.22, 912.47, 885.72, 858.96, 832.21, 805.46, 778.71, 751.95, 725.2, 698.45, 671.69, 644.94, 618.19, 591.44, 564.68, 537.93, 511.18, 484.42, 457.67, 430.92, 404.17, 377.41, 350.66, 340.31, 329.97, 319.62, 309.27, 298.92, 288.57, 278.23, 267.88, 257.53, 247.19, 236.84, 226.49, 216.14, 205.79, 195.45, 185.1],
-#         [120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 120.0, 112.69338, 95.3547, 78.01603, 60.67735, 43.33868, 26.0]],]
-
-#     trgtchnv = [14, 14, 14, 15, 18]
-
-#     eq_mats = {}
-#     run_in_fuel={'92235': 1.18113E-03, '92238': 2.24415E-02, '8016': 3.37336E-2, '6000': 9.260240E-3, '5010': 1.87091E-8, '5011': 7.57813E-8}
-
-#     fuel_material= {'92235': 9.55244E-04, 
-#                         '92238': 2.26363E-02, 
-#                         '8016': 3.36887E-02, 
-#                         '6000': 9.14892E-03 + 9.89522E-05, 
-#                         '5010': 1.86845E-08, 
-#                         '5011': 7.56816E-08}
-
-
-#     step_name = f'test_create_griffin_file'
-#     for channel_num, volumes in enumerate(trgtchnv):
-#         for volume_num in range(volumes):
-#             eq_mats[f'c{channel_num}v{volume_num}'] = [(fuel_material, n) for n in range(0,6)]
-
-#     ps = psp.PebbleSorter(graphite_fraction=0.42,
-#                         graphite_height=505.15,
-#                         output_dir=temp_path,
-#                         path_to_template_files=data_dir,
-#                         fuel_material=run_in_fuel,
-#                         steps=100,
-#                         day_limit = 600,
-#                         pass_limit=6,
-#                         burnup_limit = 1000.0,
-#                         depletion_steps = [5,5,5,5],
-#                         core_inlet_temperature=500.0,
-#                         core_outlet_temperature=500.0,
-#                         fuel_temperature=500.0,
-#                         pebble_temperature=500.0,
-#                         final_pass_limit=6,
-#                         final_homogenization_group=1,
-#                         equilibrium_core = True,
-#                         equilibrium_materials = eq_mats,
-#                         equilibrium_fuel_material = {'92235': 3.701063E-3, '92238': 1.992191E-2, '8016': 3.37336E-2, '6000': 9.260240E-3, '5010': 1.87091E-8, '5011': 7.57813E-8},
-#                         target_keff = 1.0065,
-#                         num_particles = 10000,
-#                         num_generations = 100,
-#                         critical_keff_tolerance = 1E-3,
-#                         path_to_micro_xs = path.join(ifiles_dir, 'os200mw_gcpbr_7ge15_microxs.xml'),
-#                         path_to_moose_mesh = path.join(ifiles_dir, 'os200mw_gcpbr_mesh_gfnk.e'),
-#     ) 
-    
-#     ps.assign_pebble_dist_variables(pbcyll=893, pblwconl=55.438, pbupconl=54.0, pbr=120.0,
-#                     dcr=26.0, axial_offset=-235.538, idistrfile=os.path.join(data_dir,'rawdist.inp'),
-#                     odistrfile='findist.txt', chcurvs=chcurvs,
-#                     log=None, trgtchnv=trgtchnv)
-#     ps.read_in_pebble_dist()
-#     ps.multiphysics_run = True
-#     ps.build_pbr_core()
-#     ps.setup_core()
-#     ps.create_griffin_file()
-#     files = ['gpbr200_ri_griffin_step0.i', 'gpbr200_ri_pronghorn_step0.i', 'gpbr200_ri_triso_step0.i',
-#             'fuel_blocks_isotope_densities.csv', 'fuel_blocks_burnup.csv']
-#     for file in files:
-#         file_path = path.join(main_tests_dir, 'test_create_griffin_file', file)
-#         with open(file_path) as fc:
-#             print(fc.read(), file=regtest) 
