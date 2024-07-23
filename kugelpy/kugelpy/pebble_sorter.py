@@ -15,12 +15,12 @@ from scipy.interpolate import interp1d
 import _pickle as pickle
 import json
 
-from pyrates.kugelpy_open_source.kugelpy.kugelpy.maelstream import GenPBDist
-import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble_bed_reactor as pbr
-from pyrates.kugelpy_open_source.kugelpy.sea_serpent.reactor import SerpentReactor
-import pyrates.kugelpy_open_source.kugelpy.kugelpy.pebble as pbl
-from pyrates.kugelpy_open_source.kugelpy.mutineer import serpentutils as su
-from pyrates.kugelpy_open_source.kugelpy.mutineer import logutils
+from kugelpy.kugelpy.kugelpy.maelstream import GenPBDist
+import kugelpy.kugelpy.kugelpy.pebble_bed_reactor as pbr
+from kugelpy.kugelpy.sea_serpent.reactor import SerpentReactor
+import kugelpy.kugelpy.kugelpy.pebble as pbl
+from kugelpy.kugelpy.mutineer import serpentutils as su
+from kugelpy.kugelpy.mutineer import logutils
 import subprocess
 
 main_dir = os.path.dirname(os.path.realpath(__file__))
@@ -375,7 +375,7 @@ class PebbleSorter(SerpentReactor):
         """
         Utilize the cartographer mapping module to create a Griffin input file
         """
-        from pyrates.kugelpy_open_source.kugelpy.kugelpy_open_source.cartographer.griffin_mapper import GriffinMap
+        from kugelpy.kugelpy.kugelpy_open_source.cartographer.griffin_mapper import GriffinMap
 
         pebble_file_path = os.path.join(self.output_dir, self._step_pebble_distribution_file)
 

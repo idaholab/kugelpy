@@ -10,7 +10,7 @@ Copyright 2024, Battelle Energy Alliance, LLC, ALL RIGHTS RESERVED
 # Importing
 #===============================================================================
 import numpy as np
-from pyrates.kugelpy_open_source.kugelpy.mutineer.logutils import LogTracker
+from kugelpy.kugelpy.mutineer.logutils import LogTracker
 
 
 #===============================================================================
