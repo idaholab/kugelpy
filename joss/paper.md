@@ -40,7 +40,7 @@ Included in kugelpy is an annotated Python script [run_in.md](https://github.com
 
 A Serpent geometry rendering of the GPBR200 is shown in the following image [@PBRTH]. From this image the axial and radial meshes that separate the pebbles can be easily visualized, as well as features mentioned previously. It should be noted that only a single pebble geometry input file is provided in `kugelpy`, therefore new pebble geometry input files must be supplied by the user for varying core shapes and sizes. It is important to follow the input file formatting seen in [raw_dist.inp](https://github.com/idaholab/kugelpy/kugelpy/kugelpy/data/raw_dist.inp), but the pebble distribution can be produced by a variety of means including regular lattices, DEM simulations, or random distributions.
 
-![PBR Axial View](kugelpy.png){height="72pt"}
+![PBR Axial View](kugelpy.png){height="150pt"}
 
 # Acknowledgements
 
