@@ -1,0 +1,1 @@
+{'pebble': {'surface': 'surf pebble_inner sph 0. 0. 0. 2.5\nsurf pebble_outer sph 0. 0. 0. 3.0\n'}}
