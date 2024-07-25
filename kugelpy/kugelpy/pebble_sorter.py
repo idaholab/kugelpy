@@ -75,6 +75,7 @@ class PebbleSorter(SerpentReactor):
         self.serpent_version = '2.2'
         self._power_days = 0.
         self.random_seed = 2
+        self.nbuf = 50
 
         # Variables required for Griffin/Pronghorn coupling
         self.multiphysics_run = False
@@ -1252,6 +1253,7 @@ class PebbleSorter(SerpentReactor):
         f.write('% Run Data\n')
         f.write(f'set pop {self.num_particles} {self.num_generations} {self.skipped_generations} 1.05\n')
         f.write(f'set power {self.power_level}\n')
+        f.write(f'set nbuf {self.nbuf}\n')
         f.write('set opti 1\nset pcc 0\nset printm yes\nset depout 3\n')
         depletion_steps = self.temp_depletion_steps if self.refine_burnstep else self.depletion_steps
         dep = f'dep daystep ' + ' '.join([str(x) for x in depletion_steps]) if depletion_steps != [] else ''
