@@ -42,6 +42,7 @@ therm grph900 900 grph.08t grph.10t
 therm grph1200 1200 grph.10t grph.12t% Run Data
 set pop 40000 200 40 1.05
 set power 1000000.0
+set nbuf 50
 set opti 1
 set pcc 0
 set printm yes
